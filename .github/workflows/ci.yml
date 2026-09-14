@@ -27,9 +27,20 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      - name: Prepare CI database and seed templates
+        env:
+          DEBUG: "true"
+          SECRET_KEY: "ci-test-secret-key-with-enough-length-32chars"
+          DATABASE_URL: "sqlite:///./ci_snapeng.db"
+          PYTHONPATH: backend
+        run: |
+          python -c "from app.core.database import Base, engine; Base.metadata.create_all(bind=engine)"
+          python backend/scripts/load_templates.py
+
       - name: Run backend tests
         env:
           DEBUG: "true"
           SECRET_KEY: "ci-test-secret-key-with-enough-length-32chars"
           DATABASE_URL: "sqlite:///./ci_snapeng.db"
+          PYTHONPATH: backend
         run: python -m pytest backend/tests -q --tb=short
