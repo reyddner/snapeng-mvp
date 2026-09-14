@@ -105,6 +105,7 @@ except RuntimeError:
 from app.api.v1 import (
     ai,
     auth,
+    demos,
     documents,
     drafts,
     ingestion,
@@ -129,6 +130,7 @@ app.include_router(
     prefix="/api/v1/memorials",
     tags=["Memoriais"],
 )
+app.include_router(demos.router, prefix="/api/v1/demos", tags=["Projetos-modelo"])
 app.include_router(
     questionnaires.router,
     prefix="/api/v1/questionnaires",
@@ -217,6 +219,13 @@ async def select_template(request: Request):
 async def new_enterprise(request: Request):
     """Entrada publica para empreendimentos com uma ou varias disciplinas."""
     return _page(request, "new_enterprise.html")
+
+
+@app.get("/exemplos", response_class=HTMLResponse)
+@app.get("/demos", response_class=HTMLResponse)
+async def demos_gallery(request: Request):
+    """Galeria publica de projetos-modelo para demonstracao e validacao."""
+    return _page(request, "demos.html")
 
 
 @app.get("/memorials/draft/{draft_id}", response_class=HTMLResponse)

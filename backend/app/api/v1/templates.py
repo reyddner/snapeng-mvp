@@ -183,25 +183,25 @@ async def list_templates(
     category: str = None,
     db: Session = Depends(get_db),
 ):
-    """
-    Lista templates disponíveis
+    """Lista apenas templates públicos prontos para geração (quality gate)."""
+    from app.services.template_quality import assess_template
 
-    Args:
-        skip: Número de registros para pular
-        limit: Limite de registros
-        category: Filtrar por categoria
-        db: Sessão do banco de dados
-
-    Returns:
-        Lista de templates
-    """
     query = db.query(EngineeringTemplate).filter(EngineeringTemplate.is_public == 1)
 
     if category:
         query = query.filter(EngineeringTemplate.category == category)
 
-    templates = query.offset(skip).limit(limit).all()
-    return templates
+    # Busca um pouco além do limite para compensar filtros de qualidade.
+    candidates = query.offset(skip).limit(max(limit * 3, limit)).all()
+    ready: list[EngineeringTemplate] = []
+    for template in candidates:
+        structure = dict(template.structure or {})
+        structure.setdefault("variables", template.variables or [])
+        if assess_template(structure).get("ready"):
+            ready.append(template)
+        if len(ready) >= limit:
+            break
+    return ready
 
 
 @router.get("/{template_id}", response_model=TemplateResponse)

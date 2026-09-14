@@ -3,7 +3,7 @@
 {% block title %}{% if editor_mode == 'project' %}Memorial na conta{% else %}Preenchimento do Empreendimento{% endif %} - SNAPENG{% endblock %}
 
 {% block content %}
-<div x-data="draftEditor()" class="max-w-6xl mx-auto">
+<div x-data="draftEditor()" x-init="init()" class="max-w-6xl mx-auto">
     <div x-show="loading" x-cloak class="py-12 text-center text-gray-500" x-text="isProjectMode ? 'Carregando memorial da conta...' : 'Carregando rascunho...'"></div>
 
     <div x-show="!loading && expired && !draft" class="max-w-xl mx-auto bg-white rounded-lg shadow p-8 text-center" x-cloak>
@@ -23,7 +23,7 @@
                     <span x-show="autosaveLabel" class="text-gray-400" x-text="' · ' + autosaveLabel"></span>
                 </p>
                 <h1 class="text-3xl font-bold text-gray-900" x-text="draft?.payload?.enterprise?.name"></h1>
-                <p class="text-gray-600 mt-1" x-text="isProjectMode ? 'Edite as disciplinas do memorial salvo na conta. Salvamento automático ativo.' : 'Preencha cada disciplina. Salvamento automático ativo. Os dados comuns ficam compartilhados.'"></p>
+                <p class="text-gray-600 mt-1" x-text="isProjectMode ? 'Edite as disciplinas do memorial salvo na conta. Salvamento automático ativo.' : 'Preencha cada disciplina. Salvamento automático ativo. Os dados do projeto ficam no final.'"></p>
                 <p x-show="serverSaveFailed" class="text-sm text-amber-700 mt-2">
                     Não foi possível salvar no servidor agora. Seus dados continuam neste navegador.
                 </p>
@@ -134,32 +134,6 @@
             </ul>
         </section>
 
-        <section class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-4">Dados compartilhados</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Local da obra</span>
-                    <input x-model="sharedData.localizacao" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Município</span>
-                    <input x-model="sharedData.municipio" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">UF</span>
-                    <input x-model="sharedData.uf" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase" placeholder="GO">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Área construída</span>
-                    <input type="number" min="0" x-model="sharedData.area_construida" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Número de pavimentos</span>
-                    <input type="number" min="0" x-model="sharedData.numero_pavimentos" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
-                </label>
-            </div>
-        </section>
-
         <section x-show="conflicts.length" class="bg-amber-50 border border-amber-200 rounded-lg p-6">
             <h2 class="text-lg font-semibold text-amber-900 mb-3">Conflitos entre disciplinas</h2>
             <ul class="space-y-2">
@@ -188,13 +162,13 @@
                     <select x-model="discipline.template_id" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
                         <option value="">Selecione um modelo</option>
                         <template x-for="option in (discipline.templateOptions || [])" :key="option.id">
-                            <option :value="option.id" x-text="option.name"></option>
+                            <option :value="String(option.id)" x-text="option.name"></option>
                         </template>
                     </select>
                 </label>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <template x-for="question in discipline.questions" :key="question.name">
-                        <label class="block" x-show="isQuestionVisible(question, discipline.data)">
+                        <label class="block" x-show="isQuestionVisible(question, mergedDisciplineData(discipline))">
                             <span class="text-sm font-medium text-gray-700" x-text="question.label || question.name"></span>
                             <span x-show="question.required" class="text-red-500"> *</span>
                             <template x-if="question.type === 'textarea'">
@@ -217,6 +191,60 @@
                 </div>
             </section>
         </template>
+
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-2">Dados do projeto</h2>
+            <p class="text-sm text-gray-600 mb-4">Localização, responsável técnico e demais dados comuns ficam no final e entram no memorial gerado.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Local da obra</span>
+                    <input x-model="sharedData.localizacao" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Município</span>
+                    <input x-model="sharedData.municipio" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">UF</span>
+                    <input x-model="sharedData.uf" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase" placeholder="GO">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Área construída</span>
+                    <input type="number" min="0" x-model="sharedData.area_construida" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Número de pavimentos</span>
+                    <input type="number" min="0" x-model="sharedData.numero_pavimentos" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+            </div>
+            <h3 class="text-lg font-semibold mt-6 mb-3">Responsável técnico</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Nome completo *</span>
+                    <input x-model="professionalData.full_name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Título profissional</span>
+                    <input x-model="professionalData.professional_title" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">CREA</span>
+                    <input x-model="professionalData.crea_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">UF do CREA</span>
+                    <input x-model="professionalData.crea_state" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">ART/RRT</span>
+                    <input x-model="professionalData.art_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Empresa</span>
+                    <input x-model="professionalData.company_name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+            </div>
+        </section>
 
         <div x-show="errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
             <p class="font-medium mb-2" x-text="error"></p>
@@ -253,6 +281,14 @@ function draftEditor() {
         draft: null,
         disciplines: [],
         sharedData: {},
+        professionalData: {
+            full_name: '',
+            professional_title: 'Engenheiro(a)',
+            crea_number: '',
+            crea_state: '',
+            art_number: '',
+            company_name: ''
+        },
         sourceDocuments: [],
         pendingFile: null,
         pendingExtraction: null,
@@ -430,6 +466,15 @@ function draftEditor() {
                 numero_pavimentos: '',
                 ...(payload.enterprise?.shared_data || {})
             };
+            this.professionalData = {
+                full_name: '',
+                professional_title: 'Engenheiro(a)',
+                crea_number: '',
+                crea_state: '',
+                art_number: '',
+                company_name: '',
+                ...(payload.professional || {})
+            };
             this.sourceDocuments = payload.source_documents || [];
         },
 
@@ -456,16 +501,28 @@ function draftEditor() {
                 for (const question of questionnaire.questions || []) {
                     if (data[question.name] === undefined) data[question.name] = question.default ?? '';
                 }
+                const disciplineKey = String(selection.discipline || '').toLowerCase();
+                const preferredSub = disciplineKey === 'estrutura_concreto'
+                    ? 'concreto_armado'
+                    : disciplineKey;
+                const preferred = (templatesData.templates || []).find(item =>
+                    (item.subcategory || '').toLowerCase() === preferredSub
+                ) || (templatesData.templates || [])[0];
+                const existingId = selection.template_id != null && selection.template_id !== ''
+                    ? String(selection.template_id)
+                    : '';
+                const autoId = preferred?.id != null ? String(preferred.id) : '';
                 return {
                     ...selection,
                     ...questionnaire,
                     data,
                     templateOptions: templatesData.templates || [],
-                    template_id: selection.template_id || (templatesData.templates || [])[0]?.id || '',
-                    missing: this.requiredMissing(questionnaire.questions || [], data),
+                    template_id: existingId || autoId,
+                    missing: this.requiredMissing(questionnaire.questions || [], {...this.sharedData, ...data}),
                     statusLabel: 'Questionário técnico'
                 };
             }));
+            this.refreshMissing();
         },
 
         onFormChanged() {
@@ -482,9 +539,16 @@ function draftEditor() {
             }, 1600);
         },
 
+        mergedDisciplineData(discipline) {
+            return {...(this.sharedData || {}), ...(discipline?.data || {})};
+        },
+
         refreshMissing() {
             for (const discipline of this.disciplines) {
-                discipline.missing = this.requiredMissing(discipline.questions || [], discipline.data || {});
+                discipline.missing = this.requiredMissing(
+                    discipline.questions || [],
+                    this.mergedDisciplineData(discipline)
+                );
             }
         },
 
@@ -508,11 +572,11 @@ function draftEditor() {
                 enterprise: {...(this.draft.payload.enterprise || {}), shared_data: this.sharedData},
                 disciplines: this.disciplines.map(discipline => ({
                     discipline: discipline.discipline,
-                    template_id: discipline.template_id || null,
+                    template_id: discipline.template_id ? Number(discipline.template_id) : null,
                     data: discipline.data
                 })),
                 mode: this.draft.payload.mode,
-                professional: this.draft.payload.professional,
+                professional: {...(this.draft.payload.professional || {}), ...this.professionalData},
                 source_documents: this.sourceDocuments,
                 status
             };
@@ -558,18 +622,25 @@ function draftEditor() {
             this.refreshMissing();
             const problems = [];
             for (const discipline of this.disciplines) {
+                if (!discipline.template_id && (discipline.templateOptions || []).length === 1) {
+                    discipline.template_id = String(discipline.templateOptions[0].id);
+                }
                 if (!discipline.template_id) {
                     problems.push(`${discipline.label || discipline.discipline}: selecione um modelo de memorial.`);
                 }
                 if ((discipline.missing || []).length) {
-                    problems.push(`${discipline.label || discipline.discipline}: faltam ${discipline.missing.length} campo(s) obrigatório(s).`);
+                    problems.push(`${discipline.label || discipline.discipline}: faltam ${discipline.missing.length} campo(s) obrigatório(s) — preencha o questionário antes de gerar.`);
                 }
                 if (!(discipline.templateOptions || []).length) {
                     problems.push(`${discipline.label || discipline.discipline}: nenhum modelo pronto disponível no catálogo.`);
                 }
             }
             if (!this.sharedData.localizacao && !this.sharedData.municipio) {
-                problems.push('Informe ao menos local da obra ou município nos dados compartilhados.');
+                problems.push('Informe ao menos local da obra ou município nos dados do projeto (final do formulário).');
+            }
+            const professionalName = (this.professionalData.full_name || '').trim().toLowerCase();
+            if (!professionalName || professionalName === 'a definir') {
+                problems.push('Informe o nome do responsável técnico nos dados do projeto (final do formulário).');
             }
             return problems;
         },

@@ -79,5 +79,10 @@ Thumbs.db
 v0-certidao-bot/
 SnapEng/
 
+# Inbox de templates (nunca seed publico)
+engineering_templates/_inbox/**
+!engineering_templates/_inbox/README.md
+!engineering_templates/_inbox/.gitkeep
+
 # Jupyter
 .ipynb_checkpoints

@@ -39,6 +39,24 @@ DISCIPLINE_CATEGORY_MAP = {
     "estrutura_metalica": ["estruturas"],
     "estrutura_concreto": ["estruturas"],
     "fundacoes": ["estruturas", "civil_infra"],
+    "pavimentacao": ["civil_infra"],
+    "subestacao": ["eletrica"],
+}
+
+# Preferencia de subcategory para auto-selecao (evita SPDA no fluxo de eletrica, etc.).
+DISCIPLINE_PREFERRED_SUBCATEGORY = {
+    "eletrica": "eletrica",
+    "hidraulica": "hidraulica",
+    "pluvial": "pluvial",
+    "sanitario": "sanitario",
+    "spda": "spda",
+    "corpo_bombeiros": "corpo_bombeiros",
+    "arquitetura": "arquitetura",
+    "estrutura_metalica": "estrutura_metalica",
+    "estrutura_concreto": "concreto_armado",
+    "fundacoes": "fundacoes",
+    "pavimentacao": "pavimentacao",
+    "subestacao": "subestacao",
 }
 
 
@@ -65,7 +83,8 @@ def _professional_metadata(request: MemorialBundleRequest) -> Dict[str, Any]:
 @router.get("/template-options/{discipline}")
 async def list_template_options(discipline: str, db: Session = Depends(get_db)):
     """Lista templates geradores compatíveis com uma disciplina."""
-    categories = DISCIPLINE_CATEGORY_MAP.get(discipline.lower().strip())
+    key = discipline.lower().strip()
+    categories = DISCIPLINE_CATEGORY_MAP.get(key)
     if categories is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Disciplina não encontrada")
 
@@ -75,9 +94,29 @@ async def list_template_options(discipline: str, db: Session = Depends(get_db)):
         .filter(EngineeringTemplate.is_public == 1)
         .all()
     )
-    return {
-        "discipline": discipline.lower().strip(),
-        "templates": [
+    preferred = DISCIPLINE_PREFERRED_SUBCATEGORY.get(key)
+    if preferred:
+        matched = [
+            template
+            for template in templates
+            if (template.subcategory or "").strip().lower() == preferred
+        ]
+        if matched:
+            templates = matched
+
+    ready_options = []
+    for template in templates:
+        assessment = assess_template(
+            {
+                **(template.structure or {}),
+                "variables": (template.structure or {}).get("variables")
+                or template.variables
+                or [],
+            }
+        )
+        if not assessment["ready"]:
+            continue
+        ready_options.append(
             {
                 "id": template.id,
                 "name": template.name,
@@ -85,16 +124,11 @@ async def list_template_options(discipline: str, db: Session = Depends(get_db)):
                 "subcategory": template.subcategory,
                 "ready": True,
             }
-            for template in templates
-            if assess_template(
-                {
-                    **(template.structure or {}),
-                    "variables": (template.structure or {}).get("variables")
-                    or template.variables
-                    or [],
-                }
-            )["ready"]
-        ],
+        )
+
+    return {
+        "discipline": key,
+        "templates": ready_options,
     }
 
 
@@ -165,7 +199,11 @@ async def plan_memorials(
                     question["name"]
                     for question in questionnaire["questions"]
                     if question.get("required")
+                    and TemplateEngine.is_question_active(
+                        question, {**request.enterprise.shared_data, **selection.data}
+                    )
                     and not selection.data.get(question["name"])
+                    and not request.enterprise.shared_data.get(question["name"])
                 ],
                 "rule_warnings": validate_discipline_rules(discipline, selection.data),
                 "template_name": template.name if template else None,
@@ -268,6 +306,7 @@ async def generate_memorial_bundle(
         "title": f"MEMORIAIS - {request.enterprise.name}",
         "obra": request.enterprise.name,
         "local": request.enterprise.shared_data.get("localizacao", "N/A"),
+        "shared_data": dict(request.enterprise.shared_data or {}),
         **professional_metadata,
     }
     combined_content = {"sections": [], "calculations": {}, "normas": []}

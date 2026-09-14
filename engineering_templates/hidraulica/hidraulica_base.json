@@ -1,0 +1,25 @@
+{
+  "name": "Instalações Hidráulicas Base",
+  "description": "Memorial descritivo de instalacoes hidraulicas prediais de agua fria/quente.",
+  "category": "hidraulica",
+  "subcategory": "hidraulica",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes hidraulicas da edificacao do tipo {{tipo_edificacao}}, em {{localizacao}}, com {{numero_pavimentos}} pavimento(s) e ocupacao estimada de {{ocupacao_total}} pessoas."},
+    {"title": "2. ABASTECIMENTO", "content": "Fonte de abastecimento: {{abastecimento}}. Reservatorio inferior: {{reservatorio_inferior}} L. Reservatorio superior: {{reservatorio_superior}} L."},
+    {"title": "3. AGUA QUENTE E MATERIAIS", "content": "Sistema de agua quente: {{agua_quente}}. Materiais e sistemas previstos: {{materiais_hidraulicos}}."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 5626 - Instalacoes prediais de agua fria", "ABNT NBR 7198 - Projeto e execucao de instalacoes prediais de agua quente"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
+    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
+    {"name": "ocupacao_total", "type": "number", "label": "Populacao estimada", "required": true, "min": 1},
+    {"name": "abastecimento", "type": "select", "label": "Fonte de abastecimento", "required": true, "options": [{"value": "rede_publica", "label": "Rede publica"}, {"value": "poco", "label": "Poco"}, {"value": "mista", "label": "Rede publica e poco"}]},
+    {"name": "reservatorio_inferior", "type": "number", "label": "Reservatorio inferior (L)", "required": false, "min": 0},
+    {"name": "reservatorio_superior", "type": "number", "label": "Reservatorio superior (L)", "required": false, "min": 0},
+    {"name": "agua_quente", "type": "select", "label": "Sistema de agua quente", "required": false, "options": [{"value": "nao", "label": "Nao"}, {"value": "sim", "label": "Sim"}]},
+    {"name": "materiais_hidraulicos", "type": "textarea", "label": "Materiais e sistemas", "required": false}
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Memorial de Fundacoes Base",
+  "name": "Fundações Base",
   "description": "Memorial descritivo para fundacoes e infraestrutura.",
   "category": "estruturas",
   "subcategory": "fundacoes",
@@ -16,10 +16,10 @@
     {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
     {"name": "tipo_fundacao", "type": "text", "label": "Tipo de fundacao", "required": true},
     {"name": "sondagem_disponivel", "type": "select", "label": "Sondagem disponivel", "required": true, "options": [{"value": "sim", "label": "Sim"}, {"value": "nao", "label": "Nao"}]},
-    {"name": "tipo_solo", "type": "text", "label": "Tipo de solo", "required": true},
-    {"name": "tensao_admissivel", "type": "number", "label": "Tensao admissivel (kPa)", "required": true, "min": 0},
-    {"name": "nivel_agua", "type": "number", "label": "Nivel do lencol (m)", "required": true, "min": 0},
+    {"name": "tipo_solo", "type": "text", "label": "Tipo de solo", "required": false},
+    {"name": "tensao_admissivel", "type": "number", "label": "Tensao admissivel (kPa)", "required": false, "min": 0},
+    {"name": "nivel_agua", "type": "number", "label": "Nivel do lencol (m)", "required": false, "min": 0},
     {"name": "cargas_fundacao", "type": "textarea", "label": "Cargas na fundacao", "required": true},
-    {"name": "criterios_execucao", "type": "textarea", "label": "Criterios de execucao", "required": true}
+    {"name": "criterios_execucao", "type": "textarea", "label": "Criterios de execucao", "required": false}
   ]
 }

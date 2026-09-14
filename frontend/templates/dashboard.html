@@ -4,7 +4,7 @@
 {% block title %}Dashboard - SNAPENG{% endblock %}
 
 {% block content %}
-<div x-data="dashboard()" class="max-w-7xl mx-auto">
+<div x-data="dashboard()" x-init="init()" class="max-w-7xl mx-auto">
 
     <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
         <div>
@@ -13,6 +13,9 @@
             <p x-show="claimedNotice" class="text-sm text-green-700 mt-2" x-text="claimedNotice"></p>
         </div>
         <div class="flex flex-wrap gap-3">
+            <a href="/exemplos" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold">
+                Ver exemplos
+            </a>
             <a href="/memorials/new" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
                 + Novo memorial
             </a>
@@ -58,7 +61,10 @@
         <div x-show="!loading && error" class="p-8 text-center text-red-600" x-text="error"></div>
         <div x-show="!loading && !error && filteredProjects.length === 0" class="p-8 text-center text-gray-500">
             <p x-text="hasToken ? 'Nenhum projeto encontrado.' : 'Faça login para ver projetos salvos na conta.'"></p>
-            <a href="/memorials/new" class="inline-block mt-4 text-blue-600 hover:underline">Criar memorial agora</a>
+            <div class="mt-4 flex flex-wrap justify-center gap-4">
+                <a href="/exemplos" class="text-indigo-600 hover:underline">Explorar projetos-modelo</a>
+                <a href="/memorials/new" class="text-blue-600 hover:underline">Criar memorial agora</a>
+            </div>
         </div>
         <div x-show="!loading && filteredProjects.length" class="divide-y divide-gray-200">
             <template x-for="project in filteredProjects" :key="project.id">

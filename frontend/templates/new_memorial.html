@@ -1,180 +1,99 @@
-<!-- Arquivo: frontend/templates/new_memorial.html -->
 {% extends "base.html" %}
 
 {% block title %}Novo Memorial - SNAPENG{% endblock %}
 
 {% block content %}
-<div x-data="newMemorial()" x-init="init()" class="max-w-4xl mx-auto">
-    
-    <!-- Header -->
+<div x-data="newMemorial()" x-init="init()" class="max-w-3xl mx-auto">
     <div class="mb-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-2">Novo Memorial Descritivo</h1>
-        <p class="text-gray-600" x-text="'Template: ' + (template?.name || 'Carregando...')"></p>
+        <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Template único</p>
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Criar memorial</h1>
+        <p class="text-gray-600" x-text="'Modelo: ' + (template?.name || 'Carregando...')"></p>
+        <p class="text-sm text-gray-500 mt-2">
+            Informe só o nome agora. Os demais dados do projeto ficam no preenchimento, antes de gerar.
+            Preferir <a href="/memorials/new" class="text-blue-600 hover:underline">empreendimento multidisciplinar</a>?
+        </p>
     </div>
 
-    <!-- Loading -->
-    <div x-show="loading" x-cloak class="text-center py-12">
-        <div class="text-gray-500">Carregando template...</div>
-    </div>
+    <div x-show="loading" x-cloak class="text-center py-12 text-gray-500">Carregando template...</div>
 
-    <!-- Form -->
     <div x-show="!loading && template" x-cloak class="bg-white rounded-lg shadow p-6">
-        <form @submit.prevent="createProject">
-            
-            <!-- Informações Básicas -->
-            <div class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Informações do Projeto</h2>
-                
-                <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
-                        Nome do Projeto *
-                    </label>
-                    <input 
-                        type="text" 
-                        x-model="projectName"
-                        required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </div>
+        <form @submit.prevent="createProject" class="space-y-6">
+            <label class="block">
+                <span class="text-sm font-medium text-gray-700">Nome do empreendimento *</span>
+                <input
+                    type="text"
+                    x-model="projectName"
+                    required
+                    minlength="2"
+                    placeholder="Ex.: Residencial Parque das Águas"
+                    class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </label>
 
-                <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
-                        Descrição
-                    </label>
-                    <textarea 
-                        x-model="projectDescription"
-                        rows="3"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-                </div>
+            <div class="flex justify-between items-center pt-4 border-t">
+                <a href="/templates/select" class="text-gray-600 hover:text-gray-900">← Voltar</a>
+                <button
+                    type="submit"
+                    :disabled="saving"
+                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 font-semibold">
+                    <span x-show="!saving">Continuar para o preenchimento</span>
+                    <span x-show="saving">Criando rascunho...</span>
+                </button>
             </div>
-
-            <!-- Questionário do Template -->
-            <div class="mb-6" x-show="template && template.variables">
-                <h2 class="text-xl font-semibold mb-2">Perguntas iniciais</h2>
-                <p class="text-sm text-gray-600 mb-4">Preencha as informações técnicas para montar a primeira versão do memorial.</p>
-                
-                <div class="space-y-4">
-                    <template x-for="variable in template.variables" :key="variable.name">
-                        <div class="border-b border-gray-100 pb-4">
-                            <template x-if="variable.group">
-                                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3" x-text="variable.group"></h3>
-                            </template>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span x-text="variable.label || variable.name"></span>
-                                <span x-show="variable.required" class="text-red-500">*</span>
-                            </label>
-                            <p x-show="variable.description" class="text-xs text-gray-500 mb-2" x-text="variable.description"></p>
-                            <div class="flex items-center gap-2">
-                                <template x-if="variable.type === 'textarea'">
-                                    <textarea x-model="projectData[variable.name]" :required="variable.required" :placeholder="variable.placeholder || ''" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-                                </template>
-                                <template x-if="variable.type === 'select'">
-                                    <select x-model="projectData[variable.name]" :required="variable.required" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                        <option value="">Selecione uma opção</option>
-                                        <template x-for="option in (variable.options || [])" :key="option.value">
-                                            <option :value="option.value" x-text="option.label"></option>
-                                        </template>
-                                    </select>
-                                </template>
-                                <template x-if="variable.type !== 'textarea' && variable.type !== 'select'">
-                                    <input :type="variable.type === 'number' ? 'number' : 'text'" x-model="projectData[variable.name]" :required="variable.required" :min="variable.min" :max="variable.max" :step="variable.step || (variable.type === 'number' ? 'any' : null)" :placeholder="variable.placeholder || ''" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                </template>
-                                <span x-show="variable.unit" class="text-sm text-gray-500 whitespace-nowrap" x-text="variable.unit"></span>
-                            </div>
-                            <p x-show="fieldErrors[variable.name]" class="text-sm text-red-600 mt-1" x-text="fieldErrors[variable.name]"></p>
-                        </div>
-                    </template>
-                </div>
-            </div>
-
-            <!-- Botões -->
-            <div class="flex justify-between items-center pt-6 border-t">
-                <a href="/templates/select" class="text-gray-600 hover:text-gray-900">
-                    ← Voltar para Templates
-                </a>
-                <div class="flex gap-4">
-                    <button 
-                        type="button"
-                        @click="previewProject()"
-                        class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                        Preview
-                    </button>
-                    <button 
-                        type="submit"
-                        :disabled="saving"
-                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50">
-                        <span x-show="!saving">Continuar sem conta</span>
-                        <span x-show="saving">Salvando...</span>
-                    </button>
-                </div>
-            </div>
-
         </form>
     </div>
 
-    <!-- Error Message -->
-    <div x-show="error" x-cloak class="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-        <span x-text="error"></span>
-    </div>
-
-    <div x-show="preview" x-cloak class="mt-6 bg-white rounded-lg shadow p-6">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-semibold">Prévia do memorial</h2>
-            <button type="button" @click="downloadDocx()" :disabled="generating" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50">
-                <span x-show="!generating">Baixar DOCX</span>
-                <span x-show="generating">Gerando...</span>
-            </button>
-        </div>
-        <template x-for="section in (preview?.sections || [])" :key="section.title">
-            <article class="mb-5">
-                <h3 class="font-semibold text-gray-900" x-text="section.title"></h3>
-                <p class="text-gray-700 whitespace-pre-line mt-1" x-text="section.content"></p>
-            </article>
-        </template>
-    </div>
-
+    <div x-show="error" x-cloak class="mt-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
 </div>
 {% endblock %}
 
 {% block scripts %}
 <script>
 function newMemorial() {
+    const SUBCATEGORY_TO_DISCIPLINE = {
+        arquitetura: 'arquitetura',
+        corpo_bombeiros: 'corpo_bombeiros',
+        eletrica: 'eletrica',
+        spda: 'spda',
+        estrutura_metalica: 'estrutura_metalica',
+        concreto_armado: 'estrutura_concreto',
+        fundacoes: 'fundacoes',
+        hidraulica: 'hidraulica',
+        pluvial: 'pluvial',
+        sanitario: 'sanitario',
+        pavimentacao: 'pavimentacao',
+        subestacao: 'subestacao'
+    };
+
     return {
         template: null,
         templateId: {{ template_id }},
         loading: true,
         saving: false,
         error: null,
-        fieldErrors: {},
-        preview: null,
-        generating: false,
         projectName: '',
-        projectDescription: '',
-        projectData: {},
 
         async init() {
             await this.loadTemplate();
         },
 
+        formatDetail(detail, fallback) {
+            if (!detail) return fallback;
+            if (typeof detail === 'string') return detail;
+            if (Array.isArray(detail)) return detail.map(item => item.msg || JSON.stringify(item)).join(' ');
+            if (detail.message) return detail.message;
+            return fallback;
+        },
+
         async loadTemplate() {
             this.loading = true;
             try {
-                const response = window.SnapEngAuth
-                    ? await window.SnapEngAuth.authFetch(`/api/v1/templates/${this.templateId}`)
-                    : await fetch(`/api/v1/templates/${this.templateId}`, { credentials: 'include' });
-                if (response.ok) {
-                    this.template = await response.json();
-                    
-                    // Inicializar projectData com as variáveis do template
-                    if (this.template.variables) {
-                        this.template.variables.forEach(v => {
-                            this.projectData[v.name] = '';
-                        });
-                    }
-                } else {
-                    this.error = 'Erro ao carregar template';
+                const response = await fetch(`/api/v1/templates/${this.templateId}`, { credentials: 'include' });
+                if (!response.ok) {
+                    this.error = 'Não foi possível carregar o template.';
+                    return;
                 }
+                this.template = await response.json();
             } catch (error) {
-                console.error('Erro:', error);
                 this.error = 'Erro ao carregar template: ' + error.message;
             } finally {
                 this.loading = false;
@@ -184,81 +103,58 @@ function newMemorial() {
         async createProject() {
             this.saving = true;
             this.error = null;
-            this.fieldErrors = {};
-
             try {
-                const response = await fetch(`/api/v1/templates/${this.templateId}/preview`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ project_data: this.projectData })
-                });
-
-                if (response.ok) {
-                    const result = await response.json();
-                    if (!result.valid) {
-                        this.fieldErrors = result.errors || {};
-                        this.error = 'Revise os campos obrigatórios antes de continuar.';
-                        return;
-                    }
-                    this.preview = result.content;
-                    localStorage.setItem('snapeng_draft', JSON.stringify({
-                        name: this.projectName,
-                        description: this.projectDescription,
-                        template_id: this.templateId,
-                        project_data: this.projectData
-                    }));
-                    this.error = 'Rascunho salvo neste navegador. O salvamento permanente será adicionado depois da autenticação.';
-                } else {
-                    const errorData = await response.json();
-                    this.error = errorData.detail || 'Erro ao gerar prévia';
-                }
-            } catch (error) {
-                console.error('Erro:', error);
-                this.error = 'Erro ao criar projeto: ' + error.message;
-            } finally {
-                this.saving = false;
-            }
-        },
-
-        previewProject() {
-            this.createProject();
-        },
-
-        async downloadDocx() {
-            this.generating = true;
-            this.error = null;
-            try {
-                const response = await fetch(`/api/v1/templates/${this.templateId}/generate`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        project_name: this.projectName || 'Memorial descritivo',
-                        description: this.projectDescription,
-                        project_data: this.projectData
-                    })
-                });
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    this.error = errorData.detail?.message || 'Erro ao gerar DOCX';
+                const name = (this.projectName || '').trim();
+                if (name.length < 2) {
+                    this.error = 'Informe o nome do empreendimento.';
                     return;
                 }
-                const blob = await response.blob();
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = `${this.projectName || 'memorial_descritivo'}.docx`;
-                link.click();
-                URL.revokeObjectURL(url);
+                const subcategory = (this.template?.subcategory || '').toLowerCase();
+                const discipline = SUBCATEGORY_TO_DISCIPLINE[subcategory];
+                if (!discipline) {
+                    this.error = 'Este modelo não está mapeado para o fluxo atual. Use o empreendimento multidisciplinar.';
+                    return;
+                }
+
+                const body = {
+                    enterprise: {
+                        name,
+                        description: '',
+                        shared_data: {}
+                    },
+                    mode: 'both',
+                    disciplines: [{
+                        discipline,
+                        template_id: this.templateId,
+                        data: {}
+                    }],
+                    professional: {
+                        full_name: 'A definir',
+                        professional_title: 'Engenheiro(a)'
+                    },
+                    ttl_days: 7,
+                    status: 'novo'
+                };
+
+                const response = await fetch('/api/v1/drafts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    this.error = this.formatDetail(data.detail, 'Não foi possível criar o rascunho.');
+                    return;
+                }
+                localStorage.setItem('snapeng_draft_id', data.draft_id);
+                window.location.href = `/memorials/draft/${data.draft_id}`;
             } catch (error) {
-                this.error = 'Erro ao gerar DOCX: ' + error.message;
+                this.error = 'Erro ao criar memorial: ' + error.message;
             } finally {
-                this.generating = false;
+                this.saving = false;
             }
         }
     }
 }
 </script>
 {% endblock %}
-

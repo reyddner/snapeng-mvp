@@ -1,5 +1,5 @@
 {
-  "name": "Memorial de Drenagem Pluvial Base",
+  "name": "Drenagem Pluvial Base",
   "description": "Memorial descritivo de aguas pluviais.",
   "category": "hidraulica",
   "subcategory": "pluvial",
@@ -15,11 +15,11 @@
   "variables": [
     {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
     {"name": "area_contribuicao", "type": "number", "label": "Area contribuinte (m2)", "required": true, "min": 0},
-    {"name": "intensidade_chuva", "type": "number", "label": "Intensidade de chuva (mm/h)", "required": true, "min": 0},
-    {"name": "tempo_retorno", "type": "number", "label": "Tempo de retorno (anos)", "required": true, "min": 1},
+    {"name": "intensidade_chuva", "type": "number", "label": "Intensidade de chuva (mm/h)", "required": false, "min": 0},
+    {"name": "tempo_retorno", "type": "number", "label": "Tempo de retorno (anos)", "required": false, "min": 1},
     {"name": "coeficiente_escoamento", "type": "number", "label": "Coeficiente de escoamento", "required": true, "min": 0, "max": 1},
-    {"name": "sistema_drenagem", "type": "textarea", "label": "Sistema de drenagem", "required": true},
+    {"name": "sistema_drenagem", "type": "textarea", "label": "Sistema de drenagem", "required": false},
     {"name": "destino_aguas", "type": "text", "label": "Destino das aguas", "required": true},
-    {"name": "pontos_lancamento", "type": "text", "label": "Pontos de lancamento", "required": true}
+    {"name": "pontos_lancamento", "type": "text", "label": "Pontos de lancamento", "required": false}
   ]
 }

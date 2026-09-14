@@ -8,8 +8,7 @@
         <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Passo 1 de 2</p>
         <h1 class="text-3xl font-bold text-gray-900">Novo empreendimento</h1>
         <p class="text-gray-600 mt-2 max-w-2xl">
-            Informe a obra, escolha as disciplinas e o responsável técnico.
-            Em seguida você preenche o questionário e gera os memoriais em DOCX.
+            Informe o nome e as disciplinas. Localização e responsável técnico ficam no preenchimento, antes de gerar.
         </p>
     </div>
 
@@ -18,33 +17,11 @@
 
     <form x-show="!loadingDisciplines && !loadError" @submit.prevent="createPlan" class="space-y-6" x-cloak>
         <section class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-4">Dados do empreendimento</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <label class="block md:col-span-2">
-                    <span class="text-sm font-medium text-gray-700">Nome do empreendimento *</span>
-                    <input x-model="enterprise.name" required placeholder="Ex.: Residencial Parque das Águas"
-                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Local da obra</span>
-                    <input x-model="enterprise.shared_data.localizacao" placeholder="Endereço ou referência"
-                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Município</span>
-                    <input x-model="enterprise.shared_data.municipio"
-                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">UF</span>
-                    <input x-model="enterprise.shared_data.uf" maxlength="2" placeholder="GO"
-                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-            </div>
-            <label class="block mt-4">
-                <span class="text-sm font-medium text-gray-700">Descrição</span>
-                <textarea x-model="enterprise.description" rows="3" placeholder="Resumo opcional do empreendimento"
-                          class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            <h2 class="text-xl font-semibold mb-4">Empreendimento</h2>
+            <label class="block">
+                <span class="text-sm font-medium text-gray-700">Nome do empreendimento *</span>
+                <input x-model="enterprise.name" required placeholder="Ex.: Residencial Parque das Águas"
+                       class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
             </label>
         </section>
 
@@ -78,37 +55,6 @@
             </div>
         </section>
 
-        <section class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-2">Responsável técnico</h2>
-            <p class="text-sm text-gray-600 mb-4">Esses dados aparecem no bloco técnico dos memoriais. Não substituem assinatura eletrônica certificada.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Nome completo *</span>
-                    <input x-model="professional.full_name" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Título profissional</span>
-                    <input x-model="professional.professional_title" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Número do CREA</span>
-                    <input x-model="professional.crea_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">UF do CREA</span>
-                    <input x-model="professional.crea_state" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Número da ART</span>
-                    <input x-model="professional.art_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Empresa</span>
-                    <input x-model="professional.company_name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                </label>
-            </div>
-        </section>
-
         <div x-show="error" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
 
         <div class="flex flex-wrap justify-between items-center gap-3">
@@ -138,14 +84,6 @@ function newEnterprise() {
             description: '',
             shared_data: { localizacao: '', municipio: '', uf: '' }
         },
-        professional: {
-            full_name: '',
-            professional_title: 'Engenheiro(a)',
-            crea_number: '',
-            crea_state: '',
-            art_number: '',
-            company_name: ''
-        },
 
         formatDetail(detail, fallback) {
             if (!detail) return fallback;
@@ -170,6 +108,23 @@ function newEnterprise() {
             }
         },
 
+        async resolveTemplateId(discipline) {
+            try {
+                const response = await fetch(`/api/v1/memorials/template-options/${discipline}`);
+                if (!response.ok) return null;
+                const data = await response.json();
+                const templates = data.templates || [];
+                if (!templates.length) return null;
+                const preferred = templates.find(item =>
+                    (item.subcategory || '').toLowerCase() === String(discipline).toLowerCase()
+                    || (discipline === 'estrutura_concreto' && (item.subcategory || '') === 'concreto_armado')
+                ) || templates[0];
+                return preferred?.id ?? null;
+            } catch (_) {
+                return null;
+            }
+        },
+
         async createPlan() {
             this.error = null;
             if (!this.enterprise.name.trim()) {
@@ -180,46 +135,70 @@ function newEnterprise() {
                 this.error = 'Selecione ao menos uma disciplina.';
                 return;
             }
-            if (!this.professional.full_name.trim()) {
-                this.error = 'Informe o responsável técnico.';
-                return;
-            }
             this.saving = true;
             try {
+                const disciplines = [];
+                for (const key of this.selectedDisciplines) {
+                    const templateId = await this.resolveTemplateId(key);
+                    if (!templateId) {
+                        this.error = `Nenhum modelo pronto para a disciplina "${key}". Rode o seed de templates.`;
+                        return;
+                    }
+                    disciplines.push({
+                        discipline: key,
+                        template_id: Number(templateId),
+                        data: {}
+                    });
+                }
+
                 const body = {
                     enterprise: this.enterprise,
                     mode: this.mode,
-                    disciplines: this.selectedDisciplines.map(discipline => ({ discipline })),
-                    professional: this.professional,
-                    ttl_days: 7
+                    disciplines,
+                    professional: {
+                        full_name: 'A definir',
+                        professional_title: 'Engenheiro(a)'
+                    },
+                    ttl_days: 7,
+                    status: 'novo'
                 };
                 const draftResponse = await fetch('/api/v1/drafts', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(body)
                 });
-                const draftData = await draftResponse.json();
+                let draftData = {};
+                try { draftData = await draftResponse.json(); } catch (_) {}
                 if (!draftResponse.ok) {
-                    this.error = this.formatDetail(draftData.detail, 'Não foi possível salvar o rascunho.');
+                    this.error = this.formatDetail(draftData.detail, 'Não foi possível criar o rascunho.');
                     return;
                 }
-                const response = await fetch('/api/v1/memorials/plan', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        enterprise: this.enterprise,
-                        mode: this.mode,
-                        disciplines: body.disciplines,
-                        professional: this.professional
-                    })
-                });
-                const data = await response.json();
-                if (!response.ok) {
-                    this.error = this.formatDetail(data.detail, 'Não foi possível montar o plano.');
+                if (!draftData.draft_id) {
+                    this.error = 'Rascunho criado sem identificador. Tente novamente.';
                     return;
                 }
                 localStorage.setItem('snapeng_draft_id', draftData.draft_id);
-                localStorage.setItem('snapeng_enterprise_plan', JSON.stringify(data));
+
+                // Se o usuario ja estiver logado, salva automaticamente no Dashboard.
+                if (window.SnapEngAuth) {
+                    try {
+                        const user = await window.SnapEngAuth.getCurrentUser();
+                        if (user) {
+                            const claimResponse = await window.SnapEngAuth.authFetch(
+                                `/api/v1/drafts/${draftData.draft_id}/claim`,
+                                { method: 'POST' }
+                            );
+                            if (claimResponse.ok) {
+                                const project = await claimResponse.json();
+                                if (project && project.id) {
+                                    window.location.href = `/editor/${project.id}`;
+                                    return;
+                                }
+                            }
+                        }
+                    } catch (_) { /* segue no fluxo publico */ }
+                }
+
                 window.location.href = `/memorials/draft/${draftData.draft_id}`;
             } catch (error) {
                 this.error = 'Erro de conexão: ' + error.message;

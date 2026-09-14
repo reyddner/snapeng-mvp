@@ -87,9 +87,10 @@
     },
     {
       "name": "penetracao_asfalto",
-      "type": "number",
+      "type": "text",
       "label": "Penetração do Asfalto",
-      "required": true
+      "required": true,
+      "description": "Ex.: 50/70 (grau de penetração do CAP)"
     },
     {
       "name": "etapas_execucao",

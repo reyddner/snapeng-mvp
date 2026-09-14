@@ -1,5 +1,5 @@
 {
-  "name": "Memorial Estrutura Metalica Base",
+  "name": "Estrutura Metálica Base",
   "description": "Memorial descritivo para estruturas metalicas.",
   "category": "estruturas",
   "subcategory": "estrutura_metalica",
@@ -19,7 +19,7 @@
     {"name": "aco_estrutural", "type": "text", "label": "Aco estrutural", "required": true},
     {"name": "ligacoes", "type": "text", "label": "Tipo de ligacoes", "required": true},
     {"name": "proteccao_corrosao", "type": "text", "label": "Protecao contra corrosao", "required": true},
-    {"name": "contraventamento", "type": "textarea", "label": "Contraventamento", "required": true},
+    {"name": "contraventamento", "type": "textarea", "label": "Contraventamento", "required": false},
     {"name": "cargas_adotadas", "type": "textarea", "label": "Cargas consideradas", "required": true}
   ]
 }

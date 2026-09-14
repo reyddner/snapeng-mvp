@@ -1,0 +1,29 @@
+{
+  "name": "Instalações Elétricas Base",
+  "description": "Memorial descritivo de instalacoes eletricas prediais.",
+  "category": "eletrica",
+  "subcategory": "eletrica",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes eletricas da edificacao do tipo {{tipo_edificacao}}, com uso {{uso_edificacao}}, localizada em {{localizacao}}."},
+    {"title": "2. FORNECIMENTO E CARGAS", "content": "A tensao de fornecimento adotada e {{tensao_fornecimento}}. A potencia instalada e de {{potencia_instalada}} kW, com demanda calculada de {{carga_demanda}} kW. Padrao de entrada: {{padrao_entrada}}."},
+    {"title": "3. GERACAO AUXILIAR", "content": "Presenca de gerador: {{gerador}}. Quando aplicavel, potencia {{potencia_gerador}} kVA, autonomia {{autonomia_gerador}} h. Transferencia e cargas: {{transferencia_gerador}}."},
+    {"title": "4. ATERRAMENTO", "content": "Sistema de aterramento: {{aterramento_eletrico}}."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 5410 - Instalacoes eletricas de baixa tensao"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
+    {"name": "uso_edificacao", "type": "text", "label": "Uso da edificacao", "required": true},
+    {"name": "tensao_fornecimento", "type": "select", "label": "Tensao de fornecimento", "required": true, "options": [{"value": "127_220", "label": "127/220 V"}, {"value": "220_380", "label": "220/380 V"}, {"value": "media_tensao", "label": "Media tensao"}]},
+    {"name": "potencia_instalada", "type": "number", "label": "Potencia instalada (kW)", "required": true, "min": 0},
+    {"name": "carga_demanda", "type": "number", "label": "Demanda calculada (kW)", "required": false, "min": 0},
+    {"name": "padrao_entrada", "type": "text", "label": "Tipo de padrao de entrada", "required": false},
+    {"name": "gerador", "type": "select", "label": "Possui gerador?", "required": false, "options": [{"value": "nao", "label": "Nao"}, {"value": "sim", "label": "Sim"}]},
+    {"name": "potencia_gerador", "type": "number", "label": "Potencia do gerador (kVA)", "required": true, "min": 0, "depends_on": {"field": "gerador", "equals": "sim"}},
+    {"name": "autonomia_gerador", "type": "number", "label": "Autonomia do gerador (h)", "required": true, "min": 0, "depends_on": {"field": "gerador", "equals": "sim"}},
+    {"name": "transferencia_gerador", "type": "textarea", "label": "Transferencia e cargas", "required": true, "depends_on": {"field": "gerador", "equals": "sim"}},
+    {"name": "aterramento_eletrico", "type": "textarea", "label": "Sistema de aterramento", "required": false}
+  ]
+}

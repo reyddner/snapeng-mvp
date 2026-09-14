@@ -1,5 +1,5 @@
 {
-  "name": "Memorial de SPDA Base",
+  "name": "SPDA Base",
   "description": "Memorial descritivo de protecao contra descargas atmosfericas.",
   "category": "eletrica",
   "subcategory": "spda",
@@ -16,7 +16,8 @@
     {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
     {"name": "altura_edificacao", "type": "number", "label": "Altura (m)", "required": true, "min": 0},
     {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
-    {"name": "nivel_protecao", "type": "select", "label": "Nivel de protecao", "required": true, "options": [{"value": "I", "label": "Nivel I"}, {"value": "II", "label": "Nivel II"}, {"value": "III", "label": "Nivel III"}, {"value": "IV", "label": "Nivel IV"}]},
+    {"name": "nivel_protecao", "type": "select", "label": "Nivel de protecao", "required": true, "options": [{"value": "I", "label": "Nivel I"}, {"value": "II", "label": "Nivel II"}, {"value": "III", "label": "Nivel III"}, {"value": "IV", "label": "Nivel IV"}], "depends_on": {"field": "analise_risco_spda", "not_empty": true}},
+    {"name": "analise_risco_spda", "type": "textarea", "label": "Analise de risco", "required": true},
     {"name": "metodo_spda", "type": "text", "label": "Metodo do SPDA", "required": true},
     {"name": "subsistema_captacao", "type": "textarea", "label": "Captacao", "required": true},
     {"name": "aterramento_spda", "type": "textarea", "label": "Aterramento", "required": true},

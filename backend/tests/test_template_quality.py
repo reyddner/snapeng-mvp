@@ -16,8 +16,24 @@ def test_all_template_files_are_valid_json():
         assert isinstance(result["ready"], bool)
 
 
-def test_reference_material_is_not_generation_ready():
-    reference = TEMPLATES_DIR / "civil_infra" / "1.000_questões_comentadas_de_engenharia_civil.json"
-    result = assess_template(json.loads(reference.read_text(encoding="utf-8")))
+def test_official_bases_are_generation_ready():
+    ready_files = list(TEMPLATES_DIR.rglob("*_base.json")) + list(
+        TEMPLATES_DIR.rglob("concreto_armado.json")
+    )
+    assert ready_files
+    for path in ready_files:
+        result = assess_template(json.loads(path.read_text(encoding="utf-8")))
+        assert result["ready"] is True, f"{path.name}: {result['errors']}"
+
+
+def test_incomplete_structure_is_not_generation_ready():
+    result = assess_template(
+        {
+            "name": "Material de referencia",
+            "sections": [],
+            "variables": [],
+            "calculations": [],
+        }
+    )
     assert result["ready"] is False
     assert result["kind"] == "reference"

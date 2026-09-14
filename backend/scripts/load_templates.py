@@ -1,114 +1,172 @@
 """
-Script para carregar templates iniciais no banco de dados
-Arquivo: backend/scripts/load_templates.py
+Script para carregar templates oficiais (allowlist) no banco.
+Remove do catalogo publico qualquer template fora da allowlist.
+Nunca carrega pastas _inbox / inbox.
 """
 
-import sys
+from __future__ import annotations
+
+import argparse
 import json
+import sys
 from pathlib import Path
 
-# Adicionar o diretório backend ao path
 backend_dir = Path(__file__).parent.parent
 sys.path.insert(0, str(backend_dir))
 
-# Importar após adicionar ao path
-try:
-    from app.config import settings
-    from app.core.database import SessionLocal, Base, engine
-    from app.models.template import EngineeringTemplate, TemplateCategory
-except ImportError as e:
-    print(f"Erro ao importar módulos: {e}")
-    print(f"Path atual: {sys.path}")
-    raise
+from app.config import settings
+from app.core.database import Base, SessionLocal, engine
+from app.models.template import EngineeringTemplate, TemplateCategory
+from app.services.official_templates import (
+    INBOX_DIR_NAMES,
+    SEED_ALLOWLIST,
+    is_sensitive_template_name,
+)
+from app.services.template_quality import assess_template
 
-# Em desenvolvimento local o script pode criar tabelas.
-# Em produção o schema deve vir exclusivamente do Alembic.
 if settings.DEBUG:
     Base.metadata.create_all(bind=engine)
 
-def load_template_from_json(json_path: Path):
-    """Carrega um template de um arquivo JSON"""
-    with open(json_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+CATEGORY_MAP = {
+    "civil": TemplateCategory.CIVIL_INFRA,
+    "civil_infra": TemplateCategory.CIVIL_INFRA,
+    "edificacoes": TemplateCategory.EDIFICACOES,
+    "estruturas": TemplateCategory.ESTRUTURAS,
+    "eletrica": TemplateCategory.ELETRICA,
+    "hidraulica": TemplateCategory.HIDRAULICA,
+    "pontes_viadutos": TemplateCategory.PONTES,
+}
 
-def load_templates():
-    """Carrega todos os templates JSON para o banco"""
+
+def load_template_from_json(json_path: Path) -> dict:
+    with open(json_path, "r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _is_inbox_path(path: Path) -> bool:
+    return any(part in INBOX_DIR_NAMES for part in path.parts)
+
+
+def _purge_non_allowlist(db) -> int:
+    keep_names = set()
+    templates_dir = Path(__file__).parent.parent.parent / "engineering_templates"
+    for json_file in templates_dir.rglob("*.json"):
+        if _is_inbox_path(json_file):
+            continue
+        if json_file.name in SEED_ALLOWLIST:
+            data = load_template_from_json(json_file)
+            keep_names.add(data.get("name"))
+
+    removed = 0
+    for template in db.query(EngineeringTemplate).all():
+        if template.name not in keep_names or is_sensitive_template_name(template.name or ""):
+            if template.is_public != 0:
+                template.is_public = 0
+                removed += 1
+    return removed
+
+
+def load_templates(*, allow_inbox: bool = False) -> None:
     db = SessionLocal()
-    
     try:
-        # Diretório de templates
         templates_dir = Path(__file__).parent.parent.parent / "engineering_templates"
-        
-        # Mapear categorias
-        category_map = {
-            'civil': TemplateCategory.CIVIL_INFRA,
-            'civil_infra': TemplateCategory.CIVIL_INFRA,
-            'edificacoes': TemplateCategory.EDIFICACOES,
-            'estruturas': TemplateCategory.ESTRUTURAS,
-            'eletrica': TemplateCategory.ELETRICA,
-            'hidraulica': TemplateCategory.HIDRAULICA,
-            'pontes_viadutos': TemplateCategory.PONTES,
-        }
-        
-        templates_loaded = 0
-        
-        # Percorrer subdiretórios
+        loaded = 0
+        updated = 0
+        skipped = 0
+
         for category_dir in templates_dir.iterdir():
             if not category_dir.is_dir():
                 continue
-                
-            category_name = category_dir.name
-            category_enum = category_map.get(category_name)
-            
-            if not category_enum:
-                print(f"[AVISO] Categoria '{category_name}' nao mapeada, pulando...")
+            if category_dir.name in INBOX_DIR_NAMES:
+                print(f"[SKIP] Pasta inbox ignorada: {category_dir.name}")
                 continue
-            
-            # Carregar templates JSON
-            for json_file in category_dir.glob("*.json"):
-                try:
-                    template_data = load_template_from_json(json_file)
-                    
-                    # Verificar se já existe
-                    existing = db.query(EngineeringTemplate).filter(
-                        EngineeringTemplate.name == template_data['name']
-                    ).first()
-                    
-                    if existing:
-                        print(f"[SKIP] Template '{template_data['name']}' ja existe, pulando...")
-                        continue
-                    
-                    # Criar template
-                    template = EngineeringTemplate(
-                        name=template_data['name'],
-                        description=template_data.get('description', ''),
+            category_enum = CATEGORY_MAP.get(category_dir.name)
+            if not category_enum:
+                continue
+
+            for json_file in sorted(category_dir.rglob("*.json")):
+                if _is_inbox_path(json_file) and not allow_inbox:
+                    print(f"[SKIP] Inbox: {json_file}")
+                    skipped += 1
+                    continue
+                if json_file.name not in SEED_ALLOWLIST:
+                    print(f"[SKIP] Fora da allowlist: {json_file.name}")
+                    skipped += 1
+                    continue
+
+                template_data = load_template_from_json(json_file)
+                if is_sensitive_template_name(template_data.get("name", "")):
+                    print(f"[SKIP] Nome sensivel: {template_data.get('name')}")
+                    skipped += 1
+                    continue
+
+                assessment = assess_template(template_data)
+                if not assessment.get("ready"):
+                    print(
+                        f"[SKIP] Nao ready: {json_file.name} -> {assessment.get('errors')}"
+                    )
+                    skipped += 1
+                    continue
+
+                meta = template_data.get("metadata") or {}
+                generated_by = str(meta.get("generated_by") or "")
+                if generated_by and "memorial" in generated_by.casefold() and not allow_inbox:
+                    print(f"[SKIP] Import automatico sem --allow-inbox: {json_file.name}")
+                    skipped += 1
+                    continue
+
+                existing = (
+                    db.query(EngineeringTemplate)
+                    .filter(EngineeringTemplate.name == template_data["name"])
+                    .first()
+                )
+                if existing:
+                    existing.description = template_data.get("description", "")
+                    existing.category = category_enum
+                    existing.subcategory = template_data.get("subcategory", "")
+                    existing.structure = template_data
+                    existing.variables = template_data.get("variables", [])
+                    existing.is_public = 1
+                    updated += 1
+                    print(f"[UPD] {template_data['name']}")
+                    continue
+
+                db.add(
+                    EngineeringTemplate(
+                        name=template_data["name"],
+                        description=template_data.get("description", ""),
                         category=category_enum,
-                        subcategory=template_data.get('subcategory', ''),
+                        subcategory=template_data.get("subcategory", ""),
                         structure=template_data,
-                        variables=template_data.get('variables', []),
+                        variables=template_data.get("variables", []),
                         is_public=1,
                         downloads=0,
-                        rating=0
+                        rating=0,
                     )
-                    
-                    db.add(template)
-                    templates_loaded += 1
-                    print(f"[OK] Template '{template_data['name']}' carregado!")
-                    
-                except Exception as e:
-                    print(f"[ERRO] Erro ao carregar {json_file}: {e}")
-        
+                )
+                loaded += 1
+                print(f"[OK] {template_data['name']}")
+
+        purged = _purge_non_allowlist(db)
         db.commit()
-        print(f"\n[SUCESSO] {templates_loaded} templates carregados com sucesso!")
-        
-    except Exception as e:
+        print(
+            f"\n[SUCESSO] carregados={loaded} atualizados={updated} "
+            f"desativados={purged} ignorados={skipped}"
+        )
+    except Exception:
         db.rollback()
-        print(f"[ERRO] {e}")
         raise
     finally:
         db.close()
 
-if __name__ == "__main__":
-    print("Carregando templates iniciais...\n")
-    load_templates()
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--allow-inbox",
+        action="store_true",
+        help="Permite carregar material de _inbox (nao recomendado em producao)",
+    )
+    args = parser.parse_args()
+    print("Carregando templates oficiais...\n")
+    load_templates(allow_inbox=args.allow_inbox)

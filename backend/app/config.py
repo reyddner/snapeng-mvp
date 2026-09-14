@@ -9,6 +9,8 @@ from typing import List
 from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from app.core.paths import default_sqlite_path, resolve_sqlite_database_url
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=True)
@@ -18,8 +20,8 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = True
 
-    # Database (SQLite por padrão para desenvolvimento)
-    DATABASE_URL: str = "sqlite:///./snapeng.db"
+    # Database — SQLite canonico na raiz do repo (nao depende do cwd)
+    DATABASE_URL: str = f"sqlite:///{default_sqlite_path().as_posix()}"
 
     # Security
     SECRET_KEY: str = "dev-secret-key-change-in-production-min-32-chars-long"
@@ -85,7 +87,8 @@ class Settings(BaseSettings):
         return value
 
     @model_validator(mode="after")
-    def enforce_production_secrets(self) -> "Settings":
+    def normalize_and_secure(self) -> "Settings":
+        self.DATABASE_URL = resolve_sqlite_database_url(self.DATABASE_URL)
         if self.DEBUG:
             return self
         insecure_markers = (

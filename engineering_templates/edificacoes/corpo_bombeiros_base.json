@@ -1,5 +1,5 @@
 {
-  "name": "Memorial de Seguranca Contra Incendio Base",
+  "name": "Segurança Contra Incêndio Base",
   "description": "Memorial descritivo para seguranca contra incendio e panico.",
   "category": "edificacoes",
   "subcategory": "corpo_bombeiros",
@@ -20,7 +20,7 @@
     {"name": "populacao_bombeiros", "type": "number", "label": "Populacao prevista", "required": true, "min": 1},
     {"name": "risco_incendio", "type": "text", "label": "Classificacao de risco", "required": true},
     {"name": "saidas_emergencia", "type": "textarea", "label": "Saidas de emergencia", "required": true},
-    {"name": "sistema_hidrantes", "type": "select", "label": "Sistema de hidrantes", "required": true, "options": [{"value": "nao_aplicavel", "label": "Nao aplicavel"}, {"value": "sim", "label": "Aplicavel"}]},
-    {"name": "sistemas_protecao", "type": "textarea", "label": "Sistemas de protecao", "required": true}
+    {"name": "sistema_hidrantes", "type": "select", "label": "Sistema de hidrantes", "required": false, "options": [{"value": "nao_aplicavel", "label": "Nao aplicavel"}, {"value": "sim", "label": "Aplicavel"}]},
+    {"name": "sistemas_protecao", "type": "textarea", "label": "Sistemas de protecao", "required": false}
   ]
 }

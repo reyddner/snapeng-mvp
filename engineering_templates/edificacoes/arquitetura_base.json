@@ -1,5 +1,5 @@
 {
-  "name": "Memorial Arquitetonico Base",
+  "name": "Arquitetônico Base",
   "description": "Memorial descritivo arquitetonico para edificacoes.",
   "category": "edificacoes",
   "subcategory": "arquitetura",
@@ -15,14 +15,14 @@
   "variables": [
     {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
     {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "municipio", "type": "text", "label": "Municipio", "required": true},
-    {"name": "uf", "type": "text", "label": "UF", "required": true},
+    {"name": "municipio", "type": "text", "label": "Municipio", "required": false},
+    {"name": "uf", "type": "text", "label": "UF", "required": false},
     {"name": "area_terreno", "type": "number", "label": "Area do terreno (m2)", "required": true, "min": 0},
     {"name": "area_construida", "type": "number", "label": "Area construida (m2)", "required": true, "min": 0},
     {"name": "programa_necessidades", "type": "textarea", "label": "Programa de necessidades", "required": true},
     {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
     {"name": "sistema_construtivo", "type": "text", "label": "Sistema construtivo", "required": true},
-    {"name": "acabamentos", "type": "textarea", "label": "Acabamentos", "required": true},
-    {"name": "acessibilidade", "type": "textarea", "label": "Acessibilidade", "required": true}
+    {"name": "acabamentos", "type": "textarea", "label": "Acabamentos", "required": false},
+    {"name": "acessibilidade", "type": "textarea", "label": "Acessibilidade", "required": false}
   ]
 }

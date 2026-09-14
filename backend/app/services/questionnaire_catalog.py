@@ -191,6 +191,34 @@ CATALOG: Dict[str, Dict[str, Any]] = {
             _question("criterios_execucao", "Criterios de escavacao e execucao", "textarea"),
         ],
     },
+    "pavimentacao": {
+        "label": "Pavimentacao asfaltica",
+        "document_types": ["memorial descritivo", "memorial de calculo"],
+        "questions": [
+            _question("tipo_obra", "Tipo de obra", required=True),
+            _question("extensao", "Extensao", "number", required=True, unit="km", min_value=0),
+            _question("cbr_campo", "CBR de campo", "number", required=True, unit="%", min_value=0),
+            _question("espessura_base", "Espessura da base", "number", required=True, unit="cm", min_value=0),
+            _question("espessura_revestimento", "Espessura do revestimento", "number", required=True, unit="cm", min_value=0),
+            _question("tipo_asfalto", "Tipo de asfalto", required=True),
+            _question("penetracao_asfalto", "Penetracao do asfalto", required=True),
+            _question("etapas_execucao", "Etapas de execucao", "textarea", required=True),
+        ],
+    },
+    "subestacao": {
+        "label": "Subestacao eletrica",
+        "document_types": ["memorial descritivo", "memorial de calculo"],
+        "questions": [
+            _question("tipo_subestacao", "Tipo de subestacao", required=True),
+            _question("potencia_instalada", "Potencia instalada", "number", required=True, unit="kVA", min_value=0),
+            _question("tensao_primaria", "Tensao primaria", "number", required=True, unit="kV", min_value=0),
+            _question("tensao_secundaria", "Tensao secundaria", "number", required=True, unit="kV", min_value=0),
+            _question("demanda_maxima", "Demanda maxima", "number", required=True, unit="kVA", min_value=0),
+            _question("potencia_transformador", "Potencia do transformador", "number", required=True, unit="kVA", min_value=0),
+            _question("equipamentos", "Equipamentos principais", "textarea", required=True),
+            _question("sistemas_protecao", "Sistemas de protecao", "textarea", required=True),
+        ],
+    },
 }
 
 
@@ -202,18 +230,17 @@ def list_disciplines() -> List[Dict[str, Any]]:
 
 
 def get_questionnaire(discipline: str) -> Dict[str, Any] | None:
+    """Retorna o questionario da disciplina.
+
+    Campos comuns (localizacao, municipio, UF, areas etc.) ficam nos
+    dados compartilhados do empreendimento — nao sao repetidos aqui.
+    """
     item = CATALOG.get(discipline.lower())
     if item is None:
         return None
-    specific_questions = deepcopy(item["questions"])
-    specific_names = {question["name"] for question in specific_questions}
-    common_questions = [
-        question for question in deepcopy(COMMON_QUESTIONS)
-        if question["name"] not in specific_names
-    ]
     return {
         "discipline": discipline.lower(),
-        "questions": common_questions + specific_questions,
+        "questions": deepcopy(item["questions"]),
         "label": item["label"],
         "document_types": item["document_types"],
     }

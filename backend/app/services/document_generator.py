@@ -33,49 +33,39 @@ class DocumentGenerator:
             BytesIO com documento DOCX
         """
         self.document = Document()
-
-        # Configurar estilos
         self._setup_styles()
-
-        # Capa
         self._add_cover_page(metadata)
 
-        # Seções do memorial
         for section in content.get("sections", []):
             self._add_section(section)
 
-        # Cálculos (se houver)
         if content.get("calculations"):
             self._add_calculations(content["calculations"])
 
-        # Normas técnicas
         if content.get("normas"):
             self._add_norms(content["normas"])
 
-        # Salvar em BytesIO
+        self._add_project_data_block(metadata)
+
         file_stream = io.BytesIO()
         self.document.save(file_stream)
         file_stream.seek(0)
-
         return file_stream
 
     def _setup_styles(self):
         """Configura estilos do documento"""
-        # python-docx já tem estilos padrão
-        # Não é necessário configurar estilos adicionais
+        return None
 
     def _add_cover_page(self, metadata: Dict[str, Any]):
-        """Adiciona capa profissional"""
+        """Capa enxuta: titulo + nome da obra (demais dados no final)."""
         def display(value: Any, fallback: str = "N/A") -> str:
             return str(value) if value not in (None, "") else fallback
 
-        # Logo/Cabeçalho
         title = self.document.add_heading(
             metadata.get("title", "MEMORIAL DESCRITIVO"), 0
         )
         title.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-        # Subtítulo
         subtitle = self.document.add_paragraph(metadata.get("subtitle", ""))
         subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
         if subtitle.runs:
@@ -83,32 +73,41 @@ class DocumentGenerator:
             subtitle_format.size = Pt(14)
             subtitle_format.color.rgb = RGBColor(89, 89, 89)
 
-        # Espaçamento
-        self.document.add_paragraph("\n" * 5)
+        self.document.add_paragraph("\n" * 3)
+        obra = self.document.add_paragraph()
+        obra.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        obra.add_run("Obra: ").bold = True
+        obra.add_run(display(metadata.get("obra")))
+        self.document.add_page_break()
 
-        # Informações do projeto
-        professional = metadata.get("professional", {})
-        info_table = self.document.add_table(rows=9, cols=2)
+    def _add_project_data_block(self, metadata: Dict[str, Any]):
+        """Bloco de identificacao do projeto e responsabilidade no final."""
+        def display(value: Any, fallback: str = "N/A") -> str:
+            return str(value) if value not in (None, "") else fallback
+
+        professional = metadata.get("professional", {}) or {}
+        shared = metadata.get("shared_data", {}) or {}
+
+        self.document.add_page_break()
+        self.document.add_heading("DADOS DO PROJETO", level=1)
+
+        info_table = self.document.add_table(rows=10, cols=2)
         info_table.style = "Light Grid Accent 1"
-
         info_data = [
             ("Obra:", display(metadata.get("obra"))),
-            ("Local:", display(metadata.get("local"))),
-            ("Responsável Técnico:", display(metadata.get("responsavel"))),
+            ("Local:", display(metadata.get("local") or shared.get("localizacao"))),
+            ("Município:", display(shared.get("municipio"))),
+            ("UF:", display(shared.get("uf"))),
+            ("Área construída:", display(shared.get("area_construida"))),
+            ("Pavimentos:", display(shared.get("numero_pavimentos"))),
+            ("Responsável Técnico:", display(metadata.get("responsavel") or professional.get("full_name"))),
             ("CREA:", display(metadata.get("crea"))),
-            ("Data:", datetime.now().strftime("%d/%m/%Y")),
             ("Empresa:", display(professional.get("company_name"))),
             ("ART/RRT:", display(professional.get("art_number") or professional.get("rrt_number"))),
-            ("Status:", "Preparado para assinatura eletrônica"),
-            ("Responsável:", display(professional.get("full_name") or metadata.get("responsavel"))),
         ]
-
         for i, (label, value) in enumerate(info_data):
             info_table.rows[i].cells[0].text = label
             info_table.rows[i].cells[1].text = value
-
-        # Quebra de página
-        self.document.add_page_break()
 
         self.document.add_heading("RESPONSABILIDADE TÉCNICA", level=1)
         signature = self.document.add_paragraph()
@@ -118,18 +117,15 @@ class DocumentGenerator:
         signature.add_run(display(professional.get("professional_title"), "Engenheiro(a)"))
         signature.add_run("\nRegistro: ").bold = True
         signature.add_run(display(metadata.get("crea"), "A definir"))
+        signature.add_run("\nData: ").bold = True
+        signature.add_run(datetime.now().strftime("%d/%m/%Y"))
         signature.add_run("\nAssinatura: ").bold = True
         signature.add_run("Pendente de assinatura eletrônica certificada")
 
     def _add_section(self, section: Dict[str, Any]):
         """Adiciona seção ao documento"""
-        # Título da seção
         self.document.add_heading(section["title"], level=1)
-
-        # Conteúdo
         self.document.add_paragraph(section["content"])
-
-        # Subseções
         for subsection in section.get("subsections", []):
             self.document.add_heading(subsection["title"], level=2)
             self.document.add_paragraph(subsection["content"])
@@ -150,7 +146,6 @@ class DocumentGenerator:
         """Adiciona referências normativas"""
         self.document.add_page_break()
         self.document.add_heading("NORMAS TÉCNICAS APLICÁVEIS", level=1)
-
         for norma in normas:
             self.document.add_paragraph(norma, style="List Bullet")
 
@@ -189,20 +184,12 @@ class DocumentGenerator:
 
         story = []
         professional = metadata.get("professional", {}) or {}
+        shared = metadata.get("shared_data", {}) or {}
         story.append(Paragraph(display(metadata.get("title"), "MEMORIAL DESCRITIVO"), styles["CoverTitle"]))
         if metadata.get("subtitle"):
             story.append(Paragraph(display(metadata.get("subtitle")), styles["BodyTextPt"]))
         story.append(Spacer(1, 0.4 * cm))
         story.append(Paragraph(f"<b>Obra:</b> {display(metadata.get('obra'))}", styles["MetaLine"]))
-        story.append(Paragraph(f"<b>Local:</b> {display(metadata.get('local'))}", styles["MetaLine"]))
-        story.append(
-            Paragraph(
-                f"<b>Responsável técnico:</b> {display(professional.get('full_name') or metadata.get('responsavel'))}",
-                styles["MetaLine"],
-            )
-        )
-        story.append(Paragraph(f"<b>CREA:</b> {display(metadata.get('crea'))}", styles["MetaLine"]))
-        story.append(Paragraph(f"<b>Data:</b> {datetime.now().strftime('%d/%m/%Y')}", styles["MetaLine"]))
         story.append(Spacer(1, 0.6 * cm))
 
         for section in content.get("sections", []):
@@ -237,7 +224,19 @@ class DocumentGenerator:
             items = [ListItem(Paragraph(str(norma), styles["BodyTextPt"])) for norma in normas]
             story.append(ListFlowable(items, bulletType="bullet"))
 
+        story.append(Paragraph("Dados do projeto", styles["Heading1"]))
+        story.append(Paragraph(f"<b>Local:</b> {display(metadata.get('local') or shared.get('localizacao'))}", styles["MetaLine"]))
+        story.append(Paragraph(f"<b>Município:</b> {display(shared.get('municipio'))}", styles["MetaLine"]))
+        story.append(Paragraph(f"<b>UF:</b> {display(shared.get('uf'))}", styles["MetaLine"]))
+        story.append(
+            Paragraph(
+                f"<b>Responsável técnico:</b> {display(professional.get('full_name') or metadata.get('responsavel'))}",
+                styles["MetaLine"],
+            )
+        )
+        story.append(Paragraph(f"<b>CREA:</b> {display(metadata.get('crea'))}", styles["MetaLine"]))
+        story.append(Paragraph(f"<b>Data:</b> {datetime.now().strftime('%d/%m/%Y')}", styles["MetaLine"]))
+
         document.build(story)
         buffer.seek(0)
         return buffer
-
