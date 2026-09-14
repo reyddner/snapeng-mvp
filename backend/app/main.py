@@ -41,11 +41,13 @@ app = FastAPI(
     openapi_url="/api/openapi.json" if settings.DEBUG else None,
 )
 
-# CORS para desenvolvimento
+# CORS
+_cors_origins = ["*"] if settings.DEBUG else settings.allowed_origins_list
+_cors_credentials = _cors_origins != ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins_list if not settings.DEBUG else ["*"],
-    allow_credentials=True,
+    allow_origins=_cors_origins,
+    allow_credentials=_cors_credentials,
     allow_methods=["*"],
     allow_headers=["*"],
 )

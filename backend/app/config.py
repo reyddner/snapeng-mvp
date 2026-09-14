@@ -65,14 +65,17 @@ class Settings(BaseSettings):
     @property
     def allowed_origins_list(self) -> List[str]:
         """Retorna lista de origens permitidas para CORS"""
-        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
+        raw = [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
+        if not raw or "*" in raw:
+            return ["*"]
+        return raw
 
     @property
     def allowed_hosts_list(self) -> List[str]:
         hosts = [h.strip() for h in self.ALLOWED_HOSTS.split(",") if h.strip()]
-        if "*" in hosts:
+        if not hosts or "*" in hosts:
             return ["*"]
-        return hosts or ["localhost", "127.0.0.1"]
+        return hosts
 
     @field_validator("SECRET_KEY")
     @classmethod

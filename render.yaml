@@ -1,8 +1,5 @@
-# Render Blueprint — MVP SNAPENG (URL gratuita *.onrender.com)
-# Dashboard: New → Blueprint → conecte o repo reyddner/snapeng-mvp
-#
-# Runtime Python (plano free). CSS Tailwind ja vai commitado em frontend/static/css/tailwind.css.
-# SQLite efemero: ok para demo; dados podem zerar no sleep/redeploy.
+# Render Blueprint — MVP SNAPENG
+# https://dashboard.render.com/blueprints/new → repo reyddner/snapeng-mvp
 
 services:
   - type: web
@@ -12,11 +9,7 @@ services:
     region: oregon
     branch: main
     buildCommand: pip install -r requirements-prod.txt
-    startCommand: >-
-      cd backend &&
-      alembic upgrade head &&
-      (python scripts/load_templates.py || true) &&
-      uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    startCommand: bash scripts/start.sh
     healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION
@@ -28,9 +21,9 @@ services:
       - key: DATABASE_URL
         value: "sqlite:///./snapeng.db"
       - key: ALLOWED_ORIGINS
-        value: "https://snapeng-api.onrender.com"
+        value: "*"
       - key: ALLOWED_HOSTS
-        value: ".onrender.com,snapeng-api.onrender.com"
+        value: "*"
       - key: TRUST_PROXY_HEADERS
         value: "true"
       - key: SEED_TEMPLATES

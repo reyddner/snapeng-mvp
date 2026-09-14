@@ -14,7 +14,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends build-essential libpq-dev \
+    && apt-get install --no-install-recommends -y bash build-essential libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements-prod.txt ./
@@ -23,14 +23,13 @@ RUN pip install -r requirements-prod.txt
 COPY backend ./backend
 COPY frontend ./frontend
 COPY engineering_templates ./engineering_templates
+COPY scripts ./scripts
 COPY --from=assets /build/frontend/static/css/tailwind.css ./frontend/static/css/tailwind.css
-COPY scripts/docker-entrypoint.sh /docker-entrypoint.sh
 
-RUN chmod +x /docker-entrypoint.sh \
+RUN chmod +x /app/scripts/start.sh /app/scripts/docker-entrypoint.sh \
     && useradd --create-home --shell /bin/bash snapeng \
     && chown -R snapeng:snapeng /app
 
 USER snapeng
-WORKDIR /app/backend
 EXPOSE 8000
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["bash", "/app/scripts/start.sh"]
