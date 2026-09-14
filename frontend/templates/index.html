@@ -1,0 +1,79 @@
+<!-- Arquivo: frontend/templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}SNAPENG - Memoriais de Engenharia{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto">
+
+    <section class="text-center py-20">
+        <p class="text-sm font-semibold tracking-wide text-blue-600 uppercase mb-4">SNAPENG</p>
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Memoriais descritivos multidisciplinares, do rascunho ao DOCX
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Monte o empreendimento, preencha as disciplinas com validação técnica
+            e gere o pacote em minutos. Depois, se quiser, salve na conta e continue editando.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/memorials/new" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                Criar memorial agora
+            </a>
+            <a href="/login" class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                Entrar na conta
+            </a>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Como funciona</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-sm font-bold text-blue-600 mb-3">1</div>
+                <h3 class="text-xl font-bold mb-2">Defina o empreendimento</h3>
+                <p class="text-gray-600">
+                    Informe obra, disciplinas e responsável técnico. Um rascunho público é criado na hora.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-sm font-bold text-blue-600 mb-3">2</div>
+                <h3 class="text-xl font-bold mb-2">Preencha e valide</h3>
+                <p class="text-gray-600">
+                    Questionários por disciplina, regras condicionais e checagem de conflitos entre projetos.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-sm font-bold text-blue-600 mb-3">3</div>
+                <h3 class="text-xl font-bold mb-2">Gere o pacote</h3>
+                <p class="text-gray-600">
+                    Exporte memoriais individuais ou combinados em ZIP (DOCX + PDF).
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="text-sm font-bold text-blue-600 mb-3">4</div>
+                <h3 class="text-xl font-bold mb-2">Salve na conta</h3>
+                <p class="text-gray-600">
+                    Guarde o plano, reabra no dashboard e edite/regere quando precisar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100 rounded-2xl px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">MVP pronto para piloto</h2>
+        <p class="text-center text-gray-600 mb-8 max-w-xl mx-auto">
+            Fluxo anônimo completo + conta para persistir e continuar editando.
+            Ideal para demo interna e primeiros usuários.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/memorials/new" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                Novo empreendimento
+            </a>
+            <a href="/register" class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold border border-gray-300 hover:bg-gray-50">
+                Criar conta
+            </a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

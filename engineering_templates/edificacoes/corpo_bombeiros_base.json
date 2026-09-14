@@ -1,0 +1,26 @@
+{
+  "name": "Memorial de Seguranca Contra Incendio Base",
+  "description": "Memorial descritivo para seguranca contra incendio e panico.",
+  "category": "edificacoes",
+  "subcategory": "corpo_bombeiros",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. IDENTIFICACAO E CLASSIFICACAO", "content": "Este memorial apresenta as medidas de seguranca contra incendio da edificacao em {{localizacao}}, com ocupacao {{ocupacao_bombeiros}}, area total de {{area_total_bombeiros}} m2 e altura de {{altura_edificacao}} m."},
+    {"title": "2. POPULACAO E SAIDAS", "content": "A populacao prevista e de {{populacao_bombeiros}} pessoas. As saidas de emergencia foram definidas considerando: {{saidas_emergencia}}."},
+    {"title": "3. SISTEMAS DE PROTECAO", "content": "A classificacao de risco adotada e {{risco_incendio}}. O sistema de hidrantes e {{sistema_hidrantes}}. Os demais sistemas de protecao previstos sao: {{sistemas_protecao}}."},
+    {"title": "4. CONFORMIDADE", "content": "O projeto deve ser conferido com as Instrucoes Tecnicas e exigencias do Corpo de Bombeiros competente antes do protocolo e da execucao."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 9077 - Saidas de emergencia em edificios", "ABNT NBR 12693 - Sistemas de protecao por extintores de incendio", "ABNT NBR 13714 - Sistemas de hidrantes e de mangotinhos", "ABNT NBR 17240 - Sistemas de deteccao e alarme de incendio"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "ocupacao_bombeiros", "type": "text", "label": "Ocupacao", "required": true},
+    {"name": "area_total_bombeiros", "type": "number", "label": "Area total (m2)", "required": true, "min": 0},
+    {"name": "altura_edificacao", "type": "number", "label": "Altura (m)", "required": true, "min": 0},
+    {"name": "populacao_bombeiros", "type": "number", "label": "Populacao prevista", "required": true, "min": 1},
+    {"name": "risco_incendio", "type": "text", "label": "Classificacao de risco", "required": true},
+    {"name": "saidas_emergencia", "type": "textarea", "label": "Saidas de emergencia", "required": true},
+    {"name": "sistema_hidrantes", "type": "select", "label": "Sistema de hidrantes", "required": true, "options": [{"value": "nao_aplicavel", "label": "Nao aplicavel"}, {"value": "sim", "label": "Aplicavel"}]},
+    {"name": "sistemas_protecao", "type": "textarea", "label": "Sistemas de protecao", "required": true}
+  ]
+}

@@ -1,0 +1,26 @@
+/* Custom styles for SNAPENG */
+/* Arquivo: frontend/static/css/styles.css */
+
+.prose {
+    max-width: none;
+}
+
+.prose h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.prose h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+}
+
+.prose p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+

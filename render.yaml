@@ -1,0 +1,32 @@
+# Render Blueprint — MVP SNAPENG (URL gratuita *.onrender.com)
+# Dashboard: https://dashboard.render.com → New → Blueprint
+#
+# Usa SQLite efemero no plano free (dados podem zerar no redeploy/sleep).
+# Para MVP de demonstracao isso e aceitavel. Evolua para Postgres (Neon/Render)
+# quando for manter usuarios reais.
+
+services:
+  - type: web
+    name: snapeng-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: "sqlite:///./snapeng.db"
+      - key: ALLOWED_ORIGINS
+        value: "https://snapeng-api.onrender.com"
+      - key: ALLOWED_HOSTS
+        value: "snapeng-api.onrender.com,.onrender.com"
+      - key: TRUST_PROXY_HEADERS
+        value: "true"
+      - key: SEED_TEMPLATES
+        value: "true"
+      - key: REDIS_URL
+        value: ""

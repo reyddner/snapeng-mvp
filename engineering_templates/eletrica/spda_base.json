@@ -1,0 +1,25 @@
+{
+  "name": "Memorial de SPDA Base",
+  "description": "Memorial descritivo de protecao contra descargas atmosfericas.",
+  "category": "eletrica",
+  "subcategory": "spda",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve o SPDA da edificacao {{tipo_edificacao}}, com altura de {{altura_edificacao}} m e {{numero_pavimentos}} pavimento(s)."},
+    {"title": "2. ANALISE E PROTECAO", "content": "O nivel de protecao adotado e {{nivel_protecao}}, conforme analise de risco. O metodo de captacao e {{metodo_spda}}."},
+    {"title": "3. SUBSISTEMAS", "content": "A captacao sera executada por {{subsistema_captacao}}. O aterramento sera composto por {{aterramento_spda}}."},
+    {"title": "4. MEDIDAS INTERNAS", "content": "As medidas de equipotencializacao e protecao interna sao: {{equipotencializacao}}."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 5419 - Protecao contra descargas atmosfericas", "ABNT NBR 5410 - Instalacoes eletricas de baixa tensao"],
+  "variables": [
+    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
+    {"name": "altura_edificacao", "type": "number", "label": "Altura (m)", "required": true, "min": 0},
+    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
+    {"name": "nivel_protecao", "type": "select", "label": "Nivel de protecao", "required": true, "options": [{"value": "I", "label": "Nivel I"}, {"value": "II", "label": "Nivel II"}, {"value": "III", "label": "Nivel III"}, {"value": "IV", "label": "Nivel IV"}]},
+    {"name": "metodo_spda", "type": "text", "label": "Metodo do SPDA", "required": true},
+    {"name": "subsistema_captacao", "type": "textarea", "label": "Captacao", "required": true},
+    {"name": "aterramento_spda", "type": "textarea", "label": "Aterramento", "required": true},
+    {"name": "equipotencializacao", "type": "textarea", "label": "Equipotencializacao", "required": true}
+  ]
+}

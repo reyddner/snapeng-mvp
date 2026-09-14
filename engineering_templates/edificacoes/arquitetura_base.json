@@ -1,0 +1,28 @@
+{
+  "name": "Memorial Arquitetonico Base",
+  "description": "Memorial descritivo arquitetonico para edificacoes.",
+  "category": "edificacoes",
+  "subcategory": "arquitetura",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. IDENTIFICACAO", "content": "Este memorial descreve a edificacao de uso {{tipo_edificacao}}, localizada em {{localizacao}}, no municipio de {{municipio}}/{{uf}}, com area de terreno de {{area_terreno}} m2 e area construida de {{area_construida}} m2."},
+    {"title": "2. PROGRAMA E ORGANIZACAO", "content": "O programa de necessidades contempla: {{programa_necessidades}}. A edificacao possui {{numero_pavimentos}} pavimento(s), com sistema construtivo {{sistema_construtivo}}."},
+    {"title": "3. ESPECIFICACOES", "content": "Os acabamentos e revestimentos previstos sao: {{acabamentos}}. As solucoes de acessibilidade contemplam: {{acessibilidade}}."},
+    {"title": "4. COMPATIBILIZACAO", "content": "O projeto deve ser compatibilizado com as disciplinas estrutural, fundacoes, eletrica, hidrossanitaria, SPDA e seguranca contra incendio antes da execucao."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 6492 - Documentacao tecnica para projetos arquitetonicos", "ABNT NBR 9050 - Acessibilidade a edificacoes", "ABNT NBR 15575 - Edificacoes habitacionais - Desempenho"],
+  "variables": [
+    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "municipio", "type": "text", "label": "Municipio", "required": true},
+    {"name": "uf", "type": "text", "label": "UF", "required": true},
+    {"name": "area_terreno", "type": "number", "label": "Area do terreno (m2)", "required": true, "min": 0},
+    {"name": "area_construida", "type": "number", "label": "Area construida (m2)", "required": true, "min": 0},
+    {"name": "programa_necessidades", "type": "textarea", "label": "Programa de necessidades", "required": true},
+    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
+    {"name": "sistema_construtivo", "type": "text", "label": "Sistema construtivo", "required": true},
+    {"name": "acabamentos", "type": "textarea", "label": "Acabamentos", "required": true},
+    {"name": "acessibilidade", "type": "textarea", "label": "Acessibilidade", "required": true}
+  ]
+}

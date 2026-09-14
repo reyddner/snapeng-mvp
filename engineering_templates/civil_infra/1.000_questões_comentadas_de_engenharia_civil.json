@@ -1,0 +1,16 @@
+{
+  "name": "1.000 Questões Comentadas De Engenharia Civil",
+  "description": "Template gerado automaticamente a partir de 1.000 Questões Comentadas de Engenharia Civil.pdf",
+  "category": "civil_infra",
+  "subcategory": "",
+  "version": "1.0",
+  "sections": [],
+  "variables": [],
+  "normas": [],
+  "calculations": [],
+  "metadata": {
+    "source_file": "1.000 Questões Comentadas de Engenharia Civil.pdf",
+    "generated_at": "2025-11-25T19:54:47.559238",
+    "generated_by": "import_memorials.py"
+  }
+}

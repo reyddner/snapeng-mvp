@@ -1,0 +1,102 @@
+{
+  "name": "Pavimentação Asfáltica",
+  "description": "Template para memorial descritivo de pavimentação asfáltica",
+  "category": "civil_infra",
+  "subcategory": "pavimentacao",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "1. OBJETO",
+      "content": "Este memorial descreve a execução de {{tipo_obra}} localizada em {{localizacao}}, com extensão de {{extensao}} km, compreendendo a pavimentação asfáltica conforme especificações técnicas.",
+      "variables": ["tipo_obra", "localizacao", "extensao"]
+    },
+    {
+      "title": "2. DIMENSIONAMENTO",
+      "content": "O dimensionamento da pavimentação foi realizado com base no CBR de campo de {{cbr_campo}}%, resultando em CBR de projeto de {{cbr_projeto}}%. A espessura total da camada de base é de {{espessura_base}} cm, e a camada de revestimento asfáltico possui {{espessura_revestimento}} cm.",
+      "variables": ["cbr_campo", "cbr_projeto", "espessura_base", "espessura_revestimento"]
+    },
+    {
+      "title": "3. MATERIAIS",
+      "content": "Os materiais utilizados atendem às especificações da NBR 15115 e NBR 15116. O asfalto utilizado é do tipo {{tipo_asfalto}} com penetração de {{penetracao_asfalto}}.",
+      "variables": ["tipo_asfalto", "penetracao_asfalto"]
+    },
+    {
+      "title": "4. EXECUÇÃO",
+      "content": "A execução seguiu as seguintes etapas: {{etapas_execucao}}.",
+      "variables": ["etapas_execucao"]
+    }
+  ],
+  "calculations": [
+    {
+      "name": "cbr_projeto",
+      "formula": "cbr_campo / 1.5",
+      "inputs": ["cbr_campo"],
+      "unit": "%",
+      "description": "CBR de projeto calculado a partir do CBR de campo"
+    }
+  ],
+  "normas": [
+    "NBR 15115 - Pavimentação - Execução de camadas de solo com equipamento de compactação",
+    "NBR 15116 - Pavimentação - Execução de camadas de base e sub-base",
+    "NBR 7207 - Execução de camada de impermeabilização com emulsão asfáltica"
+  ],
+  "variables": [
+    {
+      "name": "tipo_obra",
+      "type": "text",
+      "label": "Tipo de Obra",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localização",
+      "required": true
+    },
+    {
+      "name": "extensao",
+      "type": "number",
+      "label": "Extensão (km)",
+      "required": true
+    },
+    {
+      "name": "cbr_campo",
+      "type": "number",
+      "label": "CBR de Campo (%)",
+      "required": true
+    },
+    {
+      "name": "espessura_base",
+      "type": "number",
+      "label": "Espessura da Base (cm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "espessura_revestimento",
+      "type": "number",
+      "label": "Espessura do Revestimento (cm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "tipo_asfalto",
+      "type": "text",
+      "label": "Tipo de Asfalto",
+      "required": true
+    },
+    {
+      "name": "penetracao_asfalto",
+      "type": "number",
+      "label": "Penetração do Asfalto",
+      "required": true
+    },
+    {
+      "name": "etapas_execucao",
+      "type": "textarea",
+      "label": "Etapas de Execução",
+      "required": true
+    }
+  ]
+}
+

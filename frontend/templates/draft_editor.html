@@ -1,0 +1,929 @@
+{% extends "base.html" %}
+
+{% block title %}{% if editor_mode == 'project' %}Memorial na conta{% else %}Preenchimento do Empreendimento{% endif %} - SNAPENG{% endblock %}
+
+{% block content %}
+<div x-data="draftEditor()" class="max-w-6xl mx-auto">
+    <div x-show="loading" x-cloak class="py-12 text-center text-gray-500" x-text="isProjectMode ? 'Carregando memorial da conta...' : 'Carregando rascunho...'"></div>
+
+    <div x-show="!loading && expired && !draft" class="max-w-xl mx-auto bg-white rounded-lg shadow p-8 text-center" x-cloak>
+        <h1 class="text-2xl font-bold text-gray-900 mb-3" x-text="isProjectMode ? 'Projeto indisponível' : 'Rascunho indisponível'"></h1>
+        <p class="text-gray-600 mb-6" x-text="error || 'Não foi possível carregar este memorial.'"></p>
+        <a :href="isProjectMode ? '/dashboard' : '/memorials/new'" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700" x-text="isProjectMode ? 'Voltar ao dashboard' : 'Criar novo empreendimento'"></a>
+    </div>
+
+    <div x-show="!loading && draft" class="space-y-6" @input="onFormChanged()" @change="onFormChanged()" x-cloak>
+        <div class="flex flex-wrap justify-between items-end gap-4">
+            <div>
+                <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1" x-text="isProjectMode ? 'Conta · edição completa' : 'Passo 2 de 2'"></p>
+                <p class="text-sm text-gray-500">
+                    <span x-show="!isProjectMode">Rascunho <span x-text="draftId"></span> · </span>
+                    <span x-show="isProjectMode">Projeto #<span x-text="projectId"></span> · </span>
+                    Status: <span class="font-medium text-gray-800" x-text="statusLabel"></span>
+                    <span x-show="autosaveLabel" class="text-gray-400" x-text="' · ' + autosaveLabel"></span>
+                </p>
+                <h1 class="text-3xl font-bold text-gray-900" x-text="draft?.payload?.enterprise?.name"></h1>
+                <p class="text-gray-600 mt-1" x-text="isProjectMode ? 'Edite as disciplinas do memorial salvo na conta. Salvamento automático ativo.' : 'Preencha cada disciplina. Salvamento automático ativo. Os dados comuns ficam compartilhados.'"></p>
+                <p x-show="serverSaveFailed" class="text-sm text-amber-700 mt-2">
+                    Não foi possível salvar no servidor agora. Seus dados continuam neste navegador.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a x-show="isProjectMode" href="/dashboard" class="px-5 py-2 bg-white border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50">Dashboard</a>
+                <button type="button" @click="runPreflight()" :disabled="checkingPreflight" class="px-5 py-2 bg-white border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50 disabled:opacity-50">
+                    <span x-show="!checkingPreflight">Validar antes de gerar</span>
+                    <span x-show="checkingPreflight">Validando...</span>
+                </button>
+                <button type="button" @click="checkCompatibility()" :disabled="checkingCompat" class="px-5 py-2 bg-white border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50 disabled:opacity-50">
+                    <span x-show="!checkingCompat">Verificar conflitos</span>
+                    <span x-show="checkingCompat">Verificando...</span>
+                </button>
+                <button type="button" @click="saveDraft()" :disabled="saving" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50">
+                    <span x-show="!saving" x-text="isProjectMode ? 'Salvar na conta' : 'Salvar rascunho'"></span>
+                    <span x-show="saving">Salvando...</span>
+                </button>
+                <button type="button" x-show="!isProjectMode" @click="claimToAccount()" :disabled="claiming || expired" class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50">
+                    <span x-show="!claiming">Salvar na minha conta</span>
+                    <span x-show="claiming">Salvando na conta...</span>
+                </button>
+                <button type="button" @click="generateBundle()" :disabled="generating" class="px-5 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50">
+                    <span x-show="!generating">Gerar memorial</span>
+                    <span x-show="generating">Gerando...</span>
+                </button>
+            </div>
+        </div>
+
+        <section x-show="preflight" class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+            <h2 class="text-lg font-semibold text-slate-900 mb-2">Prontidão do memorial</h2>
+            <p class="text-sm text-slate-600 mb-3"
+               x-text="preflight?.can_generate ? 'Pronto para gerar.' : 'Ainda há pendências bloqueantes.'"></p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm mb-3">
+                <p>Disciplinas prontas: <strong x-text="(preflight?.summary?.disciplines_ready || 0) + '/' + (preflight?.summary?.disciplines_total || 0)"></strong></p>
+                <p>Campos faltantes: <strong x-text="preflight?.summary?.missing_total || 0"></strong></p>
+                <p>Avisos: <strong x-text="(preflight?.warnings || []).length"></strong></p>
+            </div>
+            <ul class="list-disc list-inside text-sm text-red-700 space-y-1" x-show="(preflight?.blocking || []).length">
+                <template x-for="item in (preflight?.blocking || [])" :key="item">
+                    <li x-text="item"></li>
+                </template>
+            </ul>
+            <ul class="list-disc list-inside text-sm text-amber-800 space-y-1 mt-2" x-show="(preflight?.warnings || []).length">
+                <template x-for="item in (preflight?.warnings || [])" :key="item">
+                    <li x-text="item"></li>
+                </template>
+            </ul>
+        </section>
+
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-2">Arquivos de referência</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Envie PDF, DOCX ou TXT. O texto é extraído para revisão humana — nada é aplicado automaticamente às disciplinas.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+                <input type="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain" @change="onFileSelected($event)" class="text-sm">
+                <button @click="uploadFile()" :disabled="!pendingFile || uploading" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 disabled:opacity-50">
+                    <span x-show="!uploading">Extrair texto</span>
+                    <span x-show="uploading">Extraindo...</span>
+                </button>
+            </div>
+
+            <div x-show="pendingExtraction" class="border border-amber-200 bg-amber-50 rounded-lg p-4 mb-4">
+                <p class="font-medium text-amber-900 mb-2" x-text="'Revisar: ' + (pendingExtraction.filename || 'arquivo')"></p>
+                <p class="text-xs text-amber-800 mb-2" x-text="pendingExtraction.notice"></p>
+                <textarea x-model="pendingExtraction.text" rows="8" class="w-full px-3 py-2 border border-amber-200 rounded-lg text-sm font-mono bg-white"></textarea>
+
+                <div x-show="(pendingExtraction.suggestions || []).length" class="mt-4">
+                    <p class="text-sm font-medium text-amber-900 mb-2">Sugestões detectadas (marque para aplicar)</p>
+                    <ul class="space-y-2">
+                        <template x-for="suggestion in pendingExtraction.suggestions" :key="(suggestion.discipline || 'shared') + suggestion.field + String(suggestion.value)">
+                            <li class="flex items-start gap-2 text-sm bg-white border border-amber-100 rounded px-3 py-2">
+                                <input type="checkbox" class="mt-1" x-model="suggestion.selected">
+                                <span>
+                                    <span class="text-xs uppercase tracking-wide text-gray-500" x-text="suggestion.target === 'discipline' ? ('Disciplina: ' + suggestion.discipline) : 'Compartilhado'"></span><br>
+                                    <strong x-text="suggestion.label"></strong>:
+                                    <span x-text="suggestion.value"></span>
+                                    <span class="text-xs text-gray-500" x-text="'(' + suggestion.confidence + ')'"></span>
+                                </span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mt-3">
+                    <button @click="confirmExtraction()" class="px-4 py-2 bg-amber-700 text-white rounded-lg hover:bg-amber-800">Confirmar e anexar ao rascunho</button>
+                    <button @click="pendingExtraction = null" class="px-4 py-2 bg-white border border-gray-300 rounded-lg">Descartar</button>
+                </div>
+            </div>
+
+            <ul class="space-y-2" x-show="sourceDocuments.length">
+                <template x-for="(doc, index) in sourceDocuments" :key="doc.filename + index">
+                    <li class="border border-gray-200 rounded-lg p-3">
+                        <div class="flex justify-between gap-3 items-start">
+                            <div>
+                                <p class="font-medium text-gray-900" x-text="doc.filename"></p>
+                                <p class="text-xs text-gray-500" x-text="(doc.confirmed_at || '') + (doc.page_count ? ' · ' + doc.page_count + ' pág.' : '')"></p>
+                            </div>
+                            <button @click="removeSourceDocument(index)" class="text-sm text-red-600 hover:underline">Remover</button>
+                        </div>
+                        <details class="mt-2">
+                            <summary class="text-sm text-blue-600 cursor-pointer">Ver texto confirmado</summary>
+                            <pre class="mt-2 text-xs whitespace-pre-wrap bg-gray-50 p-3 rounded max-h-48 overflow-auto" x-text="doc.text"></pre>
+                        </details>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Dados compartilhados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Local da obra</span>
+                    <input x-model="sharedData.localizacao" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Município</span>
+                    <input x-model="sharedData.municipio" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">UF</span>
+                    <input x-model="sharedData.uf" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase" placeholder="GO">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Área construída</span>
+                    <input type="number" min="0" x-model="sharedData.area_construida" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Número de pavimentos</span>
+                    <input type="number" min="0" x-model="sharedData.numero_pavimentos" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </label>
+            </div>
+        </section>
+
+        <section x-show="conflicts.length" class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+            <h2 class="text-lg font-semibold text-amber-900 mb-3">Conflitos entre disciplinas</h2>
+            <ul class="space-y-2">
+                <template x-for="conflict in conflicts" :key="conflict.field + (conflict.shared_value || '')">
+                    <li class="text-sm text-amber-900">
+                        <span class="font-medium" x-text="conflict.label || conflict.field"></span>:
+                        compartilhado <span x-text="conflict.shared_value ?? '(vazio)'"></span>
+                        —
+                        <span x-text="(conflict.differences || []).map(d => d.discipline + '=' + d.value).join('; ')"></span>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+        <template x-for="discipline in disciplines" :key="discipline.discipline">
+            <section class="bg-white rounded-lg shadow p-6">
+                <div class="flex flex-wrap justify-between gap-3 mb-5">
+                    <div>
+                        <h2 class="text-xl font-semibold" x-text="discipline.label"></h2>
+                        <p class="text-sm text-gray-500" x-text="discipline.statusLabel"></p>
+                    </div>
+                    <span class="text-sm px-3 py-1 rounded-full" :class="discipline.missing.length ? 'bg-amber-100 text-amber-800' : 'bg-green-100 text-green-800'" x-text="discipline.missing.length ? discipline.missing.length + ' pendentes' : 'Pronta para revisão'"></span>
+                </div>
+                <label class="block mb-5">
+                    <span class="text-sm font-medium text-gray-700">Modelo de memorial</span>
+                    <select x-model="discipline.template_id" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        <option value="">Selecione um modelo</option>
+                        <template x-for="option in (discipline.templateOptions || [])" :key="option.id">
+                            <option :value="option.id" x-text="option.name"></option>
+                        </template>
+                    </select>
+                </label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <template x-for="question in discipline.questions" :key="question.name">
+                        <label class="block" x-show="isQuestionVisible(question, discipline.data)">
+                            <span class="text-sm font-medium text-gray-700" x-text="question.label || question.name"></span>
+                            <span x-show="question.required" class="text-red-500"> *</span>
+                            <template x-if="question.type === 'textarea'">
+                                <textarea x-model="discipline.data[question.name]" rows="3" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg"></textarea>
+                            </template>
+                            <template x-if="question.type === 'select'">
+                                <select x-model="discipline.data[question.name]" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                                    <option value="">Selecione</option>
+                                    <template x-for="option in (question.options || [])" :key="option.value">
+                                        <option :value="option.value" x-text="option.label"></option>
+                                    </template>
+                                </select>
+                            </template>
+                            <template x-if="question.type !== 'textarea' && question.type !== 'select'">
+                                <input :type="question.type === 'number' ? 'number' : 'text'" :min="question.min" :max="question.max" x-model="discipline.data[question.name]" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </template>
+                            <span x-show="question.unit" class="text-xs text-gray-500" x-text="question.unit"></span>
+                        </label>
+                    </template>
+                </div>
+            </section>
+        </template>
+
+        <div x-show="errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+            <p class="font-medium mb-2" x-text="error"></p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <template x-for="item in errorDetails" :key="item">
+                    <li x-text="item"></li>
+                </template>
+            </ul>
+        </div>
+        <div x-show="message" class="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg" x-text="message"></div>
+        <div x-show="error && !errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function draftEditor() {
+    const STATUS_LABELS = {
+        novo: 'Novo',
+        em_preenchimento: 'Em preenchimento',
+        processando: 'Processando',
+        aguardando_informacao: 'Aguardando informação',
+        erro: 'Erro',
+        memorial_gerado: 'Memorial gerado',
+        em_revisao: 'Em revisão',
+        finalizado: 'Finalizado'
+    };
+
+    return {
+        editorMode: '{{ editor_mode|default("draft") }}',
+        draftId: '{{ draft_id|default("") }}',
+        projectId: {{ project_id|default(0) }},
+        draft: null,
+        disciplines: [],
+        sharedData: {},
+        sourceDocuments: [],
+        pendingFile: null,
+        pendingExtraction: null,
+        conflicts: [],
+        preflight: null,
+        loading: true,
+        expired: false,
+        saving: false,
+        generating: false,
+        claiming: false,
+        uploading: false,
+        checkingCompat: false,
+        checkingPreflight: false,
+        serverSaveFailed: false,
+        autosaveLabel: '',
+        _autosaveTimer: null,
+        message: null,
+        error: null,
+        errorDetails: [],
+
+        get isProjectMode() {
+            return this.editorMode === 'project';
+        },
+
+        get statusLabel() {
+            const status = this.draft?.payload?.status || this.draft?.status || 'em_preenchimento';
+            return STATUS_LABELS[status] || status;
+        },
+
+        localBackupKey() {
+            if (this.isProjectMode) return 'snapeng_project_backup_' + this.projectId;
+            return 'snapeng_draft_backup_' + this.draftId;
+        },
+
+        apiFetch(url, options = {}) {
+            if (this.isProjectMode && window.SnapEngAuth) {
+                return window.SnapEngAuth.authFetch(url, options);
+            }
+            return fetch(url, Object.assign({ credentials: 'include' }, options));
+        },
+
+        writeLocalBackup() {
+            try {
+                localStorage.setItem(this.localBackupKey(), JSON.stringify({
+                    saved_at: new Date().toISOString(),
+                    payload: this.buildPayload()
+                }));
+            } catch (_) { /* quota / private mode */ }
+        },
+
+        readLocalBackup() {
+            try {
+                const raw = localStorage.getItem(this.localBackupKey());
+                return raw ? JSON.parse(raw) : null;
+            } catch (_) {
+                return null;
+            }
+        },
+
+        async init() {
+            try {
+                if (this.isProjectMode) {
+                    await this.initFromProject();
+                    return;
+                }
+                await this.initFromDraft();
+            } catch (error) {
+                const backup = this.readLocalBackup();
+                if (backup?.payload) {
+                    this.draft = {
+                        draft_id: this.draftId || ('project-' + this.projectId),
+                        payload: backup.payload,
+                        status: backup.payload.status || 'erro'
+                    };
+                    this.applyPayload(backup.payload);
+                    this.serverSaveFailed = true;
+                    this.error = 'Falha de conexão. Usando cópia local salva neste navegador.';
+                    await this.loadDisciplines();
+                } else {
+                    this.expired = true;
+                    this.error = error.message;
+                }
+            } finally {
+                this.loading = false;
+            }
+        },
+
+        async initFromProject() {
+            if (!window.SnapEngAuth || !(await window.SnapEngAuth.hasSession())) {
+                window.location.href = '/login?next=/editor/' + this.projectId;
+                return;
+            }
+            const response = await this.apiFetch('/api/v1/projects/' + this.projectId);
+            if (response.status === 401) {
+                window.location.href = '/login?next=/editor/' + this.projectId;
+                return;
+            }
+            if (response.status === 404 || response.status === 403) {
+                this.expired = true;
+                this.error = 'Projeto não encontrado ou sem permissão.';
+                return;
+            }
+            if (!response.ok) throw new Error('Não foi possível carregar o projeto.');
+            const project = await response.json();
+            const data = project.project_data || {};
+            if (data.kind !== 'memorial_plan') {
+                window.location.href = '/dashboard';
+                return;
+            }
+            const payload = {
+                enterprise: data.enterprise || { name: project.name, shared_data: {} },
+                disciplines: data.disciplines || [],
+                mode: data.mode || 'individual',
+                professional: data.professional || {},
+                source_documents: data.source_documents || [],
+                status: data.draft_status || 'em_preenchimento'
+            };
+            if (!payload.enterprise.name) payload.enterprise.name = project.name;
+            this.draft = {
+                draft_id: data.source_draft_id || ('project-' + this.projectId),
+                payload: {
+                    ...payload,
+                    source_draft_id: data.source_draft_id || null
+                },
+                status: payload.status
+            };
+            this.applyPayload(payload);
+            await this.loadDisciplines();
+            this.writeLocalBackup();
+        },
+
+        async initFromDraft() {
+            const response = await fetch(`/api/v1/drafts/${this.draftId}`);
+            if (response.status === 404 || response.status === 410) {
+                const backup = this.readLocalBackup();
+                if (backup?.payload) {
+                    this.draft = {
+                        draft_id: this.draftId,
+                        payload: backup.payload,
+                        status: backup.payload.status || 'erro'
+                    };
+                    this.applyPayload(backup.payload);
+                    this.expired = true;
+                    this.serverSaveFailed = true;
+                    this.error = response.status === 410
+                        ? 'Rascunho expirado no servidor. Recuperamos uma cópia local deste navegador.'
+                        : 'Rascunho não encontrado no servidor. Recuperamos uma cópia local deste navegador.';
+                    await this.loadDisciplines();
+                    return;
+                }
+                this.expired = true;
+                this.error = response.status === 410
+                    ? 'Este rascunho expirou. Crie um novo empreendimento para continuar.'
+                    : 'Rascunho não encontrado. Verifique o link ou crie um novo.';
+                return;
+            }
+            if (!response.ok) throw new Error('Não foi possível carregar o rascunho.');
+            this.draft = await response.json();
+            this.applyPayload(this.draft.payload);
+            await this.loadDisciplines();
+            this.writeLocalBackup();
+
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('claim') === '1') {
+                await this.claimToAccount({ auto: true });
+            }
+        },
+
+        applyPayload(payload) {
+            this.sharedData = {
+                localizacao: '',
+                municipio: '',
+                uf: '',
+                area_construida: '',
+                numero_pavimentos: '',
+                ...(payload.enterprise?.shared_data || {})
+            };
+            this.sourceDocuments = payload.source_documents || [];
+        },
+
+        async loadDisciplines() {
+            const selections = this.draft.payload.disciplines || [];
+            this.disciplines = await Promise.all(selections.map(async selection => {
+                const response = await fetch(`/api/v1/questionnaires/${selection.discipline}`);
+                if (!response.ok) {
+                    return {
+                        ...selection,
+                        label: selection.discipline,
+                        questions: [],
+                        data: selection.data || {},
+                        templateOptions: [],
+                        template_id: selection.template_id || '',
+                        missing: [],
+                        statusLabel: 'Disciplina indisponível'
+                    };
+                }
+                const questionnaire = await response.json();
+                const templatesResponse = await fetch(`/api/v1/memorials/template-options/${selection.discipline}`);
+                const templatesData = templatesResponse.ok ? await templatesResponse.json() : {templates: []};
+                const data = {...(selection.data || {})};
+                for (const question of questionnaire.questions || []) {
+                    if (data[question.name] === undefined) data[question.name] = question.default ?? '';
+                }
+                return {
+                    ...selection,
+                    ...questionnaire,
+                    data,
+                    templateOptions: templatesData.templates || [],
+                    template_id: selection.template_id || (templatesData.templates || [])[0]?.id || '',
+                    missing: this.requiredMissing(questionnaire.questions || [], data),
+                    statusLabel: 'Questionário técnico'
+                };
+            }));
+        },
+
+        onFormChanged() {
+            this.refreshMissing();
+            this.writeLocalBackup();
+            this.scheduleAutosave();
+        },
+
+        scheduleAutosave() {
+            if (this._autosaveTimer) clearTimeout(this._autosaveTimer);
+            this.autosaveLabel = 'Alterações pendentes...';
+            this._autosaveTimer = setTimeout(() => {
+                this.saveDraft({ silent: true });
+            }, 1600);
+        },
+
+        refreshMissing() {
+            for (const discipline of this.disciplines) {
+                discipline.missing = this.requiredMissing(discipline.questions || [], discipline.data || {});
+            }
+        },
+
+        requiredMissing(questions, data) {
+            return questions.filter(question => this.isQuestionVisible(question, data) && question.required && (data[question.name] === undefined || data[question.name] === null || data[question.name] === '')).map(question => question.name);
+        },
+
+        isQuestionVisible(question, data) {
+            const dependency = question.depends_on;
+            if (!dependency) return true;
+            const value = data[dependency.field];
+            if (dependency.equals !== undefined) return value === dependency.equals;
+            if (dependency.not_empty) return value !== undefined && value !== null && value !== '';
+            if (dependency.in) return dependency.in.includes(value);
+            return false;
+        },
+
+        buildPayload() {
+            const status = this.draft?.payload?.status || this.draft?.status || 'em_preenchimento';
+            return {
+                enterprise: {...(this.draft.payload.enterprise || {}), shared_data: this.sharedData},
+                disciplines: this.disciplines.map(discipline => ({
+                    discipline: discipline.discipline,
+                    template_id: discipline.template_id || null,
+                    data: discipline.data
+                })),
+                mode: this.draft.payload.mode,
+                professional: this.draft.payload.professional,
+                source_documents: this.sourceDocuments,
+                status
+            };
+        },
+
+        formatApiError(detail, fallback) {
+            this.errorDetails = [];
+            if (!detail) return fallback;
+            if (typeof detail === 'string') return detail;
+            if (Array.isArray(detail)) {
+                this.errorDetails = detail.map(item => item.msg || JSON.stringify(item));
+                return fallback;
+            }
+            if (detail.blocking && Array.isArray(detail.blocking)) {
+                this.errorDetails = detail.blocking;
+                if (detail.conflicts) this.conflicts = detail.conflicts;
+                return detail.message || fallback;
+            }
+            if (detail.message && detail.conflicts) {
+                this.conflicts = detail.conflicts;
+                this.errorDetails = (detail.conflicts || []).map(c =>
+                    `${c.label || c.field}: compartilhado=${c.shared_value ?? '(vazio)'}`
+                );
+                return detail.message;
+            }
+            if (detail.message && detail.disciplines) {
+                const lines = [];
+                for (const [name, value] of Object.entries(detail.disciplines)) {
+                    if (typeof value === 'string') lines.push(`${name}: ${value}`);
+                    else if (Array.isArray(value)) value.forEach(item => lines.push(`${name}: ${item}`));
+                    else if (value && typeof value === 'object') {
+                        for (const [field, msg] of Object.entries(value)) lines.push(`${name}.${field}: ${msg}`);
+                    }
+                }
+                this.errorDetails = lines;
+                return detail.message;
+            }
+            if (detail.message) return detail.message;
+            return fallback;
+        },
+
+        preflightGenerate() {
+            this.refreshMissing();
+            const problems = [];
+            for (const discipline of this.disciplines) {
+                if (!discipline.template_id) {
+                    problems.push(`${discipline.label || discipline.discipline}: selecione um modelo de memorial.`);
+                }
+                if ((discipline.missing || []).length) {
+                    problems.push(`${discipline.label || discipline.discipline}: faltam ${discipline.missing.length} campo(s) obrigatório(s).`);
+                }
+                if (!(discipline.templateOptions || []).length) {
+                    problems.push(`${discipline.label || discipline.discipline}: nenhum modelo pronto disponível no catálogo.`);
+                }
+            }
+            if (!this.sharedData.localizacao && !this.sharedData.municipio) {
+                problems.push('Informe ao menos local da obra ou município nos dados compartilhados.');
+            }
+            return problems;
+        },
+
+        planBody() {
+            const payload = this.buildPayload();
+            return {
+                enterprise: payload.enterprise,
+                disciplines: this.disciplines.map(discipline => ({
+                    discipline: discipline.discipline,
+                    template_id: discipline.template_id ? Number(discipline.template_id) : null,
+                    data: {...this.sharedData, ...discipline.data}
+                })),
+                mode: payload.mode,
+                professional: payload.professional
+            };
+        },
+
+        async runPreflight() {
+            this.checkingPreflight = true;
+            this.error = null;
+            this.errorDetails = [];
+            this.message = null;
+            try {
+                const response = await fetch('/api/v1/memorials/preflight', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(this.planBody())
+                });
+                const data = await response.json();
+                if (!response.ok) throw new Error(this.formatApiError(data.detail, 'Falha na validação.'));
+                this.preflight = data;
+                this.conflicts = data.conflicts || [];
+                this.message = data.can_generate
+                    ? 'Validação concluída: pronto para gerar o memorial.'
+                    : 'Validação concluída: ainda há pendências.';
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.checkingPreflight = false;
+            }
+        },
+
+        onFileSelected(event) {
+            this.pendingFile = event.target.files?.[0] || null;
+            this.pendingExtraction = null;
+        },
+
+        async uploadFile() {
+            if (!this.pendingFile) return;
+            this.uploading = true;
+            this.error = null;
+            this.errorDetails = [];
+            this.message = null;
+            try {
+                const form = new FormData();
+                form.append('file', this.pendingFile);
+                const disciplineKeys = this.disciplines.map(item => item.discipline).filter(Boolean);
+                if (disciplineKeys.length) form.append('disciplines', disciplineKeys.join(','));
+                const response = await fetch('/api/v1/ingestion/extract', { method: 'POST', body: form });
+                if (response.status === 429) throw new Error('Muitas extrações. Aguarde um momento e tente novamente.');
+                const data = await response.json();
+                if (!response.ok) throw new Error(typeof data.detail === 'string' ? data.detail : 'Não foi possível extrair o arquivo.');
+                data.suggestions = (data.suggestions || []).map(item => ({
+                    ...item,
+                    target: item.target || 'shared',
+                    selected: true
+                }));
+                this.pendingExtraction = data;
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.uploading = false;
+            }
+        },
+
+        async confirmExtraction() {
+            if (!this.pendingExtraction) return;
+            const applied = [];
+            for (const suggestion of this.pendingExtraction.suggestions || []) {
+                if (!suggestion.selected) continue;
+                if (suggestion.target === 'discipline' && suggestion.discipline) {
+                    const discipline = this.disciplines.find(item => item.discipline === suggestion.discipline);
+                    if (discipline) {
+                        discipline.data[suggestion.field] = suggestion.value;
+                        applied.push(`${suggestion.discipline}.${suggestion.field}`);
+                    }
+                } else {
+                    this.sharedData[suggestion.field] = suggestion.value;
+                    applied.push(suggestion.field);
+                }
+            }
+            this.refreshMissing();
+            this.sourceDocuments.push({
+                filename: this.pendingExtraction.filename,
+                extension: this.pendingExtraction.extension,
+                page_count: this.pendingExtraction.page_count,
+                text: this.pendingExtraction.text,
+                suggestions: this.pendingExtraction.suggestions || [],
+                applied_fields: applied,
+                status: 'confirmed',
+                confirmed_at: new Date().toISOString()
+            });
+            this.pendingExtraction = null;
+            this.pendingFile = null;
+            await this.saveDraft({ silent: true });
+            this.message = applied.length
+                ? `Arquivo anexado. Campos aplicados: ${applied.join(', ')}.`
+                : 'Arquivo confirmado e anexado ao rascunho.';
+        },
+
+        async removeSourceDocument(index) {
+            this.sourceDocuments.splice(index, 1);
+            await this.saveDraft({ silent: true });
+        },
+
+        async checkCompatibility() {
+            this.checkingCompat = true;
+            this.error = null;
+            this.errorDetails = [];
+            this.message = null;
+            try {
+                const response = await fetch('/api/v1/memorials/compatibility', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(this.planBody())
+                });
+                const data = await response.json();
+                if (!response.ok) throw new Error(this.formatApiError(data.detail, 'Falha ao verificar compatibilidade.'));
+                this.conflicts = data.conflicts || [];
+                this.message = data.compatible ? 'Nenhum conflito entre disciplinas.' : 'Há conflitos a corrigir antes de gerar.';
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.checkingCompat = false;
+            }
+        },
+
+        async saveDraft(options = {}) {
+            const silent = Boolean(options.silent);
+            const nextStatus = options.status;
+            this.saving = !silent;
+            if (!silent) {
+                this.message = null;
+                this.error = null;
+                this.errorDetails = [];
+            }
+            this.writeLocalBackup();
+            try {
+                const body = this.buildPayload();
+                if (nextStatus) body.status = nextStatus;
+                else if (body.status === 'novo') body.status = 'em_preenchimento';
+
+                if (this.isProjectMode) {
+                    return await this.saveProjectPlan(body, silent);
+                }
+
+                const response = await fetch(`/api/v1/drafts/${this.draftId}`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(body)
+                });
+                if (response.status === 410 || response.status === 404) {
+                    this.expired = true;
+                    this.serverSaveFailed = true;
+                    this.autosaveLabel = 'Cópia local apenas';
+                    if (!silent) {
+                        this.error = 'Rascunho indisponível no servidor. Continuamos com a cópia local deste navegador.';
+                    }
+                    return false;
+                }
+                if (!response.ok) throw new Error('Não foi possível salvar o rascunho.');
+                this.draft = await response.json();
+                this.sourceDocuments = this.draft.payload.source_documents || this.sourceDocuments;
+                this.serverSaveFailed = false;
+                this.expired = false;
+                this.refreshMissing();
+                this.autosaveLabel = 'Salvo às ' + new Date().toLocaleTimeString();
+                this.writeLocalBackup();
+                if (!silent) this.message = 'Rascunho salvo com sucesso.';
+                return true;
+            } catch (error) {
+                this.serverSaveFailed = true;
+                this.autosaveLabel = 'Falha ao salvar no servidor';
+                if (!silent) this.error = error.message;
+                return false;
+            } finally {
+                this.saving = false;
+            }
+        },
+
+        async saveProjectPlan(body, silent) {
+            const projectData = {
+                kind: 'memorial_plan',
+                source_draft_id: this.draft?.payload?.source_draft_id || this.draft?.draft_id || null,
+                enterprise: body.enterprise,
+                disciplines: body.disciplines,
+                mode: body.mode,
+                professional: body.professional,
+                source_documents: body.source_documents || [],
+                draft_status: body.status
+            };
+            const response = await this.apiFetch('/api/v1/projects/' + this.projectId, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: (body.enterprise && body.enterprise.name) || this.draft?.payload?.enterprise?.name,
+                    project_data: projectData,
+                    status: ['memorial_gerado', 'finalizado'].includes(body.status) ? 'completed' : 'in_progress'
+                })
+            });
+            if (response.status === 401) {
+                window.location.href = '/login?next=/editor/' + this.projectId;
+                return false;
+            }
+            if (!response.ok) throw new Error('Não foi possível salvar o memorial na conta.');
+            const project = await response.json();
+            this.draft = {
+                draft_id: project.project_data?.source_draft_id || ('project-' + this.projectId),
+                payload: {
+                    enterprise: project.project_data.enterprise,
+                    disciplines: project.project_data.disciplines,
+                    mode: project.project_data.mode,
+                    professional: project.project_data.professional,
+                    source_documents: project.project_data.source_documents || [],
+                    status: project.project_data.draft_status || body.status
+                },
+                status: project.project_data.draft_status || body.status
+            };
+            this.sourceDocuments = this.draft.payload.source_documents || [];
+            this.serverSaveFailed = false;
+            this.expired = false;
+            this.refreshMissing();
+            this.autosaveLabel = 'Salvo na conta às ' + new Date().toLocaleTimeString();
+            this.writeLocalBackup();
+            if (!silent) this.message = 'Memorial atualizado na sua conta.';
+            return true;
+        },
+
+        async generateBundle() {
+            this.generating = true;
+            this.message = null;
+            this.error = null;
+            this.errorDetails = [];
+            try {
+                const problems = this.preflightGenerate();
+                if (problems.length) {
+                    this.error = 'Corrija os pendentes antes de gerar.';
+                    this.errorDetails = problems;
+                    await this.saveDraft({ silent: true, status: 'aguardando_informacao' });
+                    return;
+                }
+
+                await this.saveDraft({ silent: true, status: 'processando' });
+
+                const response = await fetch('/api/v1/memorials/generate-bundle', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(this.planBody())
+                });
+                if (response.status === 429) {
+                    this.error = 'Muitas gerações. Aguarde um momento e tente novamente.';
+                    await this.saveDraft({ silent: true, status: 'erro' });
+                    return;
+                }
+                if (!response.ok) {
+                    let data = {};
+                    try { data = await response.json(); } catch (_) {}
+                    this.error = this.formatApiError(data.detail, 'Não foi possível gerar o memorial.');
+                    this.preflight = data.detail?.summary
+                        ? {
+                            can_generate: false,
+                            blocking: data.detail.blocking || this.errorDetails,
+                            warnings: data.detail.warnings || [],
+                            conflicts: data.detail.conflicts || [],
+                            summary: data.detail.summary
+                        }
+                        : this.preflight;
+                    await this.saveDraft({ silent: true, status: 'erro' });
+                    return;
+                }
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'memoriais_snapeng.zip';
+                link.click();
+                URL.revokeObjectURL(url);
+                this.conflicts = [];
+                await this.saveDraft({ silent: true, status: 'memorial_gerado' });
+                this.message = this.isProjectMode
+                    ? 'Memorial gerado com sucesso. O plano continua salvo na sua conta.'
+                    : 'Memorial gerado com sucesso (ZIP com DOCX + PDF). Salve na sua conta para não perder o vínculo.';
+            } catch (error) {
+                this.error = error.message;
+                await this.saveDraft({ silent: true, status: 'erro' });
+            } finally {
+                this.generating = false;
+            }
+        },
+
+        async claimToAccount(options = {}) {
+            if (this.isProjectMode || this.claiming || this.expired) return;
+            this.claiming = true;
+            this.error = null;
+            this.errorDetails = [];
+            if (!options.auto) this.message = null;
+            try {
+                const saved = await this.saveDraft({ silent: true });
+                if (!saved && this.expired) {
+                    this.error = 'Não é possível salvar na conta: rascunho indisponível no servidor.';
+                    return;
+                }
+
+                if (!window.SnapEngAuth) {
+                    window.location.href = '/login?next=' + encodeURIComponent('/memorials/draft/' + this.draftId + '?claim=1');
+                    return;
+                }
+                const user = await window.SnapEngAuth.getCurrentUser();
+                if (!user) {
+                    window.location.href = '/login?next=' + encodeURIComponent('/memorials/draft/' + this.draftId + '?claim=1');
+                    return;
+                }
+
+                const response = await window.SnapEngAuth.authFetch(
+                    `/api/v1/drafts/${this.draftId}/claim`,
+                    { method: 'POST' }
+                );
+                const data = await response.json().catch(() => ({}));
+                if (response.status === 401) {
+                    window.location.href = '/login?next=' + encodeURIComponent('/memorials/draft/' + this.draftId + '?claim=1');
+                    return;
+                }
+                if (!response.ok) {
+                    this.error = typeof data.detail === 'string'
+                        ? data.detail
+                        : 'Não foi possível salvar o memorial na conta.';
+                    return;
+                }
+
+                try {
+                    localStorage.removeItem(this.localBackupKey());
+                    localStorage.removeItem('snapeng_draft_id');
+                } catch (_) { /* ignore */ }
+
+                this.message = 'Memorial salvo na sua conta. Abrindo o editor...';
+                window.location.href = '/editor/' + encodeURIComponent(String(data.id || ''));
+            } catch (error) {
+                this.error = error.message || 'Falha ao salvar na conta.';
+            } finally {
+                this.claiming = false;
+            }
+        }
+    }
+}
+</script>
+{% endblock %}

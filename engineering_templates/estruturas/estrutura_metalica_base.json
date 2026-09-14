@@ -1,0 +1,25 @@
+{
+  "name": "Memorial Estrutura Metalica Base",
+  "description": "Memorial descritivo para estruturas metalicas.",
+  "category": "estruturas",
+  "subcategory": "estrutura_metalica",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve a estrutura metalica do tipo {{tipo_estrutura}}, localizada em {{localizacao}}, com vao maximo de {{vao_maximo}} m."},
+    {"title": "2. MATERIAIS E LIGACOES", "content": "Sera utilizado aco estrutural {{aco_estrutural}}. As ligacoes serao do tipo {{ligacoes}}, com protecao contra corrosao por {{proteccao_corrosao}}."},
+    {"title": "3. ESTABILIDADE", "content": "O sistema de contraventamento previsto e: {{contraventamento}}. As cargas consideradas no dimensionamento sao: {{cargas_adotadas}}."},
+    {"title": "4. EXECUCAO", "content": "A execucao devera observar controle dimensional, soldagem, montagem, protecao anticorrosiva e tolerancias conforme projeto estrutural e normas aplicaveis."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 8800 - Projeto de estruturas de aco e de estruturas mistas", "ABNT NBR 6120 - Acoes para o calculo de estruturas", "ABNT NBR 6123 - Forcas devidas ao vento"],
+  "variables": [
+    {"name": "tipo_estrutura", "type": "text", "label": "Tipo de estrutura", "required": true},
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "vao_maximo", "type": "number", "label": "Vao maximo (m)", "required": true, "min": 0},
+    {"name": "aco_estrutural", "type": "text", "label": "Aco estrutural", "required": true},
+    {"name": "ligacoes", "type": "text", "label": "Tipo de ligacoes", "required": true},
+    {"name": "proteccao_corrosao", "type": "text", "label": "Protecao contra corrosao", "required": true},
+    {"name": "contraventamento", "type": "textarea", "label": "Contraventamento", "required": true},
+    {"name": "cargas_adotadas", "type": "textarea", "label": "Cargas consideradas", "required": true}
+  ]
+}

@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Novo Empreendimento - SNAPENG{% endblock %}
+
+{% block content %}
+<div x-data="newEnterprise()" x-init="init()" class="max-w-6xl mx-auto">
+    <div class="mb-8">
+        <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Passo 1 de 2</p>
+        <h1 class="text-3xl font-bold text-gray-900">Novo empreendimento</h1>
+        <p class="text-gray-600 mt-2 max-w-2xl">
+            Informe a obra, escolha as disciplinas e o responsável técnico.
+            Em seguida você preenche o questionário e gera os memoriais em DOCX.
+        </p>
+    </div>
+
+    <div x-show="loadingDisciplines" x-cloak class="py-12 text-center text-gray-500">Carregando disciplinas...</div>
+    <div x-show="!loadingDisciplines && loadError" x-cloak class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6" x-text="loadError"></div>
+
+    <form x-show="!loadingDisciplines && !loadError" @submit.prevent="createPlan" class="space-y-6" x-cloak>
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Dados do empreendimento</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label class="block md:col-span-2">
+                    <span class="text-sm font-medium text-gray-700">Nome do empreendimento *</span>
+                    <input x-model="enterprise.name" required placeholder="Ex.: Residencial Parque das Águas"
+                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Local da obra</span>
+                    <input x-model="enterprise.shared_data.localizacao" placeholder="Endereço ou referência"
+                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Município</span>
+                    <input x-model="enterprise.shared_data.municipio"
+                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">UF</span>
+                    <input x-model="enterprise.shared_data.uf" maxlength="2" placeholder="GO"
+                           class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+            </div>
+            <label class="block mt-4">
+                <span class="text-sm font-medium text-gray-700">Descrição</span>
+                <textarea x-model="enterprise.description" rows="3" placeholder="Resumo opcional do empreendimento"
+                          class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </label>
+        </section>
+
+        <section class="bg-white rounded-lg shadow p-6">
+            <div class="flex flex-wrap justify-between items-end gap-3 mb-4">
+                <h2 class="text-xl font-semibold">Disciplinas *</h2>
+                <p class="text-sm text-gray-500" x-text="selectedDisciplines.length + ' selecionada(s)'"></p>
+            </div>
+            <div x-show="disciplines.length === 0" class="text-sm text-gray-500 py-4">
+                Nenhuma disciplina disponível no momento.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <template x-for="discipline in disciplines" :key="discipline.key">
+                    <label class="flex items-start gap-3 border rounded-lg p-4 cursor-pointer transition"
+                           :class="selectedDisciplines.includes(discipline.key) ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-400'">
+                        <input type="checkbox" :value="discipline.key" x-model="selectedDisciplines" class="mt-1">
+                        <span>
+                            <span class="block font-medium text-gray-900" x-text="discipline.label"></span>
+                            <span class="block text-sm text-gray-500 mt-1" x-text="(discipline.document_types || []).join(' / ')"></span>
+                        </span>
+                    </label>
+                </template>
+            </div>
+            <div class="mt-5">
+                <span class="block text-sm font-medium text-gray-700 mb-2">Saída desejada</span>
+                <div class="flex flex-wrap gap-4 text-sm text-gray-800">
+                    <label class="flex items-center gap-2"><input type="radio" value="individual" x-model="mode"> Memoriais separados</label>
+                    <label class="flex items-center gap-2"><input type="radio" value="combined" x-model="mode"> Documento único</label>
+                    <label class="flex items-center gap-2"><input type="radio" value="both" x-model="mode"> Separados e documento único</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-2">Responsável técnico</h2>
+            <p class="text-sm text-gray-600 mb-4">Esses dados aparecem no bloco técnico dos memoriais. Não substituem assinatura eletrônica certificada.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Nome completo *</span>
+                    <input x-model="professional.full_name" required class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Título profissional</span>
+                    <input x-model="professional.professional_title" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Número do CREA</span>
+                    <input x-model="professional.crea_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">UF do CREA</span>
+                    <input x-model="professional.crea_state" maxlength="2" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg uppercase focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Número da ART</span>
+                    <input x-model="professional.art_number" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+                <label class="block">
+                    <span class="text-sm font-medium text-gray-700">Empresa</span>
+                    <input x-model="professional.company_name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </label>
+            </div>
+        </section>
+
+        <div x-show="error" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
+
+        <div class="flex flex-wrap justify-between items-center gap-3">
+            <a href="/templates/select" class="px-5 py-2 text-gray-600 hover:text-gray-900">Voltar</a>
+            <button type="submit" :disabled="saving" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 font-semibold">
+                <span x-show="!saving">Continuar para o preenchimento</span>
+                <span x-show="saving">Criando rascunho...</span>
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function newEnterprise() {
+    return {
+        disciplines: [],
+        selectedDisciplines: [],
+        mode: 'both',
+        loadingDisciplines: true,
+        loadError: null,
+        saving: false,
+        error: null,
+        enterprise: {
+            name: '',
+            description: '',
+            shared_data: { localizacao: '', municipio: '', uf: '' }
+        },
+        professional: {
+            full_name: '',
+            professional_title: 'Engenheiro(a)',
+            crea_number: '',
+            crea_state: '',
+            art_number: '',
+            company_name: ''
+        },
+
+        formatDetail(detail, fallback) {
+            if (!detail) return fallback;
+            if (typeof detail === 'string') return detail;
+            if (Array.isArray(detail)) return detail.map(item => item.msg || JSON.stringify(item)).join(' ');
+            if (detail.message) return detail.message;
+            return fallback;
+        },
+
+        async init() {
+            try {
+                const response = await fetch('/api/v1/questionnaires');
+                if (!response.ok) throw new Error('Não foi possível carregar as disciplinas.');
+                this.disciplines = (await response.json()).disciplines || [];
+                if (!this.disciplines.length) {
+                    this.loadError = 'Nenhuma disciplina configurada. Verifique o catálogo do backend.';
+                }
+            } catch (error) {
+                this.loadError = error.message;
+            } finally {
+                this.loadingDisciplines = false;
+            }
+        },
+
+        async createPlan() {
+            this.error = null;
+            if (!this.enterprise.name.trim()) {
+                this.error = 'Informe o nome do empreendimento.';
+                return;
+            }
+            if (this.selectedDisciplines.length === 0) {
+                this.error = 'Selecione ao menos uma disciplina.';
+                return;
+            }
+            if (!this.professional.full_name.trim()) {
+                this.error = 'Informe o responsável técnico.';
+                return;
+            }
+            this.saving = true;
+            try {
+                const body = {
+                    enterprise: this.enterprise,
+                    mode: this.mode,
+                    disciplines: this.selectedDisciplines.map(discipline => ({ discipline })),
+                    professional: this.professional,
+                    ttl_days: 7
+                };
+                const draftResponse = await fetch('/api/v1/drafts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                const draftData = await draftResponse.json();
+                if (!draftResponse.ok) {
+                    this.error = this.formatDetail(draftData.detail, 'Não foi possível salvar o rascunho.');
+                    return;
+                }
+                const response = await fetch('/api/v1/memorials/plan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        enterprise: this.enterprise,
+                        mode: this.mode,
+                        disciplines: body.disciplines,
+                        professional: this.professional
+                    })
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    this.error = this.formatDetail(data.detail, 'Não foi possível montar o plano.');
+                    return;
+                }
+                localStorage.setItem('snapeng_draft_id', draftData.draft_id);
+                localStorage.setItem('snapeng_enterprise_plan', JSON.stringify(data));
+                window.location.href = `/memorials/draft/${draftData.draft_id}`;
+            } catch (error) {
+                this.error = 'Erro de conexão: ' + error.message;
+            } finally {
+                this.saving = false;
+            }
+        }
+    }
+}
+</script>
+{% endblock %}

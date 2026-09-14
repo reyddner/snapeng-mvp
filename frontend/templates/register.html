@@ -1,0 +1,102 @@
+<!-- Arquivo: frontend/templates/register.html -->
+{% extends "base.html" %}
+
+{% block title %}Registro - SNAPENG{% endblock %}
+
+{% block content %}
+<div x-data="registerForm()" class="max-w-md mx-auto mt-12">
+
+    <div class="bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2 text-center">Criar conta</h1>
+        <p class="text-gray-600 text-center mb-6">Opcional — o fluxo principal de memorial funciona sem cadastro</p>
+        <p class="text-sm text-center mb-8">
+            <a href="/memorials/new" class="text-blue-600 hover:text-blue-700 font-medium">Ir direto para novo memorial</a>
+        </p>
+
+        <form @submit.prevent="register">
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input type="email" x-model="formData.email" required autocomplete="email"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Senha *</label>
+                <input type="password" x-model="formData.password" required minlength="8" autocomplete="new-password"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nome completo</label>
+                <input type="text" x-model="formData.full_name" autocomplete="name"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2">CREA (opcional)</label>
+                <input type="text" x-model="formData.crea" placeholder="Ex: CREA-GO 123456"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div x-show="error" class="mb-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
+            <div x-show="success" class="mb-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg" x-text="success"></div>
+
+            <button type="submit" :disabled="loading"
+                    class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 font-semibold">
+                <span x-show="!loading">Criar conta</span>
+                <span x-show="loading">Criando conta...</span>
+            </button>
+
+            <div class="mt-6 text-center text-gray-600">
+                Já tem uma conta?
+                <a href="/login" class="text-blue-600 hover:text-blue-700 font-semibold">Fazer login</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function registerForm() {
+    return {
+        formData: { email: '', password: '', full_name: '', crea: '' },
+        loading: false,
+        error: null,
+        success: null,
+
+        formatDetail(detail) {
+            if (!detail) return 'Erro ao criar conta';
+            if (typeof detail === 'string') return detail;
+            if (Array.isArray(detail)) return detail.map(item => item.msg || JSON.stringify(item)).join(' ');
+            return 'Erro ao criar conta';
+        },
+
+        async register() {
+            this.loading = true;
+            this.error = null;
+            this.success = null;
+            try {
+                const response = await fetch('/api/v1/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(this.formData)
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    this.success = 'Conta criada com sucesso! Redirecionando...';
+                    setTimeout(() => { window.location.href = '/login'; }, 1500);
+                } else {
+                    this.error = this.formatDetail(data.detail);
+                }
+            } catch (error) {
+                this.error = 'Erro ao criar conta: ' + error.message;
+            } finally {
+                this.loading = false;
+            }
+        }
+    }
+}
+</script>
+{% endblock %}

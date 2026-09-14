@@ -1,0 +1,322 @@
+{
+  "name": "Memorial Descritivo E De Especificações Técnicas",
+  "description": "Template gerado automaticamente a partir de MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx",
+  "category": "hidraulica",
+  "subcategory": "",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "1. OBJETO",
+      "content": "O presente memorial descritivo tem por finalidade estabelecer as especificações técnicas e procedimentos para execução {{dos}} {{serviços}} de {{reforma}} e adequação da {{feira}} {{coberta}} {{municipal}}, compreendendo construção de novos {{sanitários}}, sala de depósito de material de limpeza ({{dml}}), {{pintura}} geral, revestimentos e instalação de {{sistema}} de {{telamento}} {{anti}}-{{pássaros}}.",
+      "variables": [
+        "anti",
+        "coberta",
+        "dml",
+        "dos",
+        "feira",
+        "municipal",
+        "pintura",
+        "pássaros",
+        "reforma",
+        "sanitários",
+        "serviços",
+        "sistema",
+        "telamento"
+      ]
+    },
+    {
+      "title": "2. LOCALIZAÇÃO",
+      "content": "A {{obra}} será executada na {{feira}} {{coberta}} {{local}}izada em ____.",
+      "variables": [
+        "coberta",
+        "feira",
+        "local",
+        "obra"
+      ]
+    },
+    {
+      "title": "3. DESCRIÇÃO DOS SERVIÇOS",
+      "content": "3.1 CONSTRUÇÃO DE {{{{sanitários}}}} E {{dml}}\nÁrea Total da Construção: 25,72 m² (2,00 × 12,86m)\n3.1.1 {{sanitários}} (Masculino e Feminino)\nDimensões: 2,00 × 2,93m cada (5,86 m² cada)\nÁrea total {{dos}} {{sanitários}}: 11,72 m²\nEspecificações {{dos}} {{sanitários}}:\nSanitário Masculino:\n1 bacia sanitária com caixa acoplada\n2 mictórios suspensos em louça branca\n2 lavatórios com bancada em granito\nBarras de apoio conforme NBR 9050 (área acessível)\nDivisórias em granito natural, altura 2,49m\nSanitário Feminino:\n2 bacias sanitárias com caixa acoplada\n2 lavatórios com bancada em granito\nBarras de apoio conforme NBR 9050 (área acessível)\nDivisórias em granito natural, altura 2,49m\n3.1.2 Depósito de Material de Limpeza ({{dml}})\nDimensões: 2,00 × 6,00m\nÁrea: 12,00 m²\n1 tanque em granito reconstituído\nPrateleiras em madeira tratada\nPorta em madeira com fechadura\nRevestimentos:\nPiso: Porcelanato {{anti}}derrapante 60×60cm, classe {{pei}} 4\nParedes {{sanitários}}: Azulejo branco 20×30cm até h=1,50m, {{pintura}} epóxi lavável acima\nParedes {{dml}}: {{pintura}} acrílica semi-brilho\n3.2 {{serviços}} DE {{{{pintura}}}} E {{acabamento}}\n3.2.1 Área Administrativa\n{{pintura}} em área de 36,00 m²\nRevestimento de piso em área de 9,00 m²\n3.2.2 Escada\nRevestimento de piso: 7,17 m²\n{{pintura}}: 10,00 m²\n3.2.3 Quadra Esportiva\n{{pintura}}: 1.414,23 m²\n3.2.4 Rampas\n{{pintura}} horizontal: 62,98 m²\n{{pintura}} de paredes: 90,00 m²\n3.2.5 Pavimento Superior - Camarote\nRevestimento de piso: 53,06 m²\n{{pintura}}/grafiato: 24,55 m²\n3.2.6 Paredes do Galpão\n{{pintura}} interna e externa: 120,00 m lineares × 1,00m altura\n{{pintura}} parede externa frente aos banheiros: 23,00 m lineares\n3.3 {{alvenaria}}\nExecução de 5,00 m lineares de parede com altura de 1,00m\n3.4 {{{{sistema}}}} DE {{{{telamento}}}} {{{{anti}}}}-{{pássaros}}\n3.4.1 Objetivo\nInstalação de {{sistema}} de proteção contra entrada de pombos no interior do galpão, utilizando rede de polietileno de alta resistência.\n3.4.2 Área de Intervenção\nExtensão do arco: 28,00m\nComprimento do galpão: 62,00m\nÁrea total de {{telamento}}: 1.736,00 m²\n3.4.3 Especificações Técnicas\nRede: Polietileno de alta densidade ({{pead}}), malha 20-25mm, com proteção UV\nDurabilidade: 5 a 10 anos\nFixação: Cabos de aço galvanizado Ø 3-4mm com esticadores tipo \"turnbuckle\"\nAncoragem: Ganchos metálicos e abraçadeiras na estrutura existente",
+      "variables": [
+        "acabamento",
+        "alvenaria",
+        "anti",
+        "dml",
+        "dos",
+        "pead",
+        "pei",
+        "pintura",
+        "pássaros",
+        "sanitários",
+        "serviços",
+        "sistema",
+        "telamento"
+      ]
+    },
+    {
+      "title": "4. ESPECIFICAÇÕES GERAIS DOS MATERIAIS",
+      "content": "4.1 Instalações Hidrossanitárias\nTubulação água fria: {{pvc}} soldável, Ø 25mm e 50mm\nTubulação esgoto: {{pvc}} série normal, Ø 100mm, 50mm, 40mm\nLouças: Linha comercial resistente, cor branca\nMetais: Croma{{dos}}, linha comercial resistente\n4.2 Instalações Elétricas\nCondutores: Fios de cobre, isolamento 750V\nProteção: Disjuntores termomagnéticos\nIluminação {{sanitários}}: {{led}} com proteção IP44\nVentilação: Natural por venezianas + exaustão mecânica\n4.3 Tintas e Revestimentos\nTinta externa: Acrílica fosca, primeira linha\nTinta interna: Látex acrílico fosco\nTinta {{sanitários}}: Epóxi lavável\nPreparo: Massa acrílica e selador",
+      "variables": [
+        "dos",
+        "led",
+        "pvc",
+        "sanitários"
+      ]
+    },
+    {
+      "title": "5. NORMAS TÉCNICAS",
+      "content": "To{{dos}} os {{serviços}} deverão obedecer às seguintes {{normas}} técnicas:\nNBR 9050 - Acessibilidade\nNBR 5626 - Instalações prediais de água fria\nNBR 8160 - {{sistema}}s prediais de esgoto sanitário\nNBR 5410 - Instalações elétricas de baixa tensão\nNBR 13755 - Revestimentos cerâmicos",
+      "variables": [
+        "dos",
+        "normas",
+        "serviços",
+        "sistema"
+      ]
+    },
+    {
+      "title": "6. CONSIDERAÇÕES FINAIS",
+      "content": "Os {{serviços}} deverão ser executa{{dos}} por profissionais habilita{{dos}}, com emprego de {{materiais}} de primeira qualidade e obediência rigorosa às especificações técnicas e {{normas}} vigentes.\n{{responsável}} TÉCNICO:\n___________________________________________\nNome: {{reyddner}} {{andrei}} {{nunes}} {{silva}}\nProfissão: Engenheiro Civil\n{{crea}}: 1014662982D-GO\n{{local}} e {{data}}: 25/09/2025",
+      "variables": [
+        "andrei",
+        "crea",
+        "data",
+        "dos",
+        "local",
+        "materiais",
+        "normas",
+        "nunes",
+        "responsável",
+        "reyddner",
+        "serviços",
+        "silva"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "acabamento",
+      "type": "number",
+      "label": "Acabamento",
+      "required": true
+    },
+    {
+      "name": "alvenaria",
+      "type": "number",
+      "label": "Alvenaria",
+      "required": true
+    },
+    {
+      "name": "andrei",
+      "type": "number",
+      "label": "Andrei",
+      "required": true
+    },
+    {
+      "name": "anti",
+      "type": "number",
+      "label": "Anti",
+      "required": true
+    },
+    {
+      "name": "bela",
+      "type": "number",
+      "label": "Bela",
+      "required": true
+    },
+    {
+      "name": "coberta",
+      "type": "number",
+      "label": "Coberta",
+      "required": true
+    },
+    {
+      "name": "crea",
+      "type": "number",
+      "label": "Crea",
+      "required": true
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "label": "Data",
+      "required": true
+    },
+    {
+      "name": "dml",
+      "type": "number",
+      "label": "Dml",
+      "required": true
+    },
+    {
+      "name": "dos",
+      "type": "number",
+      "label": "Dos",
+      "required": true
+    },
+    {
+      "name": "feira",
+      "type": "number",
+      "label": "Feira",
+      "required": true
+    },
+    {
+      "name": "finais",
+      "type": "number",
+      "label": "Finais",
+      "required": true
+    },
+    {
+      "name": "gerais",
+      "type": "number",
+      "label": "Gerais",
+      "required": true
+    },
+    {
+      "name": "goiás",
+      "type": "number",
+      "label": "Goiás",
+      "required": true
+    },
+    {
+      "name": "led",
+      "type": "number",
+      "label": "Led",
+      "required": true
+    },
+    {
+      "name": "local",
+      "type": "number",
+      "label": "Local",
+      "required": true
+    },
+    {
+      "name": "materiais",
+      "type": "number",
+      "label": "Materiais",
+      "required": true
+    },
+    {
+      "name": "municipal",
+      "type": "number",
+      "label": "Municipal",
+      "required": true
+    },
+    {
+      "name": "normas",
+      "type": "number",
+      "label": "Normas",
+      "required": true
+    },
+    {
+      "name": "nunes",
+      "type": "number",
+      "label": "Nunes",
+      "required": true
+    },
+    {
+      "name": "obra",
+      "type": "number",
+      "label": "Obra",
+      "required": true
+    },
+    {
+      "name": "pead",
+      "type": "number",
+      "label": "Pead",
+      "required": true
+    },
+    {
+      "name": "pei",
+      "type": "number",
+      "label": "Pei",
+      "required": true
+    },
+    {
+      "name": "pintura",
+      "type": "number",
+      "label": "Pintura",
+      "required": true
+    },
+    {
+      "name": "prefeitura",
+      "type": "number",
+      "label": "Prefeitura",
+      "required": true
+    },
+    {
+      "name": "pvc",
+      "type": "number",
+      "label": "Pvc",
+      "required": true
+    },
+    {
+      "name": "pássaros",
+      "type": "number",
+      "label": "Pássaros",
+      "required": true
+    },
+    {
+      "name": "reforma",
+      "type": "number",
+      "label": "Reforma",
+      "required": true
+    },
+    {
+      "name": "responsável",
+      "type": "number",
+      "label": "Responsável",
+      "required": true
+    },
+    {
+      "name": "reyddner",
+      "type": "number",
+      "label": "Reyddner",
+      "required": true
+    },
+    {
+      "name": "sanitários",
+      "type": "number",
+      "label": "Sanitários",
+      "required": true
+    },
+    {
+      "name": "serviços",
+      "type": "number",
+      "label": "Serviços",
+      "required": true
+    },
+    {
+      "name": "silva",
+      "type": "number",
+      "label": "Silva",
+      "required": true
+    },
+    {
+      "name": "sistema",
+      "type": "number",
+      "label": "Sistema",
+      "required": true
+    },
+    {
+      "name": "telamento",
+      "type": "number",
+      "label": "Telamento",
+      "required": true
+    },
+    {
+      "name": "vista",
+      "type": "number",
+      "label": "Vista",
+      "required": true
+    }
+  ],
+  "normas": [
+    "NBR"
+  ],
+  "calculations": [],
+  "metadata": {
+    "source_file": "MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx",
+    "generated_at": "2025-11-25T19:54:48.236798",
+    "generated_by": "import_memorials.py"
+  }
+}

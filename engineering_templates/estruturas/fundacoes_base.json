@@ -1,0 +1,25 @@
+{
+  "name": "Memorial de Fundacoes Base",
+  "description": "Memorial descritivo para fundacoes e infraestrutura.",
+  "category": "estruturas",
+  "subcategory": "fundacoes",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve as fundacoes do empreendimento localizado em {{localizacao}}, adotando o sistema {{tipo_fundacao}}."},
+    {"title": "2. INVESTIGACAO GEOTECNICA", "content": "A solucao considera sondagem disponivel: {{sondagem_disponivel}}, tipo de solo {{tipo_solo}}, tensao admissivel de {{tensao_admissivel}} kPa e nivel do lencol freatico de {{nivel_agua}} m."},
+    {"title": "3. CRITERIOS DE DIMENSIONAMENTO", "content": "As cargas transmitidas para as fundacoes sao: {{cargas_fundacao}}. Os criterios de escavacao e execucao sao: {{criterios_execucao}}."},
+    {"title": "4. CONTROLE E EXECUCAO", "content": "A execucao devera respeitar cotas, locacao, preparo do terreno, controle do concreto, armaduras, reaterro e drenagem conforme projeto e normas aplicaveis."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 6122 - Projeto e execucao de fundacoes", "ABNT NBR 6484 - Sondagens de simples reconhecimento com SPT", "ABNT NBR 6118 - Projeto de estruturas de concreto"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "tipo_fundacao", "type": "text", "label": "Tipo de fundacao", "required": true},
+    {"name": "sondagem_disponivel", "type": "select", "label": "Sondagem disponivel", "required": true, "options": [{"value": "sim", "label": "Sim"}, {"value": "nao", "label": "Nao"}]},
+    {"name": "tipo_solo", "type": "text", "label": "Tipo de solo", "required": true},
+    {"name": "tensao_admissivel", "type": "number", "label": "Tensao admissivel (kPa)", "required": true, "min": 0},
+    {"name": "nivel_agua", "type": "number", "label": "Nivel do lencol (m)", "required": true, "min": 0},
+    {"name": "cargas_fundacao", "type": "textarea", "label": "Cargas na fundacao", "required": true},
+    {"name": "criterios_execucao", "type": "textarea", "label": "Criterios de execucao", "required": true}
+  ]
+}

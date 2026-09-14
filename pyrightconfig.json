@@ -1,0 +1,23 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.14",
+  "extraPaths": ["backend"],
+  "typeCheckingMode": "off",
+  "include": [
+    "backend"
+  ],
+  "exclude": [
+    "node_modules",
+    ".venv",
+    "SnapEng",
+    "v0-certidao-bot",
+    "frontend",
+    "engineering_templates",
+    "**/__pycache__",
+    ".pytest_cache"
+  ],
+  "reportMissingImports": "error",
+  "reportMissingModuleSource": "none",
+  "reportMissingTypeStubs": "none"
+}

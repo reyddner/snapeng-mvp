@@ -1,0 +1,156 @@
+<!-- Arquivo: frontend/templates/dashboard.html -->
+{% extends "base.html" %}
+
+{% block title %}Dashboard - SNAPENG{% endblock %}
+
+{% block content %}
+<div x-data="dashboard()" class="max-w-7xl mx-auto">
+
+    <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Meus Projetos</h1>
+            <p class="text-gray-600 mt-1" x-text="authHint"></p>
+            <p x-show="claimedNotice" class="text-sm text-green-700 mt-2" x-text="claimedNotice"></p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            <a href="/memorials/new" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                + Novo memorial
+            </a>
+            <a x-show="!hasToken" href="/login" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold">
+                Entrar
+            </a>
+            <button x-show="hasToken" @click="logout()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold">
+                Sair
+            </button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Total de Projetos</div>
+            <div class="text-3xl font-bold text-gray-900" x-text="stats.total"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Em Progresso</div>
+            <div class="text-3xl font-bold text-blue-600" x-text="stats.inProgress"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Concluídos</div>
+            <div class="text-3xl font-bold text-green-600" x-text="stats.completed"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Memoriais salvos</div>
+            <div class="text-3xl font-bold text-indigo-600" x-text="stats.memorialPlans"></div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow">
+        <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-semibold mb-2">Lista de Projetos</h2>
+            <input
+                type="text"
+                x-model="searchQuery"
+                placeholder="Buscar projetos..."
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+        </div>
+
+        <div x-show="loading" class="p-8 text-center text-gray-500">Carregando projetos...</div>
+        <div x-show="!loading && error" class="p-8 text-center text-red-600" x-text="error"></div>
+        <div x-show="!loading && !error && filteredProjects.length === 0" class="p-8 text-center text-gray-500">
+            <p x-text="hasToken ? 'Nenhum projeto encontrado.' : 'Faça login para ver projetos salvos na conta.'"></p>
+            <a href="/memorials/new" class="inline-block mt-4 text-blue-600 hover:underline">Criar memorial agora</a>
+        </div>
+        <div x-show="!loading && filteredProjects.length" class="divide-y divide-gray-200">
+            <template x-for="project in filteredProjects" :key="project.id">
+                <div class="p-6 flex flex-wrap justify-between gap-4 items-center">
+                    <div>
+                        <h3 class="font-semibold text-gray-900" x-text="project.name"></h3>
+                        <p class="text-sm text-gray-500">
+                            Status: <span x-text="project.status"></span>
+                            · Atualizado: <span x-text="formatDate(project.updated_at)"></span>
+                            <span x-show="isMemorialPlan(project)" class="text-indigo-600"> · Memorial multidisciplinar</span>
+                        </p>
+                    </div>
+                    <a :href="'/editor/' + project.id" class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100">Abrir</a>
+                </div>
+            </template>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function dashboard() {
+    return {
+        projects: [],
+        searchQuery: '',
+        loading: true,
+        error: null,
+        hasToken: false,
+        authHint: '',
+        claimedNotice: '',
+        stats: { total: 0, inProgress: 0, completed: 0, memorialPlans: 0 },
+
+        get filteredProjects() {
+            const q = this.searchQuery.trim().toLowerCase();
+            if (!q) return this.projects;
+            return this.projects.filter(p => (p.name || '').toLowerCase().includes(q));
+        },
+
+        isMemorialPlan(project) {
+            return project?.project_data?.kind === 'memorial_plan';
+        },
+
+        async init() {
+            const params = new URLSearchParams(window.location.search);
+            const claimedId = params.get('claimed');
+            if (claimedId) {
+                this.claimedNotice = 'Memorial salvo na conta (projeto #' + claimedId + ').';
+            }
+
+            const user = window.SnapEngAuth
+                ? await window.SnapEngAuth.getCurrentUser()
+                : null;
+            this.hasToken = Boolean(user);
+            if (!this.hasToken) {
+                this.loading = false;
+                this.authHint = 'Sessão não encontrada. Redirecione para login se esta página abriu sem cookie.';
+                return;
+            }
+            this.authHint = 'Projetos vinculados à sua conta.';
+            try {
+                const response = await window.SnapEngAuth.authFetch('/api/v1/projects/');
+                if (response.status === 401) {
+                    this.hasToken = false;
+                    this.authHint = 'Sessão expirada. Entre novamente ou use o fluxo público.';
+                    this.loading = false;
+                    return;
+                }
+                if (!response.ok) throw new Error('Não foi possível carregar os projetos.');
+                this.projects = await response.json();
+                this.stats.total = this.projects.length;
+                this.stats.inProgress = this.projects.filter(p => ['draft', 'in_progress', 'DRAFT', 'IN_PROGRESS'].includes(p.status)).length;
+                this.stats.completed = this.projects.filter(p => ['completed', 'COMPLETED'].includes(p.status)).length;
+                this.stats.memorialPlans = this.projects.filter(p => this.isMemorialPlan(p)).length;
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.loading = false;
+            }
+        },
+
+        formatDate(value) {
+            if (!value) return '—';
+            try { return new Date(value).toLocaleString('pt-BR'); } catch (_) { return value; }
+        },
+
+        async logout() {
+            if (window.SnapEngAuth) await window.SnapEngAuth.logout('/');
+            else window.location.href = '/';
+        }
+    }
+}
+</script>
+{% endblock %}

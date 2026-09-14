@@ -1,0 +1,102 @@
+{
+  "name": "Subestação Elétrica",
+  "description": "Template para memorial descritivo de subestação elétrica",
+  "category": "eletrica",
+  "subcategory": "subestacao",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "1. OBJETO",
+      "content": "Este memorial descreve a execução da subestação elétrica {{tipo_subestacao}} localizada em {{localizacao}}, com potência instalada de {{potencia_instalada}} kVA.",
+      "variables": ["tipo_subestacao", "localizacao", "potencia_instalada"]
+    },
+    {
+      "title": "2. DIMENSIONAMENTO",
+      "content": "A subestação foi dimensionada para atender uma demanda de {{demanda_maxima}} kVA, com tensão primária de {{tensao_primaria}} kV e tensão secundária de {{tensao_secundaria}} kV.",
+      "variables": ["demanda_maxima", "tensao_primaria", "tensao_secundaria"]
+    },
+    {
+      "title": "3. EQUIPAMENTOS",
+      "content": "Os principais equipamentos instalados são: {{equipamentos}}. O transformador possui potência nominal de {{potencia_transformador}} kVA.",
+      "variables": ["equipamentos", "potencia_transformador"]
+    },
+    {
+      "title": "4. PROTEÇÕES",
+      "content": "O sistema de proteção inclui: {{sistemas_protecao}}. A coordenação de proteções foi realizada conforme NBR 14039.",
+      "variables": ["sistemas_protecao"]
+    }
+  ],
+  "calculations": [
+    {
+      "name": "corrente_primaria",
+      "formula": "(potencia_instalada * 1000) / (tensao_primaria * 1.732)",
+      "inputs": ["potencia_instalada", "tensao_primaria"],
+      "unit": "A",
+      "description": "Corrente primária calculada"
+    }
+  ],
+  "normas": [
+    "NBR 14039 - Instalações elétricas de média tensão",
+    "NBR 5410 - Instalações elétricas de baixa tensão",
+    "NBR 15749 - Transformadores de potência"
+  ],
+  "variables": [
+    {
+      "name": "tipo_subestacao",
+      "type": "text",
+      "label": "Tipo de Subestação",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localização",
+      "required": true
+    },
+    {
+      "name": "potencia_instalada",
+      "type": "number",
+      "label": "Potência Instalada (kVA)",
+      "required": true
+    },
+    {
+      "name": "tensao_primaria",
+      "type": "number",
+      "label": "Tensão Primária (kV)",
+      "required": true
+    },
+    {
+      "name": "tensao_secundaria",
+      "type": "number",
+      "label": "Tensão Secundária (kV)",
+      "required": true
+    },
+    {
+      "name": "demanda_maxima",
+      "type": "number",
+      "label": "Demanda Máxima (kVA)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "equipamentos",
+      "type": "textarea",
+      "label": "Equipamentos Principais",
+      "required": true
+    },
+    {
+      "name": "potencia_transformador",
+      "type": "number",
+      "label": "Potência do Transformador (kVA)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "sistemas_protecao",
+      "type": "textarea",
+      "label": "Sistemas de Proteção",
+      "required": true
+    }
+  ]
+}
+

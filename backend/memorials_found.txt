@@ -1,0 +1,1470 @@
+================================================================================
+RELATÓRIO DE MEMORIAIS ENCONTRADOS
+================================================================================
+
+Data: 2025-11-25 19:53:57
+Total de arquivos: 291
+
+RESUMO POR EXTENSÃO:
+--------------------------------------------------------------------------------
+.doc: 64 arquivos
+.docx: 29 arquivos
+.pdf: 198 arquivos
+
+ARQUIVOS ENCONTRADOS:
+--------------------------------------------------------------------------------
+
+1. MODELO_Regras para elaboração de Memorial Descritivo.docx
+   Caminho: D:\APOSENTADORIA\CURSOS\ENGENHARIA\Incorporação de Edifícios e loteamento- Jamil Rahme\Loteamento na Prática\MODULO 8\BONUS 2\MODELO_Regras para elaboração de Memorial Descritivo.docx
+   Tamanho: 16,503 bytes
+   Modificado: 2025-07-08T11:21:26.570114
+
+2. MODELO_Regras para elaboração de Memorial Descritivo.docx
+   Caminho: D:\APOSENTADORIA\CURSOS\ENGENHARIA\Loteamento na Prática\MODULO 8\BONUS 2\MODELO_Regras para elaboração de Memorial Descritivo.docx
+   Tamanho: 16,503 bytes
+   Modificado: 2025-10-27T20:38:55.917992
+
+3. 10 - O Processo de Engenharia de Conhecimento.pdf
+   Caminho: D:\APOSENTADORIA\CURSOS\INTELIGENCIA ARTIFICIAL\Formacao.de.Inteligencia.Artificial\1 - Introdução à Inteligência Artificial\3. Agentes Lógicos\PDFs\10 - O Processo de Engenharia de Conhecimento.pdf
+   Tamanho: 78,607 bytes
+   Modificado: 2025-07-25T04:43:11.016941
+
+4. 1.000 Questões Comentadas de Engenharia Civil.pdf
+   Caminho: D:\APOSENTADORIA\EBOOK BAIXADOS\1.000 Questões Comentadas de Engenharia Civil.pdf
+   Tamanho: 294,162,802 bytes
+   Modificado: 2025-07-08T00:24:50.171019
+
+5. Memorial Descritivo Protocolo 13932225-2.pdf
+   Caminho: D:\arrumar\BOMBEIRO\Memorial Descritivo Protocolo 13932225-2.pdf
+   Tamanho: 4,640,884 bytes
+   Modificado: 2025-09-06T16:07:56.493417
+
+6. Memorial Descritivo Protocolo 13932225.pdf
+   Caminho: D:\arrumar\BOMBEIRO\Memorial Descritivo Protocolo 13932225.pdf
+   Tamanho: 484,201 bytes
+   Modificado: 2025-09-06T11:15:36.875384
+
+7. Cópia de PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Caminho: D:\arrumar\Documentos\Cópia de PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Tamanho: 332,144 bytes
+   Modificado: 2025-10-21T09:33:33.343168
+
+8. MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx
+   Caminho: D:\arrumar\Documentos\MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx
+   Tamanho: 242,550 bytes
+   Modificado: 2025-09-25T14:37:58.605278
+
+9. Memorial Descritivo Protocolo 13932225-1.pdf
+   Caminho: D:\arrumar\Documentos\Memorial Descritivo Protocolo 13932225-1.pdf
+   Tamanho: 484,316 bytes
+   Modificado: 2025-09-05T16:31:40.469056
+
+10. Memorial Descritivo Protocolo 13932225-2.pdf
+   Caminho: D:\arrumar\Documentos\Memorial Descritivo Protocolo 13932225-2.pdf
+   Tamanho: 484,201 bytes
+   Modificado: 2025-09-05T16:40:05.027802
+
+11. Memorial Descritivo Protocolo 13932225.pdf
+   Caminho: D:\arrumar\Documentos\Memorial Descritivo Protocolo 13932225.pdf
+   Tamanho: 484,316 bytes
+   Modificado: 2025-09-05T16:31:18.224606
+
+12. MEMORIAL DESCRITIVO.docx
+   Caminho: D:\arrumar\Documentos\MEMORIAL DESCRITIVO.docx
+   Tamanho: 259,775 bytes
+   Modificado: 2025-10-15T15:56:07.517109
+
+13. Memorial-Descritivo-Tecnico-Estrutura-Metalica-do-Estacionamento-Estrutura-da-Sala-de-Arquivo-e-Inst (1).pdf
+   Caminho: D:\arrumar\Documentos\Memorial-Descritivo-Tecnico-Estrutura-Metalica-do-Estacionamento-Estrutura-da-Sala-de-Arquivo-e-Inst (1).pdf
+   Tamanho: 2,729,515 bytes
+   Modificado: 2025-08-25T03:00:15.019255
+
+14. Memorial-Descritivo-Tecnico-Estrutura-Metalica-do-Estacionamento-Estrutura-da-Sala-de-Arquivo-e-Inst.pdf
+   Caminho: D:\arrumar\Documentos\Memorial-Descritivo-Tecnico-Estrutura-Metalica-do-Estacionamento-Estrutura-da-Sala-de-Arquivo-e-Inst.pdf
+   Tamanho: 2,729,515 bytes
+   Modificado: 2025-08-25T02:59:52.305163
+
+15. Memorial_descritivo_e_de_especificacoes_tecnicas_assinado.pdf
+   Caminho: D:\arrumar\Documentos\Memorial_descritivo_e_de_especificacoes_tecnicas_assinado.pdf
+   Tamanho: 608,977 bytes
+   Modificado: 2025-09-25T14:40:58.243325
+
+16. Memorial_Descritivo_Protocolo_13932225-1_assinado.pdf
+   Caminho: D:\arrumar\Documentos\Memorial_Descritivo_Protocolo_13932225-1_assinado.pdf
+   Tamanho: 514,033 bytes
+   Modificado: 2025-09-05T16:32:18.126096
+
+17. Memorial_Descritivo_Protocolo_13932225-2_assinado.pdf
+   Caminho: D:\arrumar\Documentos\Memorial_Descritivo_Protocolo_13932225-2_assinado.pdf
+   Tamanho: 513,906 bytes
+   Modificado: 2025-09-05T16:41:11.189595
+
+18. MENORIAL+DESCRITIVO-1.pdf
+   Caminho: D:\arrumar\Documentos\MENORIAL+DESCRITIVO-1.pdf
+   Tamanho: 1,335,811 bytes
+   Modificado: 2025-11-04T20:53:58.264401
+
+19. MENORIAL+DESCRITIVO.pdf
+   Caminho: D:\arrumar\Documentos\MENORIAL+DESCRITIVO.pdf
+   Tamanho: 1,335,811 bytes
+   Modificado: 2025-11-04T20:51:51.463783
+
+20. MONT-CRUZ ENGENHARIA ORDEM 144737.pdf
+   Caminho: D:\arrumar\Documentos\MONT-CRUZ ENGENHARIA ORDEM 144737.pdf
+   Tamanho: 158,435 bytes
+   Modificado: 2025-10-13T09:30:11.936171
+
+21. MONT-CRUZ ENGENHARIA ORDEM 146498.pdf
+   Caminho: D:\arrumar\Documentos\MONT-CRUZ ENGENHARIA ORDEM 146498.pdf
+   Tamanho: 169,550 bytes
+   Modificado: 2025-11-12T08:49:00.719942
+
+22. parecer técnico sobre mudanças no orçamento[1].pdf
+   Caminho: D:\arrumar\Documentos\parecer técnico sobre mudanças no orçamento[1].pdf
+   Tamanho: 185,347 bytes
+   Modificado: 2025-10-13T14:34:07.348597
+
+23. Parecer+Técnico_Jurídico+4066-1.pdf
+   Caminho: D:\arrumar\Documentos\Parecer+Técnico_Jurídico+4066-1.pdf
+   Tamanho: 58,539 bytes
+   Modificado: 2025-09-22T19:51:28.076182
+
+24. Parecer+Técnico_Jurídico+4066.pdf
+   Caminho: D:\arrumar\Documentos\Parecer+Técnico_Jurídico+4066.pdf
+   Tamanho: 58,539 bytes
+   Modificado: 2025-09-22T19:47:37.237153
+
+25. PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA-1.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA-1.pdf
+   Tamanho: 528,485 bytes
+   Modificado: 2025-10-21T09:28:33.171838
+
+26. PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Tamanho: 543,839 bytes
+   Modificado: 2025-10-17T14:08:07.122203
+
+27. PROPOSTA CÂMARA-FISCALIZAÇÃO-BVG-GO-MONT CRUZ ENGENHARIA.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA CÂMARA-FISCALIZAÇÃO-BVG-GO-MONT CRUZ ENGENHARIA.pdf
+   Tamanho: 531,675 bytes
+   Modificado: 2025-11-17T13:10:47.229614
+
+28. PROPOSTA NOVO PLANALTO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA NOVO PLANALTO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Tamanho: 551,733 bytes
+   Modificado: 2025-09-12T09:55:00.311497
+
+29. PROPOSTA TRE-CE-MONT CRUZ ENGENHARIA LTDA-1.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA TRE-CE-MONT CRUZ ENGENHARIA LTDA-1.pdf
+   Tamanho: 543,547 bytes
+   Modificado: 2025-10-09T00:40:02.112872
+
+30. PROPOSTA TRE-CE-MONT CRUZ ENGENHARIA LTDA.pdf
+   Caminho: D:\arrumar\Documentos\PROPOSTA TRE-CE-MONT CRUZ ENGENHARIA LTDA.pdf
+   Tamanho: 543,392 bytes
+   Modificado: 2025-10-09T00:36:40.694626
+
+31. ROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Caminho: D:\arrumar\Documentos\ROPOSTA CÂMARA-BVG-GO-MONT CRUZ ENGENHARIA LTDA.pdf
+   Tamanho: 543,840 bytes
+   Modificado: 2025-10-13T13:50:47.584195
+
+32. memorial.pdf
+   Caminho: D:\arrumar\guilherme assinar 28-10-25\memorial.pdf
+   Tamanho: 714,590 bytes
+   Modificado: 2025-10-28T15:03:27.518526
+
+33. Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Caminho: D:\arrumar\Pastas_Diversas\PONTE AV GOIÁS\Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Tamanho: 413,019 bytes
+   Modificado: 2025-06-18T13:34:13.686018
+
+34. Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Caminho: D:\arrumar\Pastas_Diversas\PONTE AV GOIÁS\ASSINATURA\Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Tamanho: 442,687 bytes
+   Modificado: 2025-06-18T13:47:17.865879
+
+35. ANEXO III - contrato__servicos_comuns_de_engenharia__setembro_21_.docx
+   Caminho: D:\MONT CRUZ\ANALISE\MES 10\10-10-22\10-10\PE 08-2022 INST.FED.DE EDUC.,CIENC.E TEC.DA BAHIA\PREGÃO 08.2022 - Laudos de Acessibilidade\ANEXO III - contrato__servicos_comuns_de_engenharia__setembro_21_.docx
+   Tamanho: 49,304 bytes
+   Modificado: 2022-09-23T10:19:14
+
+36. 1 EDITAL PE 058 2022 - Serviços de Engenharia.pdf
+   Caminho: D:\MONT CRUZ\ANALISE\MES 10\10-10-22\10-10\PREGÃO ELETRÔNICO 00058-PRESIDENCIA DA REPUBLICA\1 EDITAL PE 058 2022 - Serviços de Engenharia.pdf
+   Tamanho: 976,341 bytes
+   Modificado: 2022-10-06T16:33:21.866732
+
+37. 14- Anexo XIV – Estudo Técnico Preliminar.pdf
+   Caminho: D:\MONT CRUZ\ANALISE\MES 10\10-10-22\10-10\PREGÃO ELETRÔNICO 84-2022 - NITEROI RJ\Edital e Anexos PE 84.2022 - PCIP\14- Anexo XIV – Estudo Técnico Preliminar.pdf
+   Tamanho: 5,404,956 bytes
+   Modificado: 2022-05-23T16:31:06
+
+38. 0_MEMORIAL DE CALCULO DRENAGEM E SARJETAS ASS.pdf.pdf
+   Caminho: D:\MONT CRUZ\ANALISE\NOVEMBRO\ACREUNA-GO DIA 29-11-22 DRENAGEM\0_MEMORIAL DE CALCULO DRENAGEM E SARJETAS ASS.pdf.pdf
+   Tamanho: 784,637 bytes
+   Modificado: 2022-11-08T17:38:42
+
+39. 4_MEMORIAL FOTOGRAFICO ANTECEDENTE DRENAGEM E SARJETAS .pdf.pdf
+   Caminho: D:\MONT CRUZ\ANALISE\NOVEMBRO\ACREUNA-GO DIA 29-11-22 DRENAGEM\4_MEMORIAL FOTOGRAFICO ANTECEDENTE DRENAGEM E SARJETAS .pdf.pdf
+   Tamanho: 2,520,158 bytes
+   Modificado: 2022-11-08T17:38:42
+
+40. Anexo I - Apêndice A - Projetos, Memoriais, Planilhas e Procedimentos Técnicos.doc
+   Caminho: D:\MONT CRUZ\ANALISE\NOVEMBRO\PADRAO DE PROJETO CAIXA\Anexo I - Apêndice A - Projetos, Memoriais, Planilhas e Procedimentos Técnicos.doc
+   Tamanho: 379,904 bytes
+   Modificado: 2016-10-03T09:30:26
+
+41. Memorial_descritivo_acabamentos_centro_comercial.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_centro_comercial.doc
+   Tamanho: 1,103,360 bytes
+   Modificado: 2012-09-28T22:26:50
+
+42. Memorial_descritivo_acabamentos_residencial.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_residencial.doc
+   Tamanho: 193,536 bytes
+   Modificado: 2012-09-28T22:33:38
+
+43. Memorial_descritivo_creche.pdf
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_creche.pdf
+   Tamanho: 47,355 bytes
+   Modificado: 2012-09-30T18:32:14
+
+44. Memorial_descritivo_escola.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_escola.doc
+   Tamanho: 50,688 bytes
+   Modificado: 2012-09-30T18:43:10
+
+45. Memorial_descritivo_hipermercado.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_hipermercado.doc
+   Tamanho: 59,392 bytes
+   Modificado: 2012-09-28T22:23:54
+
+46. Memorial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_piscina.doc
+   Tamanho: 38,400 bytes
+   Modificado: 2012-09-28T22:44:14
+
+47. Memorial_descritivo_residência_prefeitura.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_residência_prefeitura.doc
+   Tamanho: 47,104 bytes
+   Modificado: 2012-09-28T22:40:54
+
+48. Memorial_descritivo_unidade_residencial.pdf
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_unidade_residencial.pdf
+   Tamanho: 59,155 bytes
+   Modificado: 2012-09-30T18:31:32
+
+49. ~$morial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\~$morial_descritivo_piscina.doc
+   Tamanho: 162 bytes
+   Modificado: 2023-02-03T14:19:57.536413
+
+50. Memorial_Descritivo[1].pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\Memorial_Descritivo[1].pdf
+   Tamanho: 593,335 bytes
+   Modificado: 2025-09-16T19:48:25.186619
+
+51. NBR-13752-1996-Pericias-de-Engenharia-na-Construcao-Civil.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NBR-13752-1996-Pericias-de-Engenharia-na-Construcao-Civil.pdf
+   Tamanho: 75,240 bytes
+   Modificado: 2025-09-16T20:36:35.411805
+
+52. Memorial Descritivo Modelo 1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\.PROJETOS ER\Projetos\serviço\memoriais\Memorial Descritivo Modelo 1.pdf
+   Tamanho: 125,118 bytes
+   Modificado: 2016-07-25T23:37:38.338287
+
+53. Memorial Descritivo Modelo 2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\.PROJETOS ER\Projetos\serviço\memoriais\Memorial Descritivo Modelo 2.pdf
+   Tamanho: 125,461 bytes
+   Modificado: 2016-07-25T23:37:42.778231
+
+54. Minuta de Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\.PROJETOS ER\Projetos\serviço\memoriais\Minuta de Memorial Descritivo.doc
+   Tamanho: 35,840 bytes
+   Modificado: 2016-07-25T23:37:47.981320
+
+55. antiga - 05-2025 MONT CRUZ ENGENHARIA LTDA - falencia lic.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\certidoes\antiga - 05-2025 MONT CRUZ ENGENHARIA LTDA - falencia lic.pdf
+   Tamanho: 671,429 bytes
+   Modificado: 2025-05-16T13:51:03.923405
+
+56. MONT_CRUZ_ENGENHARIA_LTDA_Certidao_especifica_de_Falencia_e_Concordata_para_fins_de_Licitacao_16-10-2025_16-37-37.PDF
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\certidoes\MONT_CRUZ_ENGENHARIA_LTDA_Certidao_especifica_de_Falencia_e_Concordata_para_fins_de_Licitacao_16-10-2025_16-37-37.PDF
+   Tamanho: 915,560 bytes
+   Modificado: 2025-10-16T16:49:39.261093
+
+57. PROPOSTA CÂMARA-FISCALIZAÇÃO-BVG-GO-MONT CRUZ ENGENHARIA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO CAMARA\FISCALIZAÇÃO\PROPOSTA CÂMARA-FISCALIZAÇÃO-BVG-GO-MONT CRUZ ENGENHARIA.pdf
+   Tamanho: 531,675 bytes
+   Modificado: 2025-11-17T15:11:53.673317
+
+58. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO CAMARA\PROJETO\Arquitetura\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 82,855 bytes
+   Modificado: 2025-08-26T01:35:10.096690
+
+59. 02.memorial.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO CAMARA\PROJETO\EXCEL\02.memorial.pdf
+   Tamanho: 451,521 bytes
+   Modificado: 2025-09-30T15:27:50.400303
+
+60. 02.memorial_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO CAMARA\PROJETO\EXCEL\assinado\02.memorial_assinado.pdf
+   Tamanho: 481,056 bytes
+   Modificado: 2025-09-30T16:01:31.163750
+
+61. MEMORIAL DESCRITIVO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO TRAFO\Projeto Novo\MEMORIAL DESCRITIVO.docx
+   Tamanho: 260,470 bytes
+   Modificado: 2025-10-28T15:02:55.898818
+
+62. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO TRAFO\Projeto Novo\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 715,879 bytes
+   Modificado: 2025-10-09T14:07:25.348366
+
+63. MEMORIAL+DESCRITIVO.PDF
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETO TRAFO\Re_ Fwd_ PROJETO APROVADO FUNDO MUNICIPAL DE SAUDE\MEMORIAL+DESCRITIVO.PDF
+   Tamanho: 200,026 bytes
+   Modificado: 2025-08-22T16:03:58.821424
+
+64. parecer técnico sobre mudanças no orçamento.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\14º CASSAS SUSSUAPARA\parecer técnico sobre mudanças no orçamento.docx
+   Tamanho: 235,832 bytes
+   Modificado: 2025-09-26T14:36:53.594784
+
+65. 02 - MEMORIAL DESCRITIVO ESTRUTURAL.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\17º CEU\38- CEU DA CULTURA\02 - MEMORIAL DESCRITIVO ESTRUTURAL.pdf
+   Tamanho: 156,697 bytes
+   Modificado: 2025-10-10T14:08:02.267765
+
+66. MEMORIAL DESCRITIVO ARQUITETURA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\17º CEU\38- CEU DA CULTURA\MEMORIAL DESCRITIVO ARQUITETURA.pdf
+   Tamanho: 2,349,835 bytes
+   Modificado: 2025-10-10T14:07:28.616158
+
+67. MemorialDescritivoAVTO CEU.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\17º CEU\38- CEU DA CULTURA\AVTO\MemorialDescritivoAVTO CEU.pdf
+   Tamanho: 715,873 bytes
+   Modificado: 2025-10-10T15:27:26.004449
+
+68. Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Tamanho: 4,255,469 bytes
+   Modificado: 2025-04-30T17:12:36.645812
+
+69. Memorial Descritivo Bela Vista de Goiás-GO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\Memorial Descritivo Bela Vista de Goiás-GO.docx
+   Tamanho: 754,438 bytes
+   Modificado: 2025-07-14T09:58:36.510828
+
+70. Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Tamanho: 413,019 bytes
+   Modificado: 2025-06-18T13:34:13.686018
+
+71. Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\ASSINATURA REV2\Memorial Descritivo Bela Vista de Goiás-GO-1.pdf
+   Tamanho: 509,576 bytes
+   Modificado: 2025-06-26T13:01:14.338758
+
+72. Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\ASSINATURA REV2\assinatura projeto\Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Tamanho: 539,076 bytes
+   Modificado: 2025-06-26T13:31:34.550745
+
+73. Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\ASSINATURA1\Memorial_Descritivo_Bela_Vista_de_Goias-GO-1_assinado.pdf
+   Tamanho: 442,687 bytes
+   Modificado: 2025-06-18T13:47:17.865879
+
+74. Memorial Descritivo Bela Vista de Goiás-GO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\EXCEL POSSIVEL REDUÇÃO\novo memorial 14-07-25\Memorial Descritivo Bela Vista de Goiás-GO.docx
+   Tamanho: 754,829 bytes
+   Modificado: 2025-07-14T09:59:09.301067
+
+75. Memorial_Descritivo_Bela_Vista_de_Goias-GO_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\1º PROJETO-PONTE AV. GOIÁS\PONTE AV GOIÁS\EXCEL POSSIVEL REDUÇÃO\novo memorial 14-07-25\Memorial_Descritivo_Bela_Vista_de_Goias-GO_assinado.pdf
+   Tamanho: 5,119,310 bytes
+   Modificado: 2025-07-14T10:01:06.406590
+
+76. MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 25.01.2019.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\2º PROJETO-SETOR PARQUE LAS VEGAS\PAVIMENTAÇÃO\MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 25.01.2019.doc
+   Tamanho: 2,122,240 bytes
+   Modificado: 2025-05-21T14:20:57.101196
+
+77. MEMORIAL DESCRITIVO - LAS VEGAS REV8.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\2º PROJETO-SETOR PARQUE LAS VEGAS\PAVIMENTAÇÃO\MEMORIAL\MEMORIAL DESCRITIVO - LAS VEGAS REV8.pdf
+   Tamanho: 869,721 bytes
+   Modificado: 2025-05-20T18:53:28.090289
+
+78. MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 22-05-25.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\2º PROJETO-SETOR PARQUE LAS VEGAS\PROJ. LAS VEGAS MODIFICADO\MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 22-05-25.doc
+   Tamanho: 4,027,904 bytes
+   Modificado: 2025-05-22T05:07:16.105000
+
+79. MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 22-05-25.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\2º PROJETO-SETOR PARQUE LAS VEGAS\PROJ. LAS VEGAS MODIFICADO\ASSINAR\MEMORIAL DESCRITIVO PAV. TSD PARQUE LAS VEGAS V03 A 22-05-25.pdf
+   Tamanho: 1,007,342 bytes
+   Modificado: 2025-07-22T13:23:25.960767
+
+80. MEMORIAL_DESCRITIVO_PAV._TSD_PARQUE_LAS_VEGAS_V03_A_22-05-25_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\2º PROJETO-SETOR PARQUE LAS VEGAS\PROJ. LAS VEGAS MODIFICADO\ASSINAR\ASSINADO\MEMORIAL_DESCRITIVO_PAV._TSD_PARQUE_LAS_VEGAS_V03_A_22-05-25_assinado.pdf
+   Tamanho: 1,037,280 bytes
+   Modificado: 2025-07-22T13:35:53.817492
+
+81. Memorial_descritivo_escola.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\3º CMEI\Memorial_descritivo_escola.doc
+   Tamanho: 59,392 bytes
+   Modificado: 2025-05-12T22:33:02.487000
+
+82. Memorial Descritivo - Ampliação do CMEI Dona Baltira.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\3º CMEI\ESTRUTURAL\MEMORIAL\Memorial Descritivo - Ampliação do CMEI Dona Baltira.pdf
+   Tamanho: 252,452 bytes
+   Modificado: 2025-05-15T22:34:02.203952
+
+83. Memorial Descritivo - Ampliação do CMEI Dona Baltira2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\3º CMEI\ESTRUTURAL\MEMORIAL\Memorial Descritivo - Ampliação do CMEI Dona Baltira2.pdf
+   Tamanho: 252,013 bytes
+   Modificado: 2025-06-11T11:17:12.326645
+
+84. MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\8º REFORMA FEIRA COBERTA\MEMORIAL DESCRITIVO E DE ESPECIFICAÇÕES TÉCNICAS.docx
+   Tamanho: 242,598 bytes
+   Modificado: 2025-09-25T14:39:02.847141
+
+85. Memorial descritivo e de especificações técnicas.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\8º REFORMA FEIRA COBERTA\Memorial descritivo e de especificações técnicas.pdf
+   Tamanho: 579,569 bytes
+   Modificado: 2025-09-25T14:39:04.551593
+
+86. 08-MEMORIAL DE CÁLCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\9º PAV. DE ESTRADA VICINAL\IMPRESSÃO\08-MEMORIAL DE CÁLCULO.pdf
+   Tamanho: 654,246 bytes
+   Modificado: 2025-08-05T16:29:14.174738
+
+87. 08-MEMORIAL_DE_CALCULO_assinado.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROJETOS\9º PAV. DE ESTRADA VICINAL\IMPRESSÃO\PLANILHA E MEMORIAL\08-MEMORIAL_DE_CALCULO_assinado.pdf
+   Tamanho: 683,827 bytes
+   Modificado: 2025-08-05T16:38:51.168155
+
+88. MONT CRUZ ENGENHARIA LTDA-2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\BELA VISTA DE GOIÁS\PROPOSTAS\novo\MONT CRUZ ENGENHARIA LTDA-2.pdf
+   Tamanho: 199,047 bytes
+   Modificado: 2025-05-01T04:37:50
+
+89. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\CEF-COMPLETO-Casa_32-35m2_1qto\CEF - COMPLETO - Casa_32-35m2_1qto\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-11T16:44:54
+
+90. 3- Memorial descritivo dos materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\CEF-COMPLETO-Casa_32-35m2_1qto\CEF - COMPLETO - Casa_32-35m2_1qto\3- Memorial descritivo dos materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T23:30:28
+
+91. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\CEF-COMPLETO-Casa_41-16m2_2qtos\CEF - COMPLETO - Casa_41-16m2_2qtos\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-11T16:45:36
+
+92. 3- Memorial Descritivo dos Materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\CEF-COMPLETO-Casa_41-16m2_2qtos\CEF - COMPLETO - Casa_41-16m2_2qtos\3- Memorial Descritivo dos Materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T23:32:20
+
+93. Memorial_descritivo_acabamentos_centro_comercial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_centro_comercial.doc
+   Tamanho: 1,103,360 bytes
+   Modificado: 2012-09-28T22:26:50
+
+94. Memorial_descritivo_acabamentos_residencial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_residencial.doc
+   Tamanho: 193,536 bytes
+   Modificado: 2012-09-28T22:33:38
+
+95. Memorial_descritivo_creche.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_creche.pdf
+   Tamanho: 47,355 bytes
+   Modificado: 2012-09-30T18:32:14
+
+96. Memorial_descritivo_escola.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_escola.doc
+   Tamanho: 50,688 bytes
+   Modificado: 2012-09-30T18:43:10
+
+97. Memorial_descritivo_hipermercado.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_hipermercado.doc
+   Tamanho: 59,392 bytes
+   Modificado: 2012-09-28T22:23:54
+
+98. Memorial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_piscina.doc
+   Tamanho: 38,400 bytes
+   Modificado: 2012-09-28T22:44:14
+
+99. Memorial_descritivo_residência_prefeitura.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_residência_prefeitura.doc
+   Tamanho: 47,104 bytes
+   Modificado: 2012-09-28T22:40:54
+
+100. Memorial_descritivo_unidade_residencial.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_unidade_residencial.pdf
+   Tamanho: 59,155 bytes
+   Modificado: 2012-09-30T18:31:32
+
+101. MEMORIAL DE INCORPORAÇÃO TOCANTINS.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS DIVERSOS SHOW\Trabalho do escritorio\Documentação\Instituição de condominio\MEMORIAL DE INCORPORAÇÃO TOCANTINS.doc
+   Tamanho: 65,536 bytes
+   Modificado: 2014-10-22T10:22:28
+
+102. Memorial Descritivo Modelo 1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS ER\Projetos\serviço\memoriais\Memorial Descritivo Modelo 1.pdf
+   Tamanho: 125,118 bytes
+   Modificado: 2016-07-25T23:37:38.338287
+
+103. Memorial Descritivo Modelo 2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS ER\Projetos\serviço\memoriais\Memorial Descritivo Modelo 2.pdf
+   Tamanho: 125,461 bytes
+   Modificado: 2016-07-25T23:37:42.778231
+
+104. Minuta de Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\.PROJETOS ER\Projetos\serviço\memoriais\Minuta de Memorial Descritivo.doc
+   Tamanho: 35,840 bytes
+   Modificado: 2016-07-25T23:37:47.981320
+
+105. Memorial_Hidrossanitario.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX MISTO\Memorial_Hidrossanitario.docx
+   Tamanho: 40,793 bytes
+   Modificado: 2019-11-05T18:58:48
+
+106. Memorial_Hidrossanitario.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX MULTIFAMILIAR\Memorial_Hidrossanitario.docx
+   Tamanho: 34,769 bytes
+   Modificado: 2019-11-05T19:06:52
+
+107. MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX RESIDENCIAL COMPLETO\MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 159,232 bytes
+   Modificado: 2019-11-05T19:18:44
+
+108. ~$MORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX RESIDENCIAL COMPLETO\~$MORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 162 bytes
+   Modificado: 2018-05-28T10:10:00
+
+109. MEMORIAL HIDROSSANITARIO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\04. CASAS (MINHA CASA, MINHA VIDA)\5\MEMORIAL HIDROSSANITARIO.docx
+   Tamanho: 36,779 bytes
+   Modificado: 2019-11-05T18:13:04
+
+110. memorial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\04. CASAS (MINHA CASA, MINHA VIDA)\9\memorial.doc
+   Tamanho: 73,216 bytes
+   Modificado: 2020-02-03T04:14:16
+
+111. Memorial Descritivo Renato Parente.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\10. DESMEMBRAMENTO\01\Memorial Descritivo Renato Parente.doc
+   Tamanho: 33,792 bytes
+   Modificado: 2020-02-03T04:35:32
+
+112. Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\10. DESMEMBRAMENTO\02\Memorial Descritivo.doc
+   Tamanho: 87,552 bytes
+   Modificado: 2019-10-29T04:32:58
+
+113. MEMORIAL DESCRITIVO HIDROSANITÁRIO - GALPÃO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\41 - GALPÃO\MEMORIAL DESCRITIVO HIDROSANITÁRIO - GALPÃO.docx
+   Tamanho: 46,176 bytes
+   Modificado: 2019-11-05T19:24:30
+
+114. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\PROJETOS EM DWG\01. RESIDENCIAL\EXTRA CASAS\CEF - COMPLETO - Casa_41-16m2_2qtos\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-10T23:45:36
+
+115. 3- Memorial Descritivo dos Materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\PROJETOS EM DWG\01. RESIDENCIAL\EXTRA CASAS\CEF - COMPLETO - Casa_41-16m2_2qtos\3- Memorial Descritivo dos Materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T06:32:20
+
+116. MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\6k COM PROJETOS EDITÁVEIS-20240229T110713Z-001\6k COM PROJETOS EDITÁVEIS\PROJETOS EM DWG\05. PROJETOS DE CLINICAS E HOSPITAIS\ODONTOLOGIA\Hidrossanitário\MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 236,544 bytes
+   Modificado: 2020-02-17T07:24:58
+
+117. Memorial_Hidrossanitario.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX MISTO\Memorial_Hidrossanitario.docx
+   Tamanho: 40,793 bytes
+   Modificado: 2019-11-05T18:58:48
+
+118. Memorial_Hidrossanitario.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX MULTIFAMILIAR\Memorial_Hidrossanitario.docx
+   Tamanho: 34,769 bytes
+   Modificado: 2019-11-05T19:06:52
+
+119. MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX RESIDENCIAL COMPLETO\MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 159,232 bytes
+   Modificado: 2019-11-05T19:18:44
+
+120. ~$MORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\DUPLEX\DUPLEX RESIDENCIAL COMPLETO\~$MORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 162 bytes
+   Modificado: 2018-05-28T10:10:00
+
+121. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\EXTRA CASAS\CEF - COMPLETO - Casa_41-16m2_2qtos\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-10T23:45:36
+
+122. 3- Memorial Descritivo dos Materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\01. RESIDENCIAL\EXTRA CASAS\CEF - COMPLETO - Casa_41-16m2_2qtos\3- Memorial Descritivo dos Materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T06:32:20
+
+123. MEMORIAL HIDROSSANITARIO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\04. CASAS (MINHA CASA, MINHA VIDA)\5\MEMORIAL HIDROSSANITARIO.docx
+   Tamanho: 36,779 bytes
+   Modificado: 2019-11-05T18:13:04
+
+124. memorial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\04. CASAS (MINHA CASA, MINHA VIDA)\9\memorial.doc
+   Tamanho: 73,216 bytes
+   Modificado: 2020-02-03T04:14:16
+
+125. MEMORIAL DESCRITIVO ELÉTRICO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\05. PROJETOS DE CLINICAS E HOSPITAIS\ODONTOLOGIA\Elétrico\MEMORIAL DESCRITIVO ELÉTRICO.doc
+   Tamanho: 37,888 bytes
+   Modificado: 2020-02-17T07:20:36
+
+126. MEMORIAL DESCRITIVO ELÉTRICO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\05. PROJETOS DE CLINICAS E HOSPITAIS\ODONTOLOGIA\Elétrico\MEMORIAL DESCRITIVO ELÉTRICO.pdf
+   Tamanho: 220,843 bytes
+   Modificado: 2019-06-02T22:46:32
+
+127. MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\05. PROJETOS DE CLINICAS E HOSPITAIS\ODONTOLOGIA\Hidrossanitário\MEMORIAL DESCRITIVO HIDROSSANITÁRIO.doc
+   Tamanho: 236,544 bytes
+   Modificado: 2020-02-17T07:24:58
+
+128. Memorial Descritivo Renato Parente.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\10. DESMEMBRAMENTO\01\Memorial Descritivo Renato Parente.doc
+   Tamanho: 33,792 bytes
+   Modificado: 2020-02-03T04:35:32
+
+129. Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\10. DESMEMBRAMENTO\02\Memorial Descritivo.doc
+   Tamanho: 87,552 bytes
+   Modificado: 2019-10-29T04:32:58
+
+130. MEMORIAL DESCRITIVO HIDROSANITÁRIO - GALPÃO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ARQUIVOS COMPRA PROJETOS\6k COM PROJETOS EDITÁVEIS\6K POR SEMANA COM PROJETOS EDITÁVEIS - GOLD\PROJETOS EM DWG\41 - GALPÃO\MEMORIAL DESCRITIVO HIDROSANITÁRIO - GALPÃO.docx
+   Tamanho: 46,176 bytes
+   Modificado: 2019-11-05T19:24:30
+
+131. Caderno Técnico Shopping Estação R 05.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\AV. OESTE\Caderno Técnico Shopping Estação R 05.pdf
+   Tamanho: 584,909 bytes
+   Modificado: 2022-05-12T08:57:00
+
+132. requerentes laudo técnico.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\CASA PARQUE OESTE INDUSTRIAL\LAUDO\requerentes laudo técnico.pdf
+   Tamanho: 178,473 bytes
+   Modificado: 2025-02-17T23:14:18.340010
+
+133. MEMORIAL DE PRANCHAS - FAZ PAINEIRAS (2022_08_24 13_59_36 UTC).docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\DESKTOP\novo GOHAUS\FAZENDA\MEMORIAL DE PRANCHAS - FAZ PAINEIRAS (2022_08_24 13_59_36 UTC).docx
+   Tamanho: 96,602 bytes
+   Modificado: 2022-08-24T09:00:22.842720
+
+134. MEMORIAL.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\FAZENDA\MEMORIAL.docx
+   Tamanho: 30,117 bytes
+   Modificado: 2023-09-25T22:52:46.214445
+
+135. MEMORIAL.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\FAZENDA\MEMORIAL.pdf
+   Tamanho: 146,573 bytes
+   Modificado: 2023-09-25T22:52:53.538000
+
+136. Instrucao-Normativa-0012022-Departamento-de-Engenharia_compressed-1-1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\GALPÃO CAROL E PAULO\pesquisas\Instrucao-Normativa-0012022-Departamento-de-Engenharia_compressed-1-1.pdf
+   Tamanho: 1,872,324 bytes
+   Modificado: 2024-01-19T22:53:37.456239
+
+137. SINTESE DO MEMORIAL DESCRITIVO ASSINADO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ITAMAR\SINTESE DO MEMORIAL DESCRITIVO ASSINADO.pdf
+   Tamanho: 263,928 bytes
+   Modificado: 2018-05-15T19:01:26.730675
+
+138. SINTESE DO MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\ITAMAR\SINTESE DO MEMORIAL DESCRITIVO.pdf
+   Tamanho: 263,928 bytes
+   Modificado: 2018-05-15T19:01:07.499112
+
+139. Memorial_descritivo_acabamentos_centro_comercial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_centro_comercial.doc
+   Tamanho: 1,103,360 bytes
+   Modificado: 2012-09-28T22:26:50
+
+140. Memorial_descritivo_acabamentos_residencial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_residencial.doc
+   Tamanho: 193,536 bytes
+   Modificado: 2012-09-28T22:33:38
+
+141. Memorial_descritivo_creche.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_creche.pdf
+   Tamanho: 47,355 bytes
+   Modificado: 2012-09-30T18:32:14
+
+142. Memorial_descritivo_escola.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_escola.doc
+   Tamanho: 50,688 bytes
+   Modificado: 2012-09-30T18:43:10
+
+143. Memorial_descritivo_hipermercado.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_hipermercado.doc
+   Tamanho: 59,392 bytes
+   Modificado: 2012-09-28T22:23:54
+
+144. Memorial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_piscina.doc
+   Tamanho: 38,400 bytes
+   Modificado: 2012-09-28T22:44:14
+
+145. Memorial_descritivo_residência_prefeitura.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_residência_prefeitura.doc
+   Tamanho: 47,104 bytes
+   Modificado: 2012-09-28T22:40:54
+
+146. Memorial_descritivo_unidade_residencial.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_unidade_residencial.pdf
+   Tamanho: 59,155 bytes
+   Modificado: 2012-09-30T18:31:32
+
+147. ~$morial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\MODELO REVIT BIM\MODELOS DIVERSOS\Memorial_Descritivo\Memorial_Descritivo\~$morial_descritivo_piscina.doc
+   Tamanho: 162 bytes
+   Modificado: 2023-02-03T14:19:57.536413
+
+148. MEMORIAL DE PRANCHAS - FAZ PAINEIRAS.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\novo GOHAUS\FAZENDA\MEMORIAL DE PRANCHAS - FAZ PAINEIRAS.docx
+   Tamanho: 96,602 bytes
+   Modificado: 2022-08-24T09:00:22.842720
+
+149. MEMORIAL DESCRITIVO OBRA JARDINS BOLONHA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\OBRA CONDOMÍNIO BOLONHA\OBRA CONDOMÍNIO BOLONHA\MEMORIAL DESCRITIVO OBRA JARDINS BOLONHA.pdf
+   Tamanho: 174,325 bytes
+   Modificado: 2023-11-28T14:53:40
+
+150. Anexo I - Apêndice A - Projetos, Memoriais, Planilhas e Procedimentos Técnicos.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\PADRAO DE PROJETO CAIXA\Anexo I - Apêndice A - Projetos, Memoriais, Planilhas e Procedimentos Técnicos.doc
+   Tamanho: 379,904 bytes
+   Modificado: 2016-10-03T09:30:26
+
+151. 4_17 -MEMORIAL DE CALCULO.pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\PONTES\TP 9-2022\4_17 -MEMORIAL DE CALCULO.pdf.pdf
+   Tamanho: 383,474 bytes
+   Modificado: 2022-12-16T15:18:12
+
+152. 7_28 -MEMORIAL DESCRITIVO.pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\PONTES\TP 9-2022\7_28 -MEMORIAL DESCRITIVO.pdf.pdf
+   Tamanho: 1,010,527 bytes
+   Modificado: 2022-12-16T15:18:12
+
+153. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\CEF-COMPLETO-Casa_32-35m2_1qto\CEF - COMPLETO - Casa_32-35m2_1qto\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-11T16:44:54
+
+154. 3- Memorial descritivo dos materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\CEF-COMPLETO-Casa_32-35m2_1qto\CEF - COMPLETO - Casa_32-35m2_1qto\3- Memorial descritivo dos materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T23:30:28
+
+155. 1- Memorial arquitetônico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\CEF-COMPLETO-Casa_41-16m2_2qtos\CEF - COMPLETO - Casa_41-16m2_2qtos\1- Memorial arquitetônico.doc
+   Tamanho: 52,736 bytes
+   Modificado: 2006-11-11T16:45:36
+
+156. 3- Memorial Descritivo dos Materiais.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\CEF-COMPLETO-Casa_41-16m2_2qtos\CEF - COMPLETO - Casa_41-16m2_2qtos\3- Memorial Descritivo dos Materiais.doc
+   Tamanho: 50,176 bytes
+   Modificado: 2006-11-12T23:32:20
+
+157. Memorial_descritivo_acabamentos_centro_comercial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_centro_comercial.doc
+   Tamanho: 1,103,360 bytes
+   Modificado: 2012-09-28T22:26:50
+
+158. Memorial_descritivo_acabamentos_residencial.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_acabamentos_residencial.doc
+   Tamanho: 193,536 bytes
+   Modificado: 2012-09-28T22:33:38
+
+159. Memorial_descritivo_creche.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_creche.pdf
+   Tamanho: 47,355 bytes
+   Modificado: 2012-09-30T18:32:14
+
+160. Memorial_descritivo_escola.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_escola.doc
+   Tamanho: 50,688 bytes
+   Modificado: 2012-09-30T18:43:10
+
+161. Memorial_descritivo_hipermercado.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_hipermercado.doc
+   Tamanho: 59,392 bytes
+   Modificado: 2012-09-28T22:23:54
+
+162. Memorial_descritivo_piscina.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_piscina.doc
+   Tamanho: 38,400 bytes
+   Modificado: 2012-09-28T22:44:14
+
+163. Memorial_descritivo_residência_prefeitura.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_residência_prefeitura.doc
+   Tamanho: 47,104 bytes
+   Modificado: 2012-09-28T22:40:54
+
+164. Memorial_descritivo_unidade_residencial.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Memorial_Descritivo\Memorial_Descritivo\Memorial_descritivo_unidade_residencial.pdf
+   Tamanho: 59,155 bytes
+   Modificado: 2012-09-30T18:31:32
+
+165. MEMORIAL DE INCORPORAÇÃO TOCANTINS.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\1\Trabalho do escritorio\Documentação\Instituição de condominio\MEMORIAL DE INCORPORAÇÃO TOCANTINS.doc
+   Tamanho: 65,536 bytes
+   Modificado: 2014-10-22T10:22:28
+
+166. Memorial Descritivo Modelo 1.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\serviço\memoriais\Memorial Descritivo Modelo 1.pdf
+   Tamanho: 125,118 bytes
+   Modificado: 2016-07-25T23:37:38.338287
+
+167. Memorial Descritivo Modelo 2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\serviço\memoriais\Memorial Descritivo Modelo 2.pdf
+   Tamanho: 125,461 bytes
+   Modificado: 2016-07-25T23:37:42.778231
+
+168. Minuta de Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\Projetos\serviço\memoriais\Minuta de Memorial Descritivo.doc
+   Tamanho: 35,840 bytes
+   Modificado: 2016-07-25T23:37:47.981320
+
+169. Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\quadra de esportes\Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Tamanho: 685,133 bytes
+   Modificado: 2022-08-10T15:21:26
+
+170. Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\quadra de esportes - Copia\Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Tamanho: 685,133 bytes
+   Modificado: 2022-08-10T15:21:26
+
+171. Memorial Descritivo Ponte 18,00 x 5,00m Ribeirão Água Amarela.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\CHAPADÃO DO CÉU\RIBEIRÃO ÁGUA AMARELA\Memorial Descritivo Ponte 18,00 x 5,00m Ribeirão Água Amarela.pdf
+   Tamanho: 419,718 bytes
+   Modificado: 2022-07-28T09:26:10
+
+172. Memorial Descritivo Ponte 15,00 x 6,00m.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\CHAPADÃO DO CÉU\RIO PRATA\Memorial Descritivo Ponte 15,00 x 6,00m.pdf
+   Tamanho: 153,222 bytes
+   Modificado: 2022-07-26T14:44:22
+
+173. Memorial_Descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\GO - ALTO PARAISO\ANEXOS\Documentos Alto Paraíso\Memorial_Descritivo.pdf
+   Tamanho: 290,096 bytes
+   Modificado: 2022-06-02T06:14:48
+
+174. Memorial_de_Calculo_V.02___Construcao_de_Mirante_em_Alto_Paraiso___GO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\GO - ALTO PARAISO\ANEXOS\Documentos Alto Paraíso\Memorial_de_Calculo_V.02___Construcao_de_Mirante_em_Alto_Paraiso___GO.pdf
+   Tamanho: 1,612,882 bytes
+   Modificado: 2022-06-02T06:14:30
+
+175. MEMORIAL-DESCRITIVO-1 (1).docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\MORRINHOS\TP 016-2022\MEMORIAL-DESCRITIVO-1 (1).docx
+   Tamanho: 201,978 bytes
+   Modificado: 2022-06-08T08:37:32
+
+176. MEMORIAL-DESCRITIVO-2.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\MORRINHOS\TP 017-2022\MEMORIAL-DESCRITIVO-2.docx
+   Tamanho: 202,034 bytes
+   Modificado: 2022-06-08T08:34:54
+
+177. 12_Memorial descritivo (3).pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\ponte rubiataba\12_Memorial descritivo (3).pdf.pdf
+   Tamanho: 946,542 bytes
+   Modificado: 2022-07-27T14:51:12
+
+178. 23- ANEXO 20 - Memorial-Descritivo Projeto El‚trico-Pra‡a HilariÆo.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\PRAÇA HILARIO\23- ANEXO 20 - Memorial-Descritivo Projeto El‚trico-Pra‡a HilariÆo.docx
+   Tamanho: 1,641,971 bytes
+   Modificado: 2022-05-25T14:05:04
+
+179. 6 - Anexo 4 - MEMORIAL DESCRITIVO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\PRAÇA HILARIO\6 - Anexo 4 - MEMORIAL DESCRITIVO.docx
+   Tamanho: 617,592 bytes
+   Modificado: 2022-06-15T09:34:38
+
+180. MEMORIAL-DESCRITIVO-PAISAGISMO_ASSINADO.PDF
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\SILVANIA -REVITALIZAÇÃO TRECHO\MEMORIAL-DESCRITIVO-PAISAGISMO_ASSINADO.PDF
+   Tamanho: 273,933 bytes
+   Modificado: 2022-07-30T10:20:42
+
+181. MEMORIAL DESCRITIVO COMPLETO ESTÁDIO SERRA GRANDE.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\CUSTO\URUAÇU - TP 14-2022 -23-06\MEMORIAL DESCRITIVO COMPLETO ESTÁDIO SERRA GRANDE.pdf
+   Tamanho: 251,412 bytes
+   Modificado: 2022-06-02T11:14:32
+
+182. 6_MEMORIAL DESCRITIVO.pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\ABADIÂNIA\ABADIÂNIA\TP 007-2022\ANTIGO\6_MEMORIAL DESCRITIVO.pdf.pdf
+   Tamanho: 857,856 bytes
+   Modificado: 2022-10-29T13:43:16
+
+183. 11_MEMORIAL DESCRITIVO (2).pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\ABADIÂNIA\ABADIÂNIA\TP 007-2022\REPUBLICADO 30.11.2022\11_MEMORIAL DESCRITIVO (2).pdf.pdf
+   Tamanho: 857,856 bytes
+   Modificado: 2022-11-28T16:55:36
+
+184. 6_MEMORIAL DESCRITIVO.pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\ABADIÂNIA\TP 007-2022\6_MEMORIAL DESCRITIVO.pdf.pdf
+   Tamanho: 857,856 bytes
+   Modificado: 2022-10-29T13:43:16
+
+185. MEMORIAL DESCRITIVO - CAMPO SOCIETY Zona Sul Nova.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\CRISTALINA\12\MEMORIAL DESCRITIVO - CAMPO SOCIETY Zona Sul Nova.pdf
+   Tamanho: 163,760 bytes
+   Modificado: 2022-11-10T09:52:11.910717
+
+186. MEMORIAL DESCRITIVO - CAMPO SOCIETY Bairro Jardim Planalto.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\CRISTALINA\13\projetos e outros\MEMORIAL DESCRITIVO - CAMPO SOCIETY Bairro Jardim Planalto.pdf
+   Tamanho: 164,072 bytes
+   Modificado: 2022-09-22T14:10:28.789389
+
+187. MEMORIAL DESCRITIVO - CAMPO SOCIETY Bairro JK.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\CRISTALINA\14\MEMORIAL DESCRITIVO - CAMPO SOCIETY Bairro JK.pdf
+   Tamanho: 164,480 bytes
+   Modificado: 2022-11-10T09:51:58.815443
+
+188. MEMORIAL_DESCRITIVO_DO_PREGAO_077-2022_000420.PDF.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\CRIXAS\PP 77-2022\MEMORIAL_DESCRITIVO_DO_PREGAO_077-2022_000420.PDF.pdf
+   Tamanho: 2,898,594 bytes
+   Modificado: 2022-12-26T16:51:52
+
+189. ART Engenharia.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 09-2022\ART Engenharia.pdf
+   Tamanho: 788,496 bytes
+   Modificado: 2022-08-04T15:56:28
+
+190. MEMORIAL DESCRITIVO_ÁREA DE LAZER - PRAÇA PÚBLICA_ITUMBIARA-GO_REV 03.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 09-2022\MEMORIAL DESCRITIVO_ÁREA DE LAZER - PRAÇA PÚBLICA_ITUMBIARA-GO_REV 03.pdf
+   Tamanho: 1,998,448 bytes
+   Modificado: 2022-07-28T09:30:50
+
+191. MEMORIAL DE CALCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 10-2022\MARIA LEOPOLDINA\MEMORIAL DE CALCULO.pdf
+   Tamanho: 706,913 bytes
+   Modificado: 2022-07-26T10:01:54
+
+192. MEMORIAL CALCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 10-2022\PEIXOTO DA SILVEIRA\MEMORIAL CALCULO.pdf
+   Tamanho: 729,844 bytes
+   Modificado: 2022-07-26T09:52:28
+
+193. MEMORIAL DE CALCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 10-2022\ROTARY CLUB\MEMORIAL DE CALCULO.pdf
+   Tamanho: 599,301 bytes
+   Modificado: 2022-07-26T10:37:32
+
+194. MEMORIAL DE CÁLCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 12-2022\ARQUIVOS ORIGINAIS\MEMORIAL DE CÁLCULO.pdf
+   Tamanho: 395,584 bytes
+   Modificado: 2022-08-09T08:51:51
+
+195. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\CP 12-2022\ARQUIVOS ORIGINAIS\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 2,169,056 bytes
+   Modificado: 2022-08-09T08:48:05
+
+196. Memorial de Cálculo_Av. Modesto de Carvalho.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 13-2022\PROJETOS\Memorial de Cálculo_Av. Modesto de Carvalho.pdf
+   Tamanho: 197,950 bytes
+   Modificado: 2022-09-26T19:58:52
+
+197. Memorial Descritivo_Av. Modesto de Carvalho.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 13-2022\PROJETOS\Memorial Descritivo_Av. Modesto de Carvalho.pdf
+   Tamanho: 2,078,639 bytes
+   Modificado: 2022-09-26T19:58:55
+
+198. MEMORIAL DE CÁLCULO_CIVIL_AV. CELSO MAEDA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 17-2022\MEMORIAL DE CÁLCULO_CIVIL_AV. CELSO MAEDA.pdf
+   Tamanho: 210,667 bytes
+   Modificado: 2022-10-31T03:50:12
+
+199. MEMORIAL DE CÁLCULO_ELÉTRICO_AV. CELSO MAEDA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 17-2022\MEMORIAL DE CÁLCULO_ELÉTRICO_AV. CELSO MAEDA.pdf
+   Tamanho: 213,564 bytes
+   Modificado: 2022-10-31T03:50:14
+
+200. MEMORIAL DESCRITIVO - URB. E PAISAG. AV. DTR CELSO MAEDA - ITUMBIARA - GO - ELÉTRICO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 17-2022\MEMORIAL DESCRITIVO - URB. E PAISAG. AV. DTR CELSO MAEDA - ITUMBIARA - GO - ELÉTRICO.pdf
+   Tamanho: 920,755 bytes
+   Modificado: 2022-10-31T03:50:14
+
+201. Memorial Descritivo Civil - Av. Celso Maeda.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 17-2022\Memorial Descritivo Civil - Av. Celso Maeda.pdf
+   Tamanho: 1,314,778 bytes
+   Modificado: 2022-10-31T03:50:14
+
+202. MEMORIAL DE CÁLCULO- ELÉTRICA ROTATÓRIA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 20-2022\MEMORIAL DE CÁLCULO- ELÉTRICA ROTATÓRIA.pdf
+   Tamanho: 221,940 bytes
+   Modificado: 2022-11-26T10:35:52
+
+203. MEMORIAL DE CÁLCULO_CIVIL ROTATÓRIA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 20-2022\MEMORIAL DE CÁLCULO_CIVIL ROTATÓRIA.pdf
+   Tamanho: 209,016 bytes
+   Modificado: 2022-11-26T10:35:52
+
+204. MEMORIAL DESCRITIVO - MONUMENTO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 20-2022\MEMORIAL DESCRITIVO - MONUMENTO.pdf
+   Tamanho: 1,145,430 bytes
+   Modificado: 2022-11-26T10:35:52
+
+205. MEMORIAL DESCRITIVO ELÉTRICO_MONUMENTO_ AVENIDA DTR CELSO MAEDA - ITUMBIARA - GO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - ITUMBIARA\TP 20-2022\MEMORIAL DESCRITIVO ELÉTRICO_MONUMENTO_ AVENIDA DTR CELSO MAEDA - ITUMBIARA - GO.pdf
+   Tamanho: 691,979 bytes
+   Modificado: 2022-11-26T10:35:52
+
+206. MEMORIAL DESCRITIVO PÇA STANISLAU.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 009-2022\Engenharia\MEMORIAL DESCRITIVO PÇA STANISLAU.pdf
+   Tamanho: 1,035,496 bytes
+   Modificado: 2022-08-10T08:45:08
+
+207. Parecer Técnico Parcelas de Maior Relevância Praça Stanislau.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 009-2022\Engenharia\Parecer Técnico Parcelas de Maior Relevância Praça Stanislau.pdf
+   Tamanho: 119,929 bytes
+   Modificado: 2022-09-01T08:28:56
+
+208. MEMORIAL DE CÁLCULO-PÓRTICO DE ENTRADA SÃO LUIS.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 10-2022\MEMORIAL DE CÁLCULO-PÓRTICO DE ENTRADA SÃO LUIS.pdf
+   Tamanho: 537,460 bytes
+   Modificado: 2022-08-23T08:55:18
+
+209. MEMORIAL DESCRITIVO PÓRTICO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 10-2022\MEMORIAL DESCRITIVO PÓRTICO.pdf
+   Tamanho: 309,521 bytes
+   Modificado: 2022-08-19T15:06:28
+
+210. MEMORIAL DESCRITIVO- PÓRTICO DE ENTRADA SÃO LUIS.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 10-2022\MEMORIAL DESCRITIVO- PÓRTICO DE ENTRADA SÃO LUIS.pdf
+   Tamanho: 189,164 bytes
+   Modificado: 2022-08-23T09:11:30
+
+211. Parecer Técnico Parcelas de Maior Relevância Pórtico.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO - SÃO LUIZ DE MONTES BELOS\TP 10-2022\Parecer Técnico Parcelas de Maior Relevância Pórtico.doc
+   Tamanho: 86,016 bytes
+   Modificado: 2022-08-24T15:36:01
+
+212. Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\GO-CERES\TP 19-2022\PROJETO\Memorial descritivo quadra poliesportiva conjuto bernardo sayão(1).pdf
+   Tamanho: 685,133 bytes
+   Modificado: 2022-08-10T15:21:26
+
+213. MEMORIAL DESCRITIVO_PARQUE BRITO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\JATAÍ\PP 160-2022\ANEXO_VIII_ARQUIVOS_ELETR_NICOS_11_11~1\ANEXO VIII - ARQUIVOS ELETRÔNICOS 11-11\MEMORIAL DESCRITIVO_PARQUE BRITO.pdf
+   Tamanho: 503,231 bytes
+   Modificado: 2022-11-09T15:25:22
+
+214. projetos+e+documentos+de+engenharia_0001.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\JUSSARA\TP 009-2022\projetos+e+documentos+de+engenharia_0001.pdf
+   Tamanho: 4,741,663 bytes
+   Modificado: 2022-11-28T08:06:20
+
+215. Memorial Descritivo - Melhoria de IP BR-060.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\RIO VERDE\Memorial Descritivo - Melhoria de IP BR-060.pdf
+   Tamanho: 489,593 bytes
+   Modificado: 2022-09-27T10:20:30
+
+216. Memorial Fotografico -Melhoria de IP-BR-060.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\RIO VERDE\Memorial Fotografico -Melhoria de IP-BR-060.pdf
+   Tamanho: 555,494 bytes
+   Modificado: 2022-09-27T10:21:00
+
+217. 0_ESP 005-RT-01 - Projeto Luminotécnico.pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\SANTA ISABEL\TP 6-2022\0_ESP 005-RT-01 - Projeto Luminotécnico.pdf.pdf
+   Tamanho: 1,100,413 bytes
+   Modificado: 2022-12-20T12:38:22
+
+218. 5_Memorial Descrito Rede Iluminacao Publica BR020 (1).pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\VILA BOA\REPUBLICADO 15-12-2022\5_Memorial Descrito Rede Iluminacao Publica BR020 (1).pdf.pdf
+   Tamanho: 173,077 bytes
+   Modificado: 2022-12-26T13:44:49.157571
+
+219. 5_Memorial Descrito Rede Iluminacao Publica BR020 (1).pdf.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\GO-GOIÁS\VILA BOA\TP 006-2022\5_Memorial Descrito Rede Iluminacao Publica BR020 (1).pdf.pdf
+   Tamanho: 168,659 bytes
+   Modificado: 2022-11-19T13:35:12
+
+220. PL1622022-MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MG-MINAS GERAIS\BRAZOPOLIS\TP 006-2022\PL1622022-MEMORIAL DESCRITIVO.pdf
+   Tamanho: 640,644 bytes
+   Modificado: 2022-09-22T17:15:14
+
+221. PL1622022-MEMORIAL QUANTITATIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MG-MINAS GERAIS\BRAZOPOLIS\TP 006-2022\PL1622022-MEMORIAL QUANTITATIVO.pdf
+   Tamanho: 283,489 bytes
+   Modificado: 2022-09-22T17:15:16
+
+222. Memorial-descritivo-2.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MG-MINAS GERAIS\DIVINÉSIA\PP 55-2022\Memorial-descritivo-2.pdf
+   Tamanho: 405,505 bytes
+   Modificado: 2022-11-16T16:13:33
+
+223. Anexo 05 - Memorial Descritivo.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MG-MINAS GERAIS\ITUIUTABA\TP 009-2022\Anexo 05 - Memorial Descritivo.docx
+   Tamanho: 723,113 bytes
+   Modificado: 2022-10-05T10:17:51
+
+224. MEMORIAL DESCRITIVO EDITADO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MS-MATO GROSSO DO SUL\CAMPO GRANDE\TP 132-2022 - AGESUL\MEMORIAL DESCRITIVO EDITADO.pdf
+   Tamanho: 1,383,688 bytes
+   Modificado: 2022-11-18T10:01:51.807992
+
+225. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MS-MATO GROSSO DO SUL\CAMPO GRANDE\TP 132-2022 - AGESUL\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 1,383,688 bytes
+   Modificado: 2022-11-17T10:39:12
+
+226. MEMORIAL TP 005-2022 ILUMINAÇÃO ORNAMENTAL JUSCELINO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MS-MATO GROSSO DO SUL\NOVO HORIZONTE DO SUL\TP 005-2022\MEMORIAL TP 005-2022 ILUMINAÇÃO ORNAMENTAL JUSCELINO.pdf
+   Tamanho: 605,394 bytes
+   Modificado: 2022-11-22T16:55:18.149129
+
+227. #05-MEMORIAL DE CALCULO.PDF
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MS-MATO GROSSO DO SUL\NOVO HORIZONTE DO SUL\TP 005-2022\PLANILHA-PROJETOS-MODELO PROPOSTA 05-2022\#05-MEMORIAL DE CALCULO.PDF
+   Tamanho: 80,595 bytes
+   Modificado: 2022-11-09T18:17:32
+
+228. 01 - Memorial Descritivo - Avenida dos Ipês_Apiacas.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\01 - Memorial Descritivo - Avenida dos Ipês_Apiacas.pdf
+   Tamanho: 4,873,875 bytes
+   Modificado: 2022-12-15T08:24:08
+
+229. Cotação de Produtos_Apiacas - Elseg Engenharia.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\Cotação de Produtos_Apiacas - Elseg Engenharia.pdf
+   Tamanho: 65,982 bytes
+   Modificado: 2022-12-15T08:24:08
+
+230. 01 - Memorial Descritivo - Avenida das Castanheiras_Apiacás.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\_ENG\Arquivo - Avenida das Castanheiras_Apiacas\PDF\01 - Memorial Descritivo - Avenida das Castanheiras_Apiacás.pdf
+   Tamanho: 4,881,941 bytes
+   Modificado: 2022-09-01T11:49:06.054106
+
+231. 01 - Memorial Descritivo - Avenida dos Ipês_Apiacas.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\_ENG\Arquivo - Avenida dos Ipês_Apiacas\PDF\01 - Memorial Descritivo - Avenida dos Ipês_Apiacas.pdf
+   Tamanho: 4,873,875 bytes
+   Modificado: 2022-09-01T11:38:19.963268
+
+232. 01 - Memorial Descritivo - Avenida Brasil_Apiacás.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\_ENG\Arquivos - Avenida Brasil_Apiacas\PDF\01 - Memorial Descritivo - Avenida Brasil_Apiacás.pdf
+   Tamanho: 5,698,917 bytes
+   Modificado: 2022-09-01T11:35:25.628520
+
+233. Cotação de Produtos_Apiacas - Elseg Engenharia.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\APIACÁS\CP 15-2022\_ENG\Arquivos - Avenida Brasil_Apiacas\PDF\Cotações\Cotação de Produtos_Apiacas - Elseg Engenharia.pdf
+   Tamanho: 65,982 bytes
+   Modificado: 2022-08-31T15:34:47.175512
+
+234. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\DENISE\TP 004-2022\ANTIGO\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 2,332,852 bytes
+   Modificado: 2022-11-21T08:18:25
+
+235. 01 - MEMORIAL DESCRITIVO.AV SAO PAULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\DENISE\TP 004-2022\REPUBLICADO 09.12.2022\01 - MEMORIAL DESCRITIVO.AV SAO PAULO.pdf
+   Tamanho: 6,391,562 bytes
+   Modificado: 2022-12-12T15:11:05.366308
+
+236. DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\01 - ORÇAMENTO\COTAÇÃO\DESCRITIVO.pdf
+   Tamanho: 176,855 bytes
+   Modificado: 2022-07-29T09:45:53
+
+237. Memorial Descritivo - Av. das Universitária.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\04 - MEMORIAL\Memorial Descritivo - Av. das Universitária.docx
+   Tamanho: 47,174 bytes
+   Modificado: 2021-12-21T16:43:59
+
+238. Memorial Descritivo - Av. das Universitária.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\04 - MEMORIAL\Memorial Descritivo - Av. das Universitária.pdf
+   Tamanho: 2,307,964 bytes
+   Modificado: 2021-12-21T16:44:41
+
+239. DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\REPUBLICADO 15.09.2022\01 - ORÇAMENTO\COTAÇÃO\DESCRITIVO.pdf
+   Tamanho: 176,855 bytes
+   Modificado: 2022-07-29T09:45:53
+
+240. Memorial Descritivo - Av. das Universitária.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\REPUBLICADO 15.09.2022\04 - MEMORIAL\Memorial Descritivo - Av. das Universitária.docx
+   Tamanho: 47,174 bytes
+   Modificado: 2021-12-21T16:43:59
+
+241. Memorial Descritivo - Av. das Universitária.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\ARQUIVO\REPUBLICADO 15.09.2022\04 - MEMORIAL\Memorial Descritivo - Av. das Universitária.pdf
+   Tamanho: 2,316,696 bytes
+   Modificado: 2022-09-22T12:05:45
+
+242. Memorial Descritivo - Av. das Universitária - base engastada.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\LUCAS DO RIO VERDE\TP 18-2022\REPUBLICADO 08.10.2022\Memorial Descritivo - Av. das Universitária - base engastada.pdf
+   Tamanho: 292,913 bytes
+   Modificado: 2022-10-05T08:07:11
+
+243. 00-MEMORIAL -Iluminação Geral.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\RONDONÓPOLIS\TP 85-2022\00-MEMORIAL -Iluminação Geral.pdf
+   Tamanho: 614,342 bytes
+   Modificado: 2022-12-19T10:01:55
+
+244. MEMORIAL DE CALCULO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\MT-MATO GROSSO\RONDONÓPOLIS\TP 85-2022\MEMORIAL DE CALCULO.pdf
+   Tamanho: 27,872 bytes
+   Modificado: 2022-12-19T10:03:59
+
+245. 01 - MI Nº 61313-2022 SMOB Estudo Técnico Preliminar_ass.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\PR-PARANA\FOZ DO IGUAÇU\TP 15-2022\04 - Documentação e ANEXOS\01 - MI Nº 61313-2022 SMOB Estudo Técnico Preliminar_ass.pdf
+   Tamanho: 960,446 bytes
+   Modificado: 2022-11-25T10:15:38
+
+246. 02 - Memorial Técnico Descritivo 105_ass.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\PR-PARANA\FOZ DO IGUAÇU\TP 15-2022\04 - Documentação e ANEXOS\02 - Memorial Técnico Descritivo 105_ass.pdf
+   Tamanho: 652,134 bytes
+   Modificado: 2022-11-25T10:32:20
+
+247. Memorial Descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\PR-PARANA\PINHALÃO\Memorial Descritivo.pdf
+   Tamanho: 109,474 bytes
+   Modificado: 2022-11-03T12:03:16.753068
+
+248. MEMORIAL_DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\PR-PARANA\PITANGA\CP 9-2022\SITE\MEMORIAL_DESCRITIVO.pdf
+   Tamanho: 424,524 bytes
+   Modificado: 2022-12-29T10:33:40.960798
+
+249. MEMORIAL DESCRITIVO.PDF
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\RONDONIA\NOVO HORIZONTE DO OESTE\TP 10-2022\MEMORIAL DESCRITIVO.PDF
+   Tamanho: 2,679,345 bytes
+   Modificado: 2022-11-29T09:47:20
+
+250. MDESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Eletrico Celesc\MDESCRITIVO.pdf
+   Tamanho: 430,453 bytes
+   Modificado: 2022-03-29T14:14:10
+
+251. Mdescritivo Edificação.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Eletrico Edificação\Mdescritivo Edificação.pdf
+   Tamanho: 393,230 bytes
+   Modificado: 2022-04-04T22:33:56
+
+252. Memorial SE Elsir Bernadete Gaya Muller.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Elétrico Completo E.M. Elsir Bernadete\01 - Projeto Elétrico Subestação Aprovado\Memorial SE Elsir Bernadete Gaya Muller.pdf
+   Tamanho: 406,597 bytes
+   Modificado: 2022-10-10T16:59:08
+
+253. Memorial Predial Elsir.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Elétrico Completo E.M. Elsir Bernadete\02 - Projeto Elétrico Interno\Memorial Predial Elsir.pdf
+   Tamanho: 358,988 bytes
+   Modificado: 2022-10-10T16:55:26
+
+254. Memorial SE E.M. Maria Tereza Leal.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Elétrico Completo E.M. Prof. Maria Tereza Leal\01 - Projeto Elétrico Subestação Aprovado Celesc\Memorial SE E.M. Maria Tereza Leal.pdf
+   Tamanho: 407,281 bytes
+   Modificado: 2022-10-11T08:34:12
+
+255. Memorial Predial Maria Tereza Leal.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SC - SANTA CATARINA\NAVEGANTES\TP 228-2022\Projeto Elétrico Completo E.M. Prof. Maria Tereza Leal\02 - Projeto Elétrico Interno\Memorial Predial Maria Tereza Leal.pdf
+   Tamanho: 358,960 bytes
+   Modificado: 2022-10-11T08:24:58
+
+256. ANEXO VI – PROJETO BÁSICO (MEMORIAL DESCRITIVO).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\ARARAQUARA\TP 37-2022\ANEXO VI – PROJETO BÁSICO (MEMORIAL DESCRITIVO).pdf
+   Tamanho: 424,444 bytes
+   Modificado: 2022-12-03T10:29:08.155811
+
+257. memorial-descritivo9809750.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\AREIÓPOLIS\TP 7-2022\memorial-descritivo9809750.pdf
+   Tamanho: 576,085 bytes
+   Modificado: 2022-10-19T15:31:57.935419
+
+258. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\BALSAMO\TP 21-2022\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 2,196,278 bytes
+   Modificado: 2022-11-07T09:25:14
+
+259. memorial-descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\BOA ESPERANÇA DO SUL\TP 30-2022\ANTIGO\memorial-descritivo.pdf
+   Tamanho: 785,287 bytes
+   Modificado: 2022-11-18T13:22:58
+
+260. memorial-descritivo-atualizado-.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\BOA ESPERANÇA DO SUL\TP 30-2022\REPUBLICADO 17-12-2022\memorial-descritivo-atualizado-.pdf
+   Tamanho: 785,287 bytes
+   Modificado: 2022-12-17T08:23:08
+
+261. MEMORIAL DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\BOA ESPERANÇA DO SUL\TP 30-2022\REPUBLICADO 17-12-2022\_ENG\MEMORIAL DESCRITIVO.pdf
+   Tamanho: 637,004 bytes
+   Modificado: 2023-01-23T16:35:58
+
+262. memorial-descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\CERQUEIRA CÉSAR\CP 002-2022\memorial-descritivo.pdf
+   Tamanho: 299,105 bytes
+   Modificado: 2022-11-29T09:51:30
+
+263. ANEXO+I-MEMORIAL+DESCRITIVO_TP010.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\DESCALVADO\TP 10-2022\ANEXO+I-MEMORIAL+DESCRITIVO_TP010.pdf
+   Tamanho: 203,934 bytes
+   Modificado: 2022-11-22T11:39:04
+
+264. ANEXO+IV-MEMORIAL+DE+VIAS_TP010.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\DESCALVADO\TP 10-2022\ANEXO+IV-MEMORIAL+DE+VIAS_TP010.pdf
+   Tamanho: 389,381 bytes
+   Modificado: 2022-11-22T11:39:04
+
+265. MEMORIAL DESCRITIVO - ass.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\ESTÂNCIA HIDROMINERAL DE LINDÓIA\TP 008-2022\DOCUMENTOS TÉCNICO\MEMORIAL DESCRITIVO - ass.pdf
+   Tamanho: 2,696,290 bytes
+   Modificado: 2022-05-04T15:19:09
+
+266. 1. Memorial Descritivo_Iluminação Publica LED_320 mil.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\FLORA RICA\TP 004-2022\1. Memorial Descritivo_Iluminação Publica LED_320 mil.pdf
+   Tamanho: 775,395 bytes
+   Modificado: 2022-08-18T13:10:00
+
+267. 2. Memorial de Calculos e Quantitativos_Iluminação LED_320 mil.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\FLORA RICA\TP 004-2022\2. Memorial de Calculos e Quantitativos_Iluminação LED_320 mil.pdf
+   Tamanho: 645,097 bytes
+   Modificado: 2022-08-18T13:10:00
+
+268. MEMORIAL DESCRITIVO R01.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\IACANGA\TP 010-2022\ANTIGO\MEMORIAL DESCRITIVO R01.pdf
+   Tamanho: 1,501,560 bytes
+   Modificado: 2022-07-06T14:42:00
+
+269. 001_-_MEMORIAL_DESCRITIVO_ILUMINAÇÃO_PÚBLICA_RATIFICADO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\IACANGA\TP 010-2022\REPUBLICADO 14.10.2022\001_-_MEMORIAL_DESCRITIVO_ILUMINAÇÃO_PÚBLICA_RATIFICADO.pdf
+   Tamanho: 1,508,419 bytes
+   Modificado: 2022-10-14T16:13:06
+
+270. MEMORIAL_DESCRITIVO_(1)_PROJETO_ILUMINAÇÃO_PÚBLICA_BOLETIM_186.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\IACANGA\TP 010-2022\REPUBLICADO 14.10.2022\MEMORIAL_DESCRITIVO_(1)_PROJETO_ILUMINAÇÃO_PÚBLICA_BOLETIM_186.pdf
+   Tamanho: 1,760,046 bytes
+   Modificado: 2022-10-14T16:13:01
+
+271. MEMORIAL_DESCRITIVO (2).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\IACANGA\TP 15-2022\MEMORIAL_DESCRITIVO (2).pdf
+   Tamanho: 1,335,474 bytes
+   Modificado: 2022-11-30T18:06:14
+
+272. Anexo I-B - Memorial Descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\JAHU\TP 11-2022\Anexo I-B - Memorial Descritivo.pdf
+   Tamanho: 220,359 bytes
+   Modificado: 2022-11-18T13:18:40
+
+273. MEMORIAL-DESCRITIVO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\PARANAPANEMA\TP-PARANAPANEMA\TP 22-2022\MEMORIAL-DESCRITIVO.pdf
+   Tamanho: 993,491 bytes
+   Modificado: 2022-10-25T16:36:15.028711
+
+274. memorial-descritivo (6).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\POMPEIA\TP 9-2022\memorial-descritivo (6).pdf
+   Tamanho: 239,734 bytes
+   Modificado: 2022-11-18T18:03:25.672965
+
+275. 2022-MEMORIAL DESCRITIVO ELETRICA-VIADUTO JORDÃO REIS-R00.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\SAO JOSE DO RIO PRETO\CP 37-2022\Doc Técnica\Projetos - Memorial\2022-MEMORIAL DESCRITIVO ELETRICA-VIADUTO JORDÃO REIS-R00.pdf
+   Tamanho: 147,549 bytes
+   Modificado: 2022-10-19T14:11:38
+
+276. Memorial Descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\SÃO SEBASTIÃO DA GRAMA\TP 14-2022\Memorial Descritivo.pdf
+   Tamanho: 159,855 bytes
+   Modificado: 2022-10-14T17:31:58
+
+277. Memorial Descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\SÃO SEBASTIÃO DA GRAMA\TP 15-2022\Memorial Descritivo.pdf
+   Tamanho: 137,251 bytes
+   Modificado: 2022-11-22T13:50:36
+
+278. MEMORIAL DESCRITIVO ILUMINAÇÃO PUBLICA.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\TRABIJU\TP 17-2022\MEMORIAL DESCRITIVO ILUMINAÇÃO PUBLICA.pdf
+   Tamanho: 699,423 bytes
+   Modificado: 2022-12-14T15:55:10
+
+279. Memorial descritivo.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\VOTUPORANGA\CP 11-2022\Memorial descritivo.pdf
+   Tamanho: 3,430,948 bytes
+   Modificado: 2022-11-18T09:11:39
+
+280. Memorial-Descritivo (7).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2022\SP - SÃO PAULO\ÁLVARES MACHADO\TP 13-2022\Memorial-Descritivo (7).pdf
+   Tamanho: 1,181,249 bytes
+   Modificado: 2022-12-01T15:43:02
+
+281. MEMORIAL DESCRITIVO (2)(1).pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2023\MA-MARANHÃO\GO - GOIÁS\SILVÂNIA\REVITALIZAÇÃO DA PRAÇA DO CRISTO\MEMORIAL DESCRITIVO (2)(1).pdf
+   Tamanho: 190,425 bytes
+   Modificado: 2023-01-10T09:20:43
+
+282. memorial_descritivo_-_luminarias_led_-_avenida_perimetral_-__09083902.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\ANALISE\_2023\SP - SÃO PAULO\BARIRI\CP 001-2023\memorial_descritivo_-_luminarias_led_-_avenida_perimetral_-__09083902.pdf
+   Tamanho: 252,460 bytes
+   Modificado: 2023-01-12T08:55:02
+
+283. MEMORIAL DESCRITIVO - ARQUITETURA_AVOSMARDEMENCK_ARIPUANÃ_MT.doc
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\PROJETOS\PROJETOS RAD\PROJETO ARIPUANÃ\ARIPUANÃ - MT\Avenida Osmar Demeneck\2017\Proj. Executivo\MEMORIAL DESCRITIVO - ARQUITETURA_AVOSMARDEMENCK_ARIPUANÃ_MT.doc
+   Tamanho: 120,832 bytes
+   Modificado: 2017-06-27T14:30:15.616000
+
+284. MEMORIAL DESCRITIVO CORTE E ATERRO.docx
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\PROJETOS\PROJETOS RAD\PROJETO TERRAPLENAGEM FOTOVOLTAICO\MEMORIAL DESCRITIVO CORTE E ATERRO.docx
+   Tamanho: 2,333,934 bytes
+   Modificado: 2022-05-27T10:15:53.994845
+
+285. Memorial Descritivo - Melhoria de IP BR-060.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\RIO VERDE\CP 006-2022\Memorial Descritivo - Melhoria de IP BR-060.pdf
+   Tamanho: 495,383 bytes
+   Modificado: 2022-11-30T17:19:06
+
+286. Memorial Fotografico -Melhoria de IP-BR-060.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\NOVOS\RADIANTE\RIO VERDE\CP 006-2022\Memorial Fotografico -Melhoria de IP-BR-060.pdf
+   Tamanho: 555,494 bytes
+   Modificado: 2022-09-27T10:21:00
+
+287. SINTESE MEMORIAL DESCR..pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\SILVANA\SINTESE MEMORIAL DESCR..pdf
+   Tamanho: 297,985 bytes
+   Modificado: 2025-07-24T08:25:33.016746
+
+288. 04-LUMINOTÉCNICO.pdf
+   Caminho: D:\MONT CRUZ\PROJETOS\THAMYLLIS\projeto tham\04-LUMINOTÉCNICO.pdf
+   Tamanho: 324,163 bytes
+   Modificado: 2025-08-14T23:01:13.464454
+
+289. Memorial Descritivo Modelo 1.pdf
+   Caminho: D:\MONT CRUZ\serviço\memoriais\Memorial Descritivo Modelo 1.pdf
+   Tamanho: 125,118 bytes
+   Modificado: 2016-07-25T23:37:38.338287
+
+290. Memorial Descritivo Modelo 2.pdf
+   Caminho: D:\MONT CRUZ\serviço\memoriais\Memorial Descritivo Modelo 2.pdf
+   Tamanho: 125,461 bytes
+   Modificado: 2016-07-25T23:37:42.778231
+
+291. Minuta de Memorial Descritivo.doc
+   Caminho: D:\MONT CRUZ\serviço\memoriais\Minuta de Memorial Descritivo.doc
+   Tamanho: 35,840 bytes
+   Modificado: 2016-07-25T23:37:47.981320

@@ -1,0 +1,24 @@
+{
+  "name": "Memorial de Instalacoes Sanitarias Base",
+  "description": "Memorial descritivo de instalacoes sanitarias.",
+  "category": "hidraulica",
+  "subcategory": "sanitario",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes sanitarias da obra em {{localizacao}}, atendendo {{numero_contribuintes}} contribuinte(s)."},
+    {"title": "2. COLETA E TRATAMENTO", "content": "A rede coletora publica esta classificada como {{rede_coletora}}. O sistema de tratamento adotado e {{sistema_tratamento}}, com vazao diaria estimada de {{vazao_diaria}} L/dia."},
+    {"title": "3. DESTINO E OPERACAO", "content": "O destino do efluente tratado sera {{destino_efluente}}. A solucao de ventilacao sanitaria e: {{ventilacao_sanitaria}}."},
+    {"title": "4. EXECUCAO", "content": "Tubulacoes, caixas, conexoes e dispositivos deverao ser instalados com declividades, acessibilidade para manutencao e estanqueidade conforme projeto."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 8160 - Sistemas prediais de esgoto sanitario", "ABNT NBR 7229 - Projeto, construcao e operacao de sistemas de tanques septicos"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "numero_contribuintes", "type": "number", "label": "Numero de contribuintes", "required": true, "min": 1},
+    {"name": "rede_coletora", "type": "select", "label": "Rede coletora publica", "required": true, "options": [{"value": "sim", "label": "Sim"}, {"value": "nao", "label": "Nao"}]},
+    {"name": "sistema_tratamento", "type": "text", "label": "Sistema de tratamento", "required": true},
+    {"name": "vazao_diaria", "type": "number", "label": "Vazao diaria (L/dia)", "required": true, "min": 0},
+    {"name": "destino_efluente", "type": "text", "label": "Destino do efluente", "required": true},
+    {"name": "ventilacao_sanitaria", "type": "textarea", "label": "Ventilacao sanitaria", "required": true}
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "name": "Estrutura de Concreto Armado",
+  "description": "Template para memorial descritivo de estruturas de concreto armado",
+  "category": "estruturas",
+  "subcategory": "concreto_armado",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "1. OBJETO",
+      "content": "Este memorial descreve a execução da estrutura de concreto armado para {{tipo_estrutura}} localizada em {{localizacao}}, com área total de {{area_total}} m².",
+      "variables": ["tipo_estrutura", "localizacao", "area_total"]
+    },
+    {
+      "title": "2. DIMENSIONAMENTO",
+      "content": "A estrutura foi dimensionada conforme NBR 6118, utilizando concreto com resistência característica de {{fck}} MPa. As armaduras foram dimensionadas com aço CA-{{tipo_aco}}, com cobrimento mínimo de {{cobrimento}} cm.",
+      "variables": ["fck", "tipo_aco", "cobrimento"]
+    },
+    {
+      "title": "3. MATERIAIS",
+      "content": "Concreto: {{tipo_concreto}} com traço {{traco_concreto}}. Aço: CA-{{tipo_aco}} com diâmetros variando de {{diametro_min}} mm a {{diametro_max}} mm.",
+      "variables": ["tipo_concreto", "traco_concreto", "tipo_aco", "diametro_min", "diametro_max"]
+    },
+    {
+      "title": "4. EXECUÇÃO",
+      "content": "A execução seguiu as seguintes etapas: {{etapas_execucao}}. O controle tecnológico foi realizado conforme NBR 12655.",
+      "variables": ["etapas_execucao"]
+    }
+  ],
+  "calculations": [
+    {
+      "name": "volume_concreto",
+      "formula": "area_total * espessura_media",
+      "inputs": ["area_total", "espessura_media"],
+      "unit": "m³",
+      "description": "Volume total de concreto"
+    }
+  ],
+  "normas": [
+    "NBR 6118 - Projeto de estruturas de concreto",
+    "NBR 12655 - Concreto de cimento Portland - Preparo, controle, recebimento e aceitação",
+    "NBR 14931 - Execução de estruturas de concreto"
+  ],
+  "variables": [
+    {
+      "name": "tipo_estrutura",
+      "type": "text",
+      "label": "Tipo de Estrutura",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localização",
+      "required": true
+    },
+    {
+      "name": "area_total",
+      "type": "number",
+      "label": "Área Total (m²)",
+      "required": true
+    },
+    {
+      "name": "fck",
+      "type": "number",
+      "label": "Resistência Característica (MPa)",
+      "required": true
+    },
+    {
+      "name": "tipo_aco",
+      "type": "text",
+      "label": "Tipo de Aço (CA-50, CA-60)",
+      "required": true
+    },
+    {
+      "name": "cobrimento",
+      "type": "number",
+      "label": "Cobrimento (cm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "tipo_concreto",
+      "type": "text",
+      "label": "Tipo de Concreto",
+      "required": true
+    },
+    {
+      "name": "traco_concreto",
+      "type": "text",
+      "label": "Traço do Concreto",
+      "required": true
+    },
+    {
+      "name": "diametro_min",
+      "type": "number",
+      "label": "Diâmetro Mínimo (mm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "diametro_max",
+      "type": "number",
+      "label": "Diâmetro Máximo (mm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "etapas_execucao",
+      "type": "textarea",
+      "label": "Etapas de Execução",
+      "required": true
+    },
+    {
+      "name": "espessura_media",
+      "type": "number",
+      "label": "Espessura Média (m)",
+      "required": true,
+      "min": 0
+    }
+  ]
+}
+

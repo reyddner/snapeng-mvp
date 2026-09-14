@@ -1,0 +1,39 @@
+<!-- Arquivo: frontend/templates/base.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SNAPENG - Memoriais de Engenharia{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    {% if config is defined and config.DEBUG %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% else %}
+    <link rel="stylesheet" href="/static/css/tailwind.css">
+    {% endif %}
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/auth.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    {% include 'components/navbar.html' %}
+
+    <main class="container mx-auto px-4 py-8 flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+        <div class="container mx-auto px-4 py-6 flex flex-wrap gap-3 justify-between items-center text-sm text-gray-500">
+            <span>SNAPENG — memoriais descritivos de engenharia</span>
+            <a href="/memorials/new" class="text-blue-600 hover:text-blue-700 font-medium">Criar memorial</a>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+    {# Alpine depois dos scripts da página, para x-data encontrar as funções #}
+    <script defer src="/static/js/alpine.min.js"></script>
+</body>
+</html>

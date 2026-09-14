@@ -1,0 +1,673 @@
+{
+  "name": "Memorial Descritivo Protocolo 13932225-1 Assinado",
+  "description": "Template gerado automaticamente a partir de Memorial_Descritivo_Protocolo_13932225-1_assinado.pdf",
+  "category": "edificacoes",
+  "subcategory": "",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "1. O preenchimento incorreto ou a omissão de informações/dados é inteiramente de responsabilidade",
+      "content": "do {{responsável}} técnico e pode comprometer a devida análise do {{processo}}, sujeitando-o às sanções\nestabeleci{{das}} no {{art}}. 25 da legislação vigente (Lei 15.802/2006) sem prejuízo {{das}} de natureza civil ou\npenal.",
+      "variables": [
+        "art",
+        "das",
+        "processo",
+        "responsável"
+      ]
+    },
+    {
+      "title": "2. Deverão ser preenchidos somente os itens e enviadas as páginas referentes aos sistemas",
+      "content": "preventivos presentes na edificação e/ou área de risco.\n1 - {{responsável}} TÉCNICO {{pelo}} {{projeto}}\n{{reyddner}} {{andrei}} {{nunes}} {{silva}} 1014662982D-GO",
+      "variables": [
+        "andrei",
+        "nunes",
+        "pelo",
+        "projeto",
+        "responsável",
+        "reyddner",
+        "silva"
+      ]
+    },
+    {
+      "title": "024.XXX.XXX-36 1020250257294",
+      "content": "engenharia@{{bela}}{{vista}}.go.gov.br (62) 99681-5131\n2 - {{tipo}} DE {{serviço}} {{solicitado}}\nAprovação inicial de {{projeto}}\nSubstituição de {{projeto}}\nNome: {{crea}}/{{cau}}/{{cft}}:\n{{cpf}}:\nN. {{art}}/{{rrt}}:\n(* Preencher somente o documento\nde responsabilidade para o {{projeto}}\nde combate a {{incêndio}} )\nE-\nmail: Telefone:\nPágina 2 de 8\n2.1 - OBSERVAÇÕES\nCom Parecer Técnico\n{{projeto}} de aceite*\n{{evento}} tem{{por}}ário\n*Somente para edificações comprovadamente construí{{das}} em data anterior a 10/03/2007, conforme NT-41.\n2.2 - {{evento}} TEM{{{{por}}}}ÁRIO\n1º {{rodeio}} {{show}} DE {{roselandia}}\n2000 20\n3 - {{dados}} DO {{proprietário}}/{{responsável}} {{pela}} EDIFICAÇÃO",
+      "variables": [
+        "art",
+        "bela",
+        "cau",
+        "cft",
+        "cpf",
+        "crea",
+        "dados",
+        "das",
+        "evento",
+        "incêndio",
+        "pela",
+        "por",
+        "projeto",
+        "proprietário",
+        "responsável",
+        "rodeio",
+        "roselandia",
+        "rrt",
+        "serviço",
+        "show",
+        "solicitado",
+        "temporário",
+        "tipo",
+        "vista"
+      ]
+    },
+    {
+      "title": "PREFEITURA MUNICIPAL DE BELA VISTA DE GOIAS",
+      "content": "01.005.917/0001-41",
+      "variables": []
+    },
+    {
+      "title": "PREFEITURA MUNICIPAL DE BELA VISTA DE GOIAS",
+      "content": "{{rua}} {{das}} {{laranjeiras}} ,Nº 0 75240-000",
+      "variables": [
+        "das",
+        "laranjeiras",
+        "rua"
+      ]
+    },
+    {
+      "title": "SETOR SANTO ANTONIO BELA VISTA DE GOIAS",
+      "content": "",
+      "variables": []
+    },
+    {
+      "title": "DISTRITO DE ROSELANDIA",
+      "content": "4 - SITUAÇÃO DA EDIFICAÇÃO\n4.1 - CARACTERÍSTICAS DA EDIFICAÇÃO/{{evento}}\nPARA O {{preenchimento}} {{destes}} {{campos}} {{observar}} A TA{{bela}} 1 DO {{anexo}} A DA NT-01 E DA NT-14\nLocal de Reunião de Público: Estação e terminal de\npassageiro",
+      "variables": [
+        "anexo",
+        "bela",
+        "campos",
+        "destes",
+        "evento",
+        "observar",
+        "preenchimento",
+        "tabela"
+      ]
+    },
+    {
+      "title": "ARENA DE RODEIO",
+      "content": "05/09/2025 08/09/2025",
+      "variables": []
+    },
+    {
+      "title": "CNPJ CPF",
+      "content": "Isolada\nP{{art}}e de outra edificação principal\nF-4\nNome do\n{{evento}}:\nData do início do\n{{evento}}:\nData do término do\n{{evento}}:\nLotação do\n{{evento}}:\nQuantidade de\nbrigadistas:\nRazão\nSocial:\nNome\nFantasia:\n3.1 - {{dados}} da edificação\nLogradouro: {{cep}}:\nBairro: Município:\nComplemento:\nOcupação/Uso\nPredominante: Divisão:\nDescrição:\n{{cnae}} Área:\nPágina 3 de 8\n9001-9/05 4.415\n300 MJ/m²\n1 0 17 3\n2 m 4.415 m²\n³ Somatório {{das}} áreas construí{{das}} e {{das}} áreas de risco da edificação\n5 - MEDI{{{{das}}}} DE {{segurança}} {{contra}} {{incêndio}} E PÂNICO\nSeparação {{entre}} edificações\nAcesso de {{via}}tura na edificação\n{{segurança}} estrutural\nComp{{art}}imentação horizontal (ou de áreas)\nComp{{art}}imentação vertical\nControle de materiais de acabamento\nSinalização de {{emergência}}\nIluminação de {{emergência}}\n{{extintores}}\nSaí{{das}} de {{emergência}}\n{{tipo}} de {{escada}}:",
+      "variables": [
+        "art",
+        "cep",
+        "cnae",
+        "contra",
+        "dados",
+        "das",
+        "emergência",
+        "entre",
+        "escada",
+        "evento",
+        "extintores",
+        "incêndio",
+        "medidas",
+        "segurança",
+        "tipo",
+        "via"
+      ]
+    },
+    {
+      "title": "NE EP PF",
+      "content": "",
+      "variables": []
+    },
+    {
+      "title": "PFP AE",
+      "content": "Elevador de {{emergência}}\nAlarme de {{incêndio}}\nDetecção de {{incêndio}}\nHidrantes e mangotinhos\nChuveiro automático\nResfriamento\nEspuma\nControle de fontes de ignição\nSistema fixo de gases limpos e dióxido de carbono\nBrigada\nControle de fumaça\nHidrante urbano",
+      "variables": [
+        "emergência",
+        "incêndio"
+      ]
+    },
+    {
+      "title": "SPDA",
+      "content": "6 - {{riscos}} {{{{especiais}}}}\nArmazenamento de líquidos\ninflamáveis/combustíveis Armazenamento de produtos perigosos\nCentral de gás Grupo Motogerador\nArmazenamento de {{glp}} Fogos de {{art}}ifício\nVaso sob pressão (caldeira) Gás Natural\nDepósitos e áreas de armazenamento Sistema Fotovoltaico\nBaixo\nPrincipal:\nRisco: Carga de\n{{incêndio}}:\nN. de\npavimentos: Subterrâneos: Térreos: Elevados:\nAltura: Área total da\nedificação³:\nPágina 4 de 8\nOutros (especificar)\n7 - SEPARAÇÃO {{{{entre}}}} EDIFICAÇÕES\n14,5 m\n13 - SINALIZAÇÃO DE {{{{emergência}}}}\nO Sistema de Sinalização de {{emergência}} da edificação ou área de risco deve atender o previsto na Norma\nTécnica n. 20 (vigente na data da aprovação) do {{cbmgo}}.\nDeverá ser instalada, no acesso principal da edificação, placa indicativa da localização do quadro geral de\ndistribuição de energia – {{qdg}} (área {{comum}} e privativas) bem como do Gerador de energia, quando houver.\nPara {{evento}}s públicos e centros es{{por}}tivos e de exibição devem ser instala{{das}}, em todos os acessos de entrada\ndo recinto, placas indicativas da capacidade total de público, e nas entra{{das}} dos {{setor}}es, placas indicativas da\ncapacidade de público do respectivo {{setor}}, conforme previsto na NT 12.\n* Obrigatória em ambientes fechados destinados à reunião de público, com capacidade igual ou superior a\n1.000 pessoas.\n13 - SINALIZAÇÃO DE {{{{emergência}}}}\nO Sistema de Sinalização de {{emergência}} da edificação ou área de risco deve atender o previsto na Norma\nTécnica n. 20 (vigente na data da aprovação) do {{cbmgo}}.\nDeverá ser instalada, no acesso principal da edificação, placa indicativa da localização do quadro geral de\ndistribuição de energia – {{qdg}} (área {{comum}} e privativas) bem como do Gerador de energia, quando houver.\nPara {{evento}}s públicos e centros es{{por}}tivos e de exibição devem ser instala{{das}}, em todos os acessos de entrada\ndo recinto, placas indicativas da capacidade total de público, e nas entra{{das}} dos {{setor}}es, placas indicativas da\ncapacidade de público do respectivo {{setor}}, conforme previsto na NT 12.\nSim Não\nDistância de Separação Parede Corta Fogo\nEdifícios Residenciais Conjugados Distância {{entre}} Facha{{das}}\nSim Não\nSim Não\n6.1 – Utilização de Gás Liquefeito de\nPetróleo – {{glp}}, recipientes de 13Kg\nMétodo\nMétodo\nutilizado:\nQual o método de\nseparação?\nPossui afastamento\nsuperior a 14 m?\nInforme o\nafastamento (m):\n13.1 - Nota sobre sinalização de {{emergência}}\n13.2 - Sinalização complementar:\nA edificação possui sinalização\ncomplementar:\n13.1 - Nota sobre sinalização de {{emergência}}\nPágina 5 de 8\n* Obrigatória em ambientes fechados destinados à reunião de público, com capacidade igual ou superior a\n1.000 pessoas.\n14 - ILUMINAÇÃO DE {{{{emergência}}}}\nEm caso de falta de energia {{por}} {{incêndio}} e no uso de grupo motogerador automático com circuitos {{especiais}}\npara iluminação de {{emergência}}, to{{das}} as áreas protegi{{das}} para escoamento {{das}} pessoas, e livres de materiais\ncombustíveis, com separação {{por}} {{por}}ta corta-fogo (Esca{{das}} Enclausura{{das}}, etc...), podem manter a\nalimentação em 110/220 Vca de um motogerador automático.\nQualquer passagem dos cabos {{por}} áreas de risco proíbe o uso de tensão 110/220 Vca da rede normal ou do\ngerador.\nEm caso de {{incêndio}} em qualquer área fora da proteção para saída de {{emergência}} e com material combustível,\na tensão da alimentação da iluminação de {{emergência}} deve ser no máximo 30 Vcc.\nOs eletrodutos utilizados para condutores de iluminação de {{emergência}} não podem ser usados para outros fins,\nsalvo instalação de detecção e alarme de {{incêndio}} ou de comunicação, conforme a ABNT NBR 5410, contanto\nque as tensões de alimentação estejam abaixo de 30 Vcc e todos os circuitos devidamente protegidos {{contra}}\ncurtos-circuitos.\nTodos os eletrodutos e cabos que atravessam áreas protegi{{das}}, ou passam {{por}} separações de áreas\ncomp{{art}}imenta{{das}}, devem ter selos internos e externos ({{entre}} a tubulação e a alvenaria), à prova de passagem\nde gases e de fumaça.\nÉ de responsabilidade total do instalador a execução do sistema de iluminação de {{emergência}}.\n* Não podem ser posicionados nas saí{{das}} de {{emergência}} (esca{{das}}, corredores, etc...) de forma a\nimpedir, {{por}} ofuscamento ou iluminação desfavorável, o deslocamento {{das}} pessoas e/ou a inspeção da\nárea {{pela}}s equipes de salvamento.\nNo caso de blocos autônomos, os eletrodutos podem ser de plástico sem especificações {{especiais}} para a\nrecarga {{das}} baterias em 110/220 Vca, mas não para luminárias alimenta{{das}} {{por}} esse bloco autônomo.\nOs aparelhos devem ser construídos de forma que, no ensaio de temperatura a 70 °C, a luminária funcione no\nmínimo {{por}} 1 h e eles sejam aprovados {{por}} organismos nacionais competentes.\nOs pontos de luz não devem ser instalados de modo a {{cau}}sar ofuscamento aos olhos, seja diretamente ou {{por}}\niluminação refletida.\nSim Não\nEmbutida\nAparente\nOutra (especificar)\nMetálica {{pvc}} Rígido Antichama\nBloco Autônomo\nLuminárias alimenta{{das}} {{por}} fonte centralizada\n{{projeto}}res ou Faróis*\nOutro (especificar)\n13.2 - Sinalização complementar:\nA edificação possui sinalização\ncomplementar:\n14.1 - Iluminação de {{emergência}} – (O sistema não pode ter autonomia inferior a 1h)\nInstalação:\n14.2 - Luminárias\nPágina 6 de 8\nQuando utilizado anteparo em luminárias fecha{{das}}, os equipamentos não podem ser projetados de modo que\nseja permitida a entrada de fumaça, para não prejudicar seu rendimento luminoso atual e futuro.\nEm qualquer caso, mesmo havendo obstáculos, curva ou {{escada}}, os pontos de iluminação de sinalização\ndevem ser dispostos de forma que, na direção de saída de cada ponto, seja possível visualizar o ponto seguinte,\ncom uma distância máxima de 15 m.\n15 - PROTEÇÃO {{{{por}}}} {{extintores}}\n{{terreo}} 6\n6\n16 - SAÍ{{{{das}}}} DE {{{{emergência}}}}\n0 17 3 1\n1 4415 4 2000\nESCA{{{{das}}}} NÃO-ENCLAUSURA{{{{das}}}} OU {{{{escada}}}} {{{{comum}}}} (NE)",
+      "variables": [
+        "art",
+        "cau",
+        "cbmgo",
+        "comum",
+        "contra",
+        "das",
+        "emergência",
+        "enclausuradas",
+        "entre",
+        "escada",
+        "escadas",
+        "especiais",
+        "evento",
+        "extintores",
+        "glp",
+        "incêndio",
+        "pela",
+        "por",
+        "projeto",
+        "pvc",
+        "qdg",
+        "riscos",
+        "setor",
+        "terreo"
+      ]
+    },
+    {
+      "title": "CONFORME PLANTA BAIXA",
+      "content": "NE 1,20 m 7\n*Caso a edificação possua mais de uma {{escada}} com características diferentes deverá ser preenchido um\nmemorial para cada {{escada}}.\n6 2,10\n20 CM 30 CM\nSim Não\nPÓ QUÍMICO ({{pqs}}) 20-B:C\nF-4\n15.1 - Discriminação {{por}} Pavimentos ou {{setor}}es\nPavimento ou {{setor}} {{tipo}} de Extintor Capacidade Extintora Quantidade\nTotal de unidades\nextintoras:\n16.1 - Número de Pavimentos\nSubterrâneo: Térreo: Elevado: Total:\n16.2 - Discriminação {{das}} populações\nPavimento ou\n{{setor}} Área construída Pé direito Ocupação Lotação\nIdentificação da {{escada}} (Conforme {{planta}}\n{{baixa}}):\nDivisão/Grupo: Altura: Quantidade:\nPossui\nparede?\nLances\nNúmero de\nlances:\nLargura da\n{{escada}}:\nDegrau Altura do\nespelho:\nLargura do\npiso:\nPágina 7 de 8\nDeve estar {{entre}} 63-64 cm e altura {{entre}} 16-18 cm (±0,5 cm)\n{{via}} PÚBLICA",
+      "variables": [
+        "baixa",
+        "das",
+        "entre",
+        "escada",
+        "planta",
+        "por",
+        "pqs",
+        "setor",
+        "tipo",
+        "via"
+      ]
+    },
+    {
+      "title": "METALICO",
+      "content": "0,90\nESCA{{das}} NÃO-ENCLAUSURA{{das}} OU {{escada}} {{comum}} (NE)",
+      "variables": [
+        "comum",
+        "das",
+        "enclausuradas",
+        "escada",
+        "escadas"
+      ]
+    },
+    {
+      "title": "CONFORME PROJETO EM ANEXO",
+      "content": "NE 1,20 m 7\n*Caso a edificação possua mais de uma {{escada}} com características diferentes deverá ser preenchido um\nmemorial para cada {{escada}}.\n6 2,10\n15 30\nDeve estar {{entre}} 63-64 cm e altura {{entre}} 16-18 cm (±0,5 cm)\nSim Não\nSim Não\nNão\nBloco autônomo\nFórmula de Blondel (2h + b): 70.0\ncm ✗  Não conforme\nCaracterísticas\nPiso\nantiderrapante:\nLocal de\ndescarga:\nCorrimãos\nMaterial:\nAltura - borda /\npiso:\nIluminação\n{{tipo}}:\nPossui iluminação\nnatural?\nIdentificação da {{escada}} (Conforme {{planta}}\n{{baixa}}):\nDivisão/Grupo: Altura: Quantidade:\nPossui\nparede?\nLances\nNúmero de\nlances:\nLargura da\n{{escada}}:\nDegrau Altura do\nespelho:\nLargura do\npiso:\nFórmula de Blondel (2h + b): 60.0\ncm ✗  Não conforme\nCaracterísticas\nPágina 8 de 8\n{{via}} pública ({{rua}})",
+      "variables": [
+        "baixa",
+        "entre",
+        "escada",
+        "planta",
+        "rua",
+        "tipo",
+        "via"
+      ]
+    },
+    {
+      "title": "METÁLICOS",
+      "content": "0,90\nSim Não\nNão\nBloco autônomo\nPiso\nantiderrapante:\nLocal de\ndescarga:\nCorrimãos\nMaterial:\nAltura - borda /\npiso:\nIluminação\n{{tipo}}:\nPossui iluminação\nnatural?",
+      "variables": [
+        "tipo"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "andrei",
+      "type": "number",
+      "label": "Andrei",
+      "required": true
+    },
+    {
+      "name": "anexo",
+      "type": "number",
+      "label": "Anexo",
+      "required": true
+    },
+    {
+      "name": "antonio",
+      "type": "number",
+      "label": "Antonio",
+      "required": true
+    },
+    {
+      "name": "arena",
+      "type": "number",
+      "label": "Arena",
+      "required": true
+    },
+    {
+      "name": "art",
+      "type": "number",
+      "label": "Art",
+      "required": true
+    },
+    {
+      "name": "baixa",
+      "type": "number",
+      "label": "Baixa",
+      "required": true
+    },
+    {
+      "name": "bela",
+      "type": "number",
+      "label": "Bela",
+      "required": true
+    },
+    {
+      "name": "campos",
+      "type": "number",
+      "label": "Campos",
+      "required": true
+    },
+    {
+      "name": "cau",
+      "type": "number",
+      "label": "Cau",
+      "required": true
+    },
+    {
+      "name": "cbmgo",
+      "type": "number",
+      "label": "Cbmgo",
+      "required": true
+    },
+    {
+      "name": "cep",
+      "type": "number",
+      "label": "Cep",
+      "required": true
+    },
+    {
+      "name": "cft",
+      "type": "number",
+      "label": "Cft",
+      "required": true
+    },
+    {
+      "name": "cnae",
+      "type": "number",
+      "label": "Cnae",
+      "required": true
+    },
+    {
+      "name": "cnpj",
+      "type": "number",
+      "label": "Cnpj",
+      "required": true
+    },
+    {
+      "name": "comum",
+      "type": "number",
+      "label": "Comum",
+      "required": true
+    },
+    {
+      "name": "contra",
+      "type": "number",
+      "label": "Contra",
+      "required": true
+    },
+    {
+      "name": "cpf",
+      "type": "number",
+      "label": "Cpf",
+      "required": true
+    },
+    {
+      "name": "crea",
+      "type": "number",
+      "label": "Crea",
+      "required": true
+    },
+    {
+      "name": "dados",
+      "type": "number",
+      "label": "Dados",
+      "required": true
+    },
+    {
+      "name": "das",
+      "type": "number",
+      "label": "Das",
+      "required": true
+    },
+    {
+      "name": "destes",
+      "type": "number",
+      "label": "Destes",
+      "required": true
+    },
+    {
+      "name": "distrito",
+      "type": "number",
+      "label": "Distrito",
+      "required": true
+    },
+    {
+      "name": "emergência",
+      "type": "number",
+      "label": "Emergência",
+      "required": true
+    },
+    {
+      "name": "enclausuradas",
+      "type": "number",
+      "label": "Enclausuradas",
+      "required": true
+    },
+    {
+      "name": "entre",
+      "type": "number",
+      "label": "Entre",
+      "required": true
+    },
+    {
+      "name": "escada",
+      "type": "number",
+      "label": "Escada",
+      "required": true
+    },
+    {
+      "name": "escadas",
+      "type": "number",
+      "label": "Escadas",
+      "required": true
+    },
+    {
+      "name": "especiais",
+      "type": "number",
+      "label": "Especiais",
+      "required": true
+    },
+    {
+      "name": "evento",
+      "type": "number",
+      "label": "Evento",
+      "required": true
+    },
+    {
+      "name": "extintores",
+      "type": "number",
+      "label": "Extintores",
+      "required": true
+    },
+    {
+      "name": "glp",
+      "type": "number",
+      "label": "Glp",
+      "required": true
+    },
+    {
+      "name": "goias",
+      "type": "number",
+      "label": "Goias",
+      "required": true
+    },
+    {
+      "name": "incêndio",
+      "type": "number",
+      "label": "Incêndio",
+      "required": true
+    },
+    {
+      "name": "laranjeiras",
+      "type": "number",
+      "label": "Laranjeiras",
+      "required": true
+    },
+    {
+      "name": "medidas",
+      "type": "number",
+      "label": "Medidas",
+      "required": true
+    },
+    {
+      "name": "metalico",
+      "type": "number",
+      "label": "Metalico",
+      "required": true
+    },
+    {
+      "name": "metálicos",
+      "type": "number",
+      "label": "Metálicos",
+      "required": true
+    },
+    {
+      "name": "municipal",
+      "type": "number",
+      "label": "Municipal",
+      "required": true
+    },
+    {
+      "name": "nunes",
+      "type": "number",
+      "label": "Nunes",
+      "required": true
+    },
+    {
+      "name": "observar",
+      "type": "number",
+      "label": "Observar",
+      "required": true
+    },
+    {
+      "name": "pela",
+      "type": "number",
+      "label": "Pela",
+      "required": true
+    },
+    {
+      "name": "pelo",
+      "type": "number",
+      "label": "Pelo",
+      "required": true
+    },
+    {
+      "name": "pfp",
+      "type": "number",
+      "label": "Pfp",
+      "required": true
+    },
+    {
+      "name": "planta",
+      "type": "number",
+      "label": "Planta",
+      "required": true
+    },
+    {
+      "name": "por",
+      "type": "number",
+      "label": "Por",
+      "required": true
+    },
+    {
+      "name": "pqs",
+      "type": "number",
+      "label": "Pqs",
+      "required": true
+    },
+    {
+      "name": "preenchimento",
+      "type": "number",
+      "label": "Preenchimento",
+      "required": true
+    },
+    {
+      "name": "prefeitura",
+      "type": "number",
+      "label": "Prefeitura",
+      "required": true
+    },
+    {
+      "name": "processo",
+      "type": "number",
+      "label": "Processo",
+      "required": true
+    },
+    {
+      "name": "projeto",
+      "type": "number",
+      "label": "Projeto",
+      "required": true
+    },
+    {
+      "name": "proprietário",
+      "type": "number",
+      "label": "Proprietário",
+      "required": true
+    },
+    {
+      "name": "pvc",
+      "type": "number",
+      "label": "Pvc",
+      "required": true
+    },
+    {
+      "name": "qdg",
+      "type": "number",
+      "label": "Qdg",
+      "required": true
+    },
+    {
+      "name": "responsável",
+      "type": "number",
+      "label": "Responsável",
+      "required": true
+    },
+    {
+      "name": "reyddner",
+      "type": "number",
+      "label": "Reyddner",
+      "required": true
+    },
+    {
+      "name": "riscos",
+      "type": "number",
+      "label": "Riscos",
+      "required": true
+    },
+    {
+      "name": "rodeio",
+      "type": "number",
+      "label": "Rodeio",
+      "required": true
+    },
+    {
+      "name": "roselandia",
+      "type": "number",
+      "label": "Roselandia",
+      "required": true
+    },
+    {
+      "name": "rrt",
+      "type": "number",
+      "label": "Rrt",
+      "required": true
+    },
+    {
+      "name": "rua",
+      "type": "number",
+      "label": "Rua",
+      "required": true
+    },
+    {
+      "name": "santo",
+      "type": "number",
+      "label": "Santo",
+      "required": true
+    },
+    {
+      "name": "segurança",
+      "type": "number",
+      "label": "Segurança",
+      "required": true
+    },
+    {
+      "name": "serviço",
+      "type": "number",
+      "label": "Serviço",
+      "required": true
+    },
+    {
+      "name": "setor",
+      "type": "number",
+      "label": "Setor",
+      "required": true
+    },
+    {
+      "name": "show",
+      "type": "number",
+      "label": "Show",
+      "required": true
+    },
+    {
+      "name": "silva",
+      "type": "number",
+      "label": "Silva",
+      "required": true
+    },
+    {
+      "name": "solicitado",
+      "type": "number",
+      "label": "Solicitado",
+      "required": true
+    },
+    {
+      "name": "spda",
+      "type": "number",
+      "label": "Spda",
+      "required": true
+    },
+    {
+      "name": "tabela",
+      "type": "number",
+      "label": "Tabela",
+      "required": true
+    },
+    {
+      "name": "temporário",
+      "type": "number",
+      "label": "Temporário",
+      "required": true
+    },
+    {
+      "name": "terreo",
+      "type": "number",
+      "label": "Terreo",
+      "required": true
+    },
+    {
+      "name": "tipo",
+      "type": "number",
+      "label": "Tipo",
+      "required": true
+    },
+    {
+      "name": "via",
+      "type": "number",
+      "label": "Via",
+      "required": true
+    },
+    {
+      "name": "vista",
+      "type": "number",
+      "label": "Vista",
+      "required": true
+    },
+    {
+      "name": "xxx",
+      "type": "number",
+      "label": "Xxx",
+      "required": true
+    }
+  ],
+  "normas": [
+    "ABNT NBR"
+  ],
+  "calculations": [],
+  "metadata": {
+    "source_file": "Memorial_Descritivo_Protocolo_13932225-1_assinado.pdf",
+    "generated_at": "2025-11-25T19:54:54.283402",
+    "generated_by": "import_memorials.py"
+  }
+}

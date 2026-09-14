@@ -1,0 +1,241 @@
+{
+  "name": "Memorial Descritivo E De Especificacoes Tecnicas Assinado",
+  "description": "Template gerado automaticamente a partir de Memorial_descritivo_e_de_especificacoes_tecnicas_assinado.pdf",
+  "category": "hidraulica",
+  "subcategory": "",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "6. CONSIDERAÇÕES FINAIS Os serviços deverão ser executados por proﬁssionais habilitados, com emprego de materiais de primeira qualidade e obediência rigorosa às especiﬁcações técnicas e normas vigentes.  RESPONSÁVEL TÉCNICO:       ___________________________________________ Nome: REYDDNER ANDREI NUNES SILVA Proﬁssão: Engenheiro Civil CREA: 1014662982D-GO Local e Data: 25/09/2025",
+      "content": "",
+      "variables": []
+    }
+  ],
+  "variables": [
+    {
+      "name": "acabamento",
+      "type": "text",
+      "label": "Acabamento",
+      "required": true
+    },
+    {
+      "name": "alvenaria",
+      "type": "text",
+      "label": "Alvenaria",
+      "required": true
+    },
+    {
+      "name": "andrei",
+      "type": "text",
+      "label": "Andrei",
+      "required": true
+    },
+    {
+      "name": "anti",
+      "type": "text",
+      "label": "Anti",
+      "required": true
+    },
+    {
+      "name": "bela",
+      "type": "text",
+      "label": "Bela",
+      "required": true
+    },
+    {
+      "name": "coberta",
+      "type": "text",
+      "label": "Coberta",
+      "required": true
+    },
+    {
+      "name": "crea",
+      "type": "text",
+      "label": "Crea",
+      "required": true
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "label": "Data",
+      "required": true
+    },
+    {
+      "name": "dml",
+      "type": "text",
+      "label": "Dml",
+      "required": true
+    },
+    {
+      "name": "dos",
+      "type": "text",
+      "label": "Dos",
+      "required": true
+    },
+    {
+      "name": "feira",
+      "type": "text",
+      "label": "Feira",
+      "required": true
+    },
+    {
+      "name": "finais",
+      "type": "text",
+      "label": "Finais",
+      "required": true
+    },
+    {
+      "name": "gerais",
+      "type": "text",
+      "label": "Gerais",
+      "required": true
+    },
+    {
+      "name": "goiás",
+      "type": "text",
+      "label": "Goiás",
+      "required": true
+    },
+    {
+      "name": "led",
+      "type": "text",
+      "label": "Led",
+      "required": true
+    },
+    {
+      "name": "local",
+      "type": "text",
+      "label": "Local",
+      "required": true
+    },
+    {
+      "name": "materiais",
+      "type": "text",
+      "label": "Materiais",
+      "required": true
+    },
+    {
+      "name": "municipal",
+      "type": "text",
+      "label": "Municipal",
+      "required": true
+    },
+    {
+      "name": "normas",
+      "type": "text",
+      "label": "Normas",
+      "required": true
+    },
+    {
+      "name": "nunes",
+      "type": "text",
+      "label": "Nunes",
+      "required": true
+    },
+    {
+      "name": "obra",
+      "type": "text",
+      "label": "Obra",
+      "required": true
+    },
+    {
+      "name": "pead",
+      "type": "text",
+      "label": "Pead",
+      "required": true
+    },
+    {
+      "name": "pei",
+      "type": "text",
+      "label": "Pei",
+      "required": true
+    },
+    {
+      "name": "pintura",
+      "type": "text",
+      "label": "Pintura",
+      "required": true
+    },
+    {
+      "name": "prefeitura",
+      "type": "text",
+      "label": "Prefeitura",
+      "required": true
+    },
+    {
+      "name": "pvc",
+      "type": "text",
+      "label": "Pvc",
+      "required": true
+    },
+    {
+      "name": "pássaros",
+      "type": "text",
+      "label": "Pássaros",
+      "required": true
+    },
+    {
+      "name": "reforma",
+      "type": "text",
+      "label": "Reforma",
+      "required": true
+    },
+    {
+      "name": "responsável",
+      "type": "text",
+      "label": "Responsável",
+      "required": true
+    },
+    {
+      "name": "reyddner",
+      "type": "text",
+      "label": "Reyddner",
+      "required": true
+    },
+    {
+      "name": "sanitários",
+      "type": "text",
+      "label": "Sanitários",
+      "required": true
+    },
+    {
+      "name": "serviços",
+      "type": "text",
+      "label": "Serviços",
+      "required": true
+    },
+    {
+      "name": "silva",
+      "type": "text",
+      "label": "Silva",
+      "required": true
+    },
+    {
+      "name": "sistema",
+      "type": "text",
+      "label": "Sistema",
+      "required": true
+    },
+    {
+      "name": "telamento",
+      "type": "text",
+      "label": "Telamento",
+      "required": true
+    },
+    {
+      "name": "vista",
+      "type": "text",
+      "label": "Vista",
+      "required": true
+    }
+  ],
+  "normas": [
+    "NBR"
+  ],
+  "calculations": [],
+  "metadata": {
+    "source_file": "Memorial_descritivo_e_de_especificacoes_tecnicas_assinado.pdf",
+    "generated_at": "2025-11-25T19:54:53.892722",
+    "generated_by": "import_memorials.py"
+  }
+}

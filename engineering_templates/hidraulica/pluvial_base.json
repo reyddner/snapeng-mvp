@@ -1,0 +1,25 @@
+{
+  "name": "Memorial de Drenagem Pluvial Base",
+  "description": "Memorial descritivo de aguas pluviais.",
+  "category": "hidraulica",
+  "subcategory": "pluvial",
+  "version": "1.0",
+  "sections": [
+    {"title": "1. OBJETO", "content": "Este memorial descreve o sistema de drenagem pluvial da obra em {{localizacao}}, considerando area contribuinte de {{area_contribuicao}} m2."},
+    {"title": "2. CHUVA DE PROJETO", "content": "A intensidade de chuva adotada e {{intensidade_chuva}} mm/h, com tempo de retorno de {{tempo_retorno}} anos e coeficiente de escoamento de {{coeficiente_escoamento}}."},
+    {"title": "3. SISTEMA", "content": "O sistema de drenagem previsto e: {{sistema_drenagem}}. As aguas serao encaminhadas para {{destino_aguas}}, com pontos de lancamento em {{pontos_lancamento}}."},
+    {"title": "4. EXECUCAO", "content": "Calhas, condutores, caixas e tubulacoes deverao ser executados com declividades, cotas, suportes e estanqueidade conforme projeto."}
+  ],
+  "calculations": [],
+  "normas": ["ABNT NBR 10844 - Instalacoes prediais de aguas pluviais"],
+  "variables": [
+    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
+    {"name": "area_contribuicao", "type": "number", "label": "Area contribuinte (m2)", "required": true, "min": 0},
+    {"name": "intensidade_chuva", "type": "number", "label": "Intensidade de chuva (mm/h)", "required": true, "min": 0},
+    {"name": "tempo_retorno", "type": "number", "label": "Tempo de retorno (anos)", "required": true, "min": 1},
+    {"name": "coeficiente_escoamento", "type": "number", "label": "Coeficiente de escoamento", "required": true, "min": 0, "max": 1},
+    {"name": "sistema_drenagem", "type": "textarea", "label": "Sistema de drenagem", "required": true},
+    {"name": "destino_aguas", "type": "text", "label": "Destino das aguas", "required": true},
+    {"name": "pontos_lancamento", "type": "text", "label": "Pontos de lancamento", "required": true}
+  ]
+}

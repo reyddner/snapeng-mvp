@@ -1,0 +1,136 @@
+﻿<!-- Arquivo: frontend/templates/dashboard.html -->
+<!-- Arquivo: frontend/templates/base.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SNAPENG</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        /* Custom styles */
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <!-- Arquivo: frontend/templates/components/navbar.html -->
+<nav class="bg-white shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <a href="/" class="text-2xl font-bold text-blue-600">SNAPENG</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Início</a>
+                <a href="/dashboard" class="text-gray-700 hover:text-blue-600">Dashboard</a>
+                <a href="/api/docs" class="text-gray-700 hover:text-blue-600">API Docs</a>
+                <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        
+<div x-data="dashboard()" class="max-w-7xl mx-auto">
+    
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Meus Projetos</h1>
+        <button 
+            @click="openNewProjectModal()"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+            + Novo Memorial
+        </button>
+    </div>
+    
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Total de Projetos</div>
+            <div class="text-3xl font-bold text-gray-900" x-text="stats.total"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Em Progresso</div>
+            <div class="text-3xl font-bold text-blue-600" x-text="stats.inProgress"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Concluídos</div>
+            <div class="text-3xl font-bold text-green-600" x-text="stats.completed"></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-gray-500 text-sm">Este Mês</div>
+            <div class="text-3xl font-bold text-purple-600" x-text="stats.thisMonth"></div>
+        </div>
+    </div>
+    
+    <!-- Projects List (HTMX) -->
+    <div class="bg-white rounded-lg shadow">
+        <div class="p-6 border-b border-gray-200">
+            <input 
+                type="text" 
+                placeholder="Buscar projetos..."
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                hx-get="/api/v1/projects/search"
+                hx-trigger="keyup changed delay:500ms"
+                hx-target="#projects-list">
+        </div>
+        
+        <div id="projects-list" 
+             hx-get="/api/v1/projects" 
+             hx-trigger="load"
+             class="divide-y divide-gray-200">
+            <!-- Projects will be loaded here via HTMX -->
+            <div class="p-8 text-center text-gray-500">
+                Carregando projetos...
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+function dashboard() {
+    return {
+        stats: {
+            total: 24,
+            inProgress: 8,
+            completed: 16,
+            thisMonth: 5
+        },
+        
+        openNewProjectModal() {
+            // Abrir modal de novo projeto
+            window.location.href = '/templates/select';
+        }
+    }
+}
+</script>
+
+    </main>
+    
+    <!-- Toast Notifications (Alpine.js) -->
+    <div x-data="{ show: false, message: '' }" 
+         x-show="show" 
+         x-cloak
+         class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
+        <span x-text="message"></span>
+    </div>
+    
+    
+</body>
+</html>
+

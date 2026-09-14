@@ -1,0 +1,24 @@
+{
+  "municipios": [
+    {
+      "nome": "São Paulo",
+      "uf": "SP",
+      "url": "https://www.prefeitura.sp.gov.br",
+      "codigo_ibge": "3550308"
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "uf": "RJ",
+      "url": "https://www.rio.rj.gov.br",
+      "codigo_ibge": "3304557"
+    },
+    {
+      "nome": "Brasília",
+      "uf": "DF",
+      "url": "https://www.brasilia.df.gov.br",
+      "codigo_ibge": "5300108"
+    }
+  ],
+  "nota": "Este é um arquivo de exemplo. Para processar todos os 5.569 municípios, você precisa de uma lista completa. Pode obter em: https://www.ibge.gov.br/explica/codigos-dos-municipios.php"
+}
+
