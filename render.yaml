@@ -1,19 +1,26 @@
 # Render Blueprint — MVP SNAPENG (URL gratuita *.onrender.com)
-# Dashboard: https://dashboard.render.com → New → Blueprint
+# Dashboard: New → Blueprint → conecte o repo reyddner/snapeng-mvp
 #
-# Usa SQLite efemero no plano free (dados podem zerar no redeploy/sleep).
-# Para MVP de demonstracao isso e aceitavel. Evolua para Postgres (Neon/Render)
-# quando for manter usuarios reais.
+# Runtime Python (plano free). CSS Tailwind ja vai commitado em frontend/static/css/tailwind.css.
+# SQLite efemero: ok para demo; dados podem zerar no sleep/redeploy.
 
 services:
   - type: web
     name: snapeng-api
-    runtime: docker
+    runtime: python
     plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    region: oregon
+    branch: main
+    buildCommand: pip install -r requirements-prod.txt
+    startCommand: >-
+      cd backend &&
+      alembic upgrade head &&
+      (python scripts/load_templates.py || true) &&
+      uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
       - key: DEBUG
         value: "false"
       - key: SECRET_KEY
@@ -23,7 +30,7 @@ services:
       - key: ALLOWED_ORIGINS
         value: "https://snapeng-api.onrender.com"
       - key: ALLOWED_HOSTS
-        value: "snapeng-api.onrender.com,.onrender.com"
+        value: ".onrender.com,snapeng-api.onrender.com"
       - key: TRUST_PROXY_HEADERS
         value: "true"
       - key: SEED_TEMPLATES

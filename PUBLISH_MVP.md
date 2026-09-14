@@ -21,13 +21,14 @@ gh repo create snapeng --public --source=. --remote=origin --push
 
 ## 2) Render (recomendado para este MVP)
 
-1. Abra https://dashboard.render.com e conecte o GitHub
-2. **New → Blueprint** e selecione o repo `snapeng`
-3. Confirme o `render.yaml` (sobe API + Postgres free)
-4. Apos o deploy, copie a URL `https://snapeng-api.onrender.com`
-5. Em Environment, ajuste:
-   - `ALLOWED_ORIGINS=https://snapeng-api.onrender.com`
-   - `ALLOWED_HOSTS=snapeng-api.onrender.com,.onrender.com`
+1. Abra o link direto de Blueprint:
+   https://dashboard.render.com/blueprints/new
+2. Conecte o GitHub (se pedir) e selecione o repo **reyddner/snapeng-mvp**
+3. Confirme o `render.yaml` e clique **Deploy Blueprint**
+4. Aguarde o build (3–8 min). URL tipica: `https://snapeng-api.onrender.com`
+5. Se a URL real for diferente, em Environment ajuste:
+   - `ALLOWED_ORIGINS=https://SUA-URL.onrender.com`
+   - `ALLOWED_HOSTS=.onrender.com,SUA-URL.onrender.com`
 
 Health: `GET /health`  
 App: `/` e `/memorials/new`
