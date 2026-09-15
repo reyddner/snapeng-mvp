@@ -246,7 +246,7 @@
             </div>
         </section>
 
-        <div x-show="errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+        <div id="editor-feedback" x-show="errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-cloak>
             <p class="font-medium mb-2" x-text="error"></p>
             <ul class="list-disc list-inside text-sm space-y-1">
                 <template x-for="item in errorDetails" :key="item">
@@ -254,8 +254,30 @@
                 </template>
             </ul>
         </div>
-        <div x-show="message" class="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg" x-text="message"></div>
-        <div x-show="error && !errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error"></div>
+        <div id="editor-success" x-show="message" class="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg" x-text="message" x-cloak></div>
+        <div id="editor-error" x-show="error && !errorDetails.length" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" x-text="error" x-cloak></div>
+
+        <section class="bg-white rounded-lg shadow p-6 border-2 border-green-200 sticky bottom-4 z-10">
+            <h2 class="text-xl font-semibold text-gray-900 mb-1">Finalizar memorial</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Depois de preencher as disciplinas e os dados do projeto, valide e gere o ZIP (DOCX + PDF).
+                Isso não reinicia o fluxo.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <button type="button" @click="runPreflight()" :disabled="checkingPreflight" class="px-5 py-3 bg-white border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50 disabled:opacity-50 font-semibold">
+                    <span x-show="!checkingPreflight">Validar</span>
+                    <span x-show="checkingPreflight">Validando...</span>
+                </button>
+                <button type="button" @click="generateBundle()" :disabled="generating" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 font-semibold">
+                    <span x-show="!generating">Gerar memorial (ZIP)</span>
+                    <span x-show="generating">Gerando...</span>
+                </button>
+                <button type="button" x-show="!isProjectMode" @click="claimToAccount()" :disabled="claiming || expired" class="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 font-semibold">
+                    <span x-show="!claiming">Salvar na conta</span>
+                    <span x-show="claiming">Salvando...</span>
+                </button>
+            </div>
+        </section>
     </div>
 </div>
 {% endblock %}
@@ -618,6 +640,15 @@ function draftEditor() {
             return fallback;
         },
 
+        scrollToFeedback() {
+            this.$nextTick(() => {
+                const el = document.getElementById('editor-feedback')
+                    || document.getElementById('editor-error')
+                    || document.getElementById('editor-success');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        },
+
         preflightGenerate() {
             this.refreshMissing();
             const problems = [];
@@ -891,6 +922,7 @@ function draftEditor() {
                     this.error = 'Corrija os pendentes antes de gerar.';
                     this.errorDetails = problems;
                     await this.saveDraft({ silent: true, status: 'aguardando_informacao' });
+                    this.scrollToFeedback();
                     return;
                 }
 
@@ -904,12 +936,21 @@ function draftEditor() {
                 if (response.status === 429) {
                     this.error = 'Muitas gerações. Aguarde um momento e tente novamente.';
                     await this.saveDraft({ silent: true, status: 'erro' });
+                    this.scrollToFeedback();
                     return;
                 }
                 if (!response.ok) {
                     let data = {};
                     try { data = await response.json(); } catch (_) {}
                     this.error = this.formatApiError(data.detail, 'Não foi possível gerar o memorial.');
+                    if (Array.isArray(data.detail?.blocking)) {
+                        this.errorDetails = data.detail.blocking;
+                    } else if (data.detail?.disciplines && typeof data.detail.disciplines === 'object') {
+                        this.errorDetails = Object.entries(data.detail.disciplines).flatMap(([key, val]) => {
+                            if (Array.isArray(val)) return val.map(item => `${key}: ${item}`);
+                            return [`${key}: ${val}`];
+                        });
+                    }
                     this.preflight = data.detail?.summary
                         ? {
                             can_generate: false,
@@ -920,6 +961,7 @@ function draftEditor() {
                         }
                         : this.preflight;
                     await this.saveDraft({ silent: true, status: 'erro' });
+                    this.scrollToFeedback();
                     return;
                 }
                 const blob = await response.blob();
@@ -934,9 +976,11 @@ function draftEditor() {
                 this.message = this.isProjectMode
                     ? 'Memorial gerado com sucesso. O plano continua salvo na sua conta.'
                     : 'Memorial gerado com sucesso (ZIP com DOCX + PDF). Salve na sua conta para não perder o vínculo.';
+                this.scrollToFeedback();
             } catch (error) {
                 this.error = error.message;
                 await this.saveDraft({ silent: true, status: 'erro' });
+                this.scrollToFeedback();
             } finally {
                 this.generating = false;
             }
