@@ -1,25 +1,138 @@
 {
   "name": "Estrutura Metálica Base",
-  "description": "Memorial descritivo para estruturas metalicas.",
+  "description": "Memorial descritivo para estruturas metalicas. Memorial técnico expandido (v2).",
   "category": "estruturas",
   "subcategory": "estrutura_metalica",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. OBJETO", "content": "Este memorial descreve a estrutura metalica do tipo {{tipo_estrutura}}, localizada em {{localizacao}}, com vao maximo de {{vao_maximo}} m."},
-    {"title": "2. MATERIAIS E LIGACOES", "content": "Sera utilizado aco estrutural {{aco_estrutural}}. As ligacoes serao do tipo {{ligacoes}}, com protecao contra corrosao por {{proteccao_corrosao}}."},
-    {"title": "3. ESTABILIDADE", "content": "O sistema de contraventamento previsto e: {{contraventamento}}. As cargas consideradas no dimensionamento sao: {{cargas_adotadas}}."},
-    {"title": "4. EXECUCAO", "content": "A execucao devera observar controle dimensional, soldagem, montagem, protecao anticorrosiva e tolerancias conforme projeto estrutural e normas aplicaveis."}
+    {
+      "title": "1. OBJETO",
+      "content": "Este memorial descreve a estrutura metálica do tipo {{tipo_estrutura}}, com vão máximo de {{vao_maximo}} m e área de cobertura de {{area_cobertura}} m², em {{localizacao}}."
+    },
+    {
+      "title": "2. MATERIAIS E LIGAÇÕES",
+      "content": "Aço estrutural: {{aco_estrutural}}.\n\nLigações: {{ligacoes}}.\n\nProteção contra corrosão: {{proteccao_corrosao}}.\n\nParafusos, soldas e chumbadores atenderão às normas de fabricação e montagem, com qualificação de procedimentos de soldagem quando aplicável."
+    },
+    {
+      "title": "3. AÇÕES E DESEMPENHO",
+      "content": "Cargas consideradas:\n\n{{cargas_adotadas}}\n\nO dimensionamento observa NBR 8800 (ou NBR 14762 para perfis formados a frio, quando aplicável), com verificação de estabilidade, flechas e vibrações."
+    },
+    {
+      "title": "4. CONTRAVENTAMENTO E ESTABILIDADE",
+      "content": "Sistema de contraventamento:\n\n{{contraventamento}}\n\nDurante a montagem, deverão ser previstos estabilizadores temporários até a conclusão dos diafragmas e ligações definitivas."
+    },
+    {
+      "title": "5. FABRICAÇÃO, TRANSPORTE E MONTAGEM",
+      "content": "Peças serão fabricadas com controle dimensional, identificação e proteção de superfícies. O transporte evitará deformações permanentes. A montagem seguirá sequência que garanta estabilidade e segurança dos montadores (NR-18/NR-35 no que couber)."
+    },
+    {
+      "title": "6. CONTROLE DE QUALIDADE",
+      "content": "Soldas críticas poderão exigir ENS (líquido penetrante, ultrassom) conforme especificação. Torque de parafusos de alta resistência será controlado. Recebimento em obra incluirá conferência de chumbadores e nivelamento de bases."
+    },
+    {
+      "title": "7. DISPOSIÇÕES FINAIS",
+      "content": "Perfurações adicionais, cortes ou soldas de campo não previstos no projeto são vedados sem autorização do responsável técnico."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de estrutura metálica seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 8800 - Projeto de estruturas de aco e de estruturas mistas", "ABNT NBR 6120 - Acoes para o calculo de estruturas", "ABNT NBR 6123 - Forcas devidas ao vento"],
+  "normas": [
+    "ABNT NBR 8800 — Projeto de estruturas de aço e de estruturas mistas de aço e concreto de edifícios",
+    "ABNT NBR 14762 — Dimensionamento de estruturas de aço constituídas por perfis formados a frio",
+    "ABNT NBR 6123 — Forças devidas ao vento em edificações",
+    "Especificações AWS/AWS D1.1 para soldagem (quando aplicável)"
+  ],
   "variables": [
-    {"name": "tipo_estrutura", "type": "text", "label": "Tipo de estrutura", "required": true},
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "vao_maximo", "type": "number", "label": "Vao maximo (m)", "required": true, "min": 0},
-    {"name": "aco_estrutural", "type": "text", "label": "Aco estrutural", "required": true},
-    {"name": "ligacoes", "type": "text", "label": "Tipo de ligacoes", "required": true},
-    {"name": "proteccao_corrosao", "type": "text", "label": "Protecao contra corrosao", "required": true},
-    {"name": "contraventamento", "type": "textarea", "label": "Contraventamento", "required": false},
-    {"name": "cargas_adotadas", "type": "textarea", "label": "Cargas consideradas", "required": true}
+    {
+      "name": "tipo_estrutura",
+      "type": "text",
+      "label": "Tipo de estrutura",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "vao_maximo",
+      "type": "number",
+      "label": "Vao maximo (m)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "area_cobertura",
+      "type": "number",
+      "label": "Area de cobertura (m2)",
+      "required": false,
+      "min": 0
+    },
+    {
+      "name": "aco_estrutural",
+      "type": "text",
+      "label": "Aco estrutural",
+      "required": true
+    },
+    {
+      "name": "ligacoes",
+      "type": "text",
+      "label": "Tipo de ligacoes",
+      "required": true
+    },
+    {
+      "name": "proteccao_corrosao",
+      "type": "text",
+      "label": "Protecao contra corrosao",
+      "required": true
+    },
+    {
+      "name": "contraventamento",
+      "type": "textarea",
+      "label": "Contraventamento",
+      "required": false
+    },
+    {
+      "name": "cargas_adotadas",
+      "type": "textarea",
+      "label": "Cargas consideradas",
+      "required": true
+    }
   ]
 }

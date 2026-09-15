@@ -1,44 +1,81 @@
 {
   "name": "Pavimentação Asfáltica",
-  "description": "Template para memorial descritivo de pavimentação asfáltica",
+  "description": "Template para memorial descritivo de pavimentação asfáltica Memorial técnico expandido (v2).",
   "category": "civil_infra",
   "subcategory": "pavimentacao",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
     {
       "title": "1. OBJETO",
-      "content": "Este memorial descreve a execução de {{tipo_obra}} localizada em {{localizacao}}, com extensão de {{extensao}} km, compreendendo a pavimentação asfáltica conforme especificações técnicas.",
-      "variables": ["tipo_obra", "localizacao", "extensao"]
+      "content": "Este memorial descreve o projeto de pavimentação asfáltica para {{tipo_obra}}, com extensão de {{extensao}} km, localizado em {{localizacao}}."
     },
     {
-      "title": "2. DIMENSIONAMENTO",
-      "content": "O dimensionamento da pavimentação foi realizado com base no CBR de campo de {{cbr_campo}}%, resultando em CBR de projeto de {{cbr_projeto}}%. A espessura total da camada de base é de {{espessura_base}} cm, e a camada de revestimento asfáltico possui {{espessura_revestimento}} cm.",
-      "variables": ["cbr_campo", "cbr_projeto", "espessura_base", "espessura_revestimento"]
+      "title": "2. PARÂMETROS DE DIMENSIONAMENTO",
+      "content": "CBR de campo: {{cbr_campo}} %. Espessura de base: {{espessura_base}} cm. Espessura de revestimento: {{espessura_revestimento}} cm.\n\nTipo de asfalto: {{tipo_asfalto}}. Penetração: {{penetracao_asfalto}}.\n\nO dimensionamento considera tráfego previsto, suporte do subleito e clima regional."
     },
     {
-      "title": "3. MATERIAIS",
-      "content": "Os materiais utilizados atendem às especificações da NBR 15115 e NBR 15116. O asfalto utilizado é do tipo {{tipo_asfalto}} com penetração de {{penetracao_asfalto}}.",
-      "variables": ["tipo_asfalto", "penetracao_asfalto"]
+      "title": "3. ESTRUTURA DO PAVIMENTO",
+      "content": "A estrutura típica compreende regularização do subleito, base granular e revestimento betuminoso. Camadas serão compactadas até o grau de compactação especificado, com controle de umidade e densidade."
     },
     {
-      "title": "4. EXECUÇÃO",
-      "content": "A execução seguiu as seguintes etapas: {{etapas_execucao}}.",
-      "variables": ["etapas_execucao"]
+      "title": "4. ETAPAS DE EXECUÇÃO",
+      "content": "{{etapas_execucao}}\n\nA imprimação/pintura de ligação será executada sobre superfície limpa. O CBUQ será usinado, transportado e aplicado com controle de temperatura e compactação."
+    },
+    {
+      "title": "5. CONTROLE TECNOLÓGICO",
+      "content": "Devem ser realizados ensaios de granulometria, CBR, densidade, teor de ligante e extração, conforme plano de qualidade da obra. Trechos não conformes serão refeitos."
+    },
+    {
+      "title": "6. DRENAGEM E ACABAMENTO",
+      "content": "A drenagem superficial e profunda (quando prevista) é condição de desempenho do pavimento. Acabamento inclui sinalização e limpeza de dispositivos."
+    },
+    {
+      "title": "7. DISPOSIÇÕES FINAIS",
+      "content": "Alterações de tráfego de projeto ou de CBR de subleito exigem redimensionamento das espessuras."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de pavimentação asfáltica seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
     }
   ],
-  "calculations": [
-    {
-      "name": "cbr_projeto",
-      "formula": "cbr_campo / 1.5",
-      "inputs": ["cbr_campo"],
-      "unit": "%",
-      "description": "CBR de projeto calculado a partir do CBR de campo"
-    }
-  ],
+  "calculations": [],
   "normas": [
-    "NBR 15115 - Pavimentação - Execução de camadas de solo com equipamento de compactação",
-    "NBR 15116 - Pavimentação - Execução de camadas de base e sub-base",
-    "NBR 7207 - Execução de camada de impermeabilização com emulsão asfáltica"
+    "ABNT NBR 15115 — Materiais reciclados de resíduos sólidos da construção civil — Execução de camadas de pavimentação",
+    "ABNT NBR 15116 — Agregados reciclados de resíduos sólidos da construção civil",
+    "Especificações DNIT/DER aplicáveis a CBUQ e bases granulares",
+    "Normas de ensaio ABNT/DNIT para controle tecnológico de pavimentos"
   ],
   "variables": [
     {
@@ -100,4 +137,3 @@
     }
   ]
 }
-

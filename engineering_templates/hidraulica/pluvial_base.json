@@ -1,25 +1,130 @@
 {
   "name": "Drenagem Pluvial Base",
-  "description": "Memorial descritivo de aguas pluviais.",
+  "description": "Memorial descritivo de aguas pluviais. Memorial técnico expandido (v2).",
   "category": "hidraulica",
   "subcategory": "pluvial",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. OBJETO", "content": "Este memorial descreve o sistema de drenagem pluvial da obra em {{localizacao}}, considerando area contribuinte de {{area_contribuicao}} m2."},
-    {"title": "2. CHUVA DE PROJETO", "content": "A intensidade de chuva adotada e {{intensidade_chuva}} mm/h, com tempo de retorno de {{tempo_retorno}} anos e coeficiente de escoamento de {{coeficiente_escoamento}}."},
-    {"title": "3. SISTEMA", "content": "O sistema de drenagem previsto e: {{sistema_drenagem}}. As aguas serao encaminhadas para {{destino_aguas}}, com pontos de lancamento em {{pontos_lancamento}}."},
-    {"title": "4. EXECUCAO", "content": "Calhas, condutores, caixas e tubulacoes deverao ser executados com declividades, cotas, suportes e estanqueidade conforme projeto."}
+    {
+      "title": "1. OBJETO",
+      "content": "Este memorial descreve o sistema de drenagem de águas pluviais da edificação/área em {{localizacao}}, com área de contribuição de {{area_contribuicao}} m², coeficiente de escoamento {{coeficiente_escoamento}}, intensidade de chuva de projeto {{intensidade_chuva}} mm/h e tempo de retorno de {{tempo_retorno}} anos."
+    },
+    {
+      "title": "2. CRITÉRIOS HIDROLÓGICOS",
+      "content": "O dimensionamento adota método racional ou equivalente, com vazão de projeto proporcional à área impermeabilizada e à intensidade pluviométrica local. O tempo de retorno foi escolhido conforme criticidade da ocupação e diretrizes municipais.\n\nRecomenda-se verificar calhas, condutores, canaletas e dispositivos de amortecimento para a vazão de projeto, com folga operacional para manutenção."
+    },
+    {
+      "title": "3. SISTEMA DE CAPTAÇÃO E CONDUÇÃO",
+      "content": "Sistema de drenagem previsto:\n\n{{sistema_drenagem}}\n\nCalhas e condutores serão executados com caimento adequado, juntas estanques e dispositivos de limpeza. Evitar-se-á lançamento direto sobre passeios sem dissipação."
+    },
+    {
+      "title": "4. DESTINO DAS ÁGUAS E PONTOS DE LANÇAMENTO",
+      "content": "Destino das águas pluviais: {{destino_aguas}}.\n\nPontos de lançamento: {{pontos_lancamento}}.\n\nQuando houver exigência municipal, serão previstos dispositivos de retenção, infiltração ou tratamento preliminar (caixa de areia/sedimentação) antes do lançamento na rede pública."
+    },
+    {
+      "title": "5. INTERFACES E MANUTENÇÃO",
+      "content": "A drenagem será compatibilizada com impermeabilização de lajes, paisagismo e pavimentação. Deve haver acesso para limpeza de caixas e condutores. A manutenção periódica é condição para o desempenho hidráulico de longo prazo."
+    },
+    {
+      "title": "6. DISPOSIÇÕES FINAIS",
+      "content": "Alterações de impermeabilização do terreno ou de cotas de lançamento invalidam o dimensionamento e exigem revisão do projeto pluvial."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de drenagem pluvial seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 10844 - Instalacoes prediais de aguas pluviais"],
+  "normas": [
+    "ABNT NBR 10844 — Instalações prediais de águas pluviais",
+    "Diretrizes de drenagem urbana do município",
+    "Instruções da concessionária/órgão gestor de drenagem (quando houver)"
+  ],
   "variables": [
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "area_contribuicao", "type": "number", "label": "Area contribuinte (m2)", "required": true, "min": 0},
-    {"name": "intensidade_chuva", "type": "number", "label": "Intensidade de chuva (mm/h)", "required": false, "min": 0},
-    {"name": "tempo_retorno", "type": "number", "label": "Tempo de retorno (anos)", "required": false, "min": 1},
-    {"name": "coeficiente_escoamento", "type": "number", "label": "Coeficiente de escoamento", "required": true, "min": 0, "max": 1},
-    {"name": "sistema_drenagem", "type": "textarea", "label": "Sistema de drenagem", "required": false},
-    {"name": "destino_aguas", "type": "text", "label": "Destino das aguas", "required": true},
-    {"name": "pontos_lancamento", "type": "text", "label": "Pontos de lancamento", "required": false}
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "area_contribuicao",
+      "type": "number",
+      "label": "Area contribuinte (m2)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "intensidade_chuva",
+      "type": "number",
+      "label": "Intensidade de chuva (mm/h)",
+      "required": false,
+      "min": 0
+    },
+    {
+      "name": "tempo_retorno",
+      "type": "number",
+      "label": "Tempo de retorno (anos)",
+      "required": false,
+      "min": 1
+    },
+    {
+      "name": "coeficiente_escoamento",
+      "type": "number",
+      "label": "Coeficiente de escoamento",
+      "required": true,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "sistema_drenagem",
+      "type": "textarea",
+      "label": "Sistema de drenagem",
+      "required": false
+    },
+    {
+      "name": "destino_aguas",
+      "type": "text",
+      "label": "Destino das aguas",
+      "required": true
+    },
+    {
+      "name": "pontos_lancamento",
+      "type": "text",
+      "label": "Pontos de lancamento",
+      "required": false
+    }
   ]
 }

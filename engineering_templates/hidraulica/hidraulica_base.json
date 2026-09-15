@@ -1,25 +1,174 @@
 {
   "name": "Instalações Hidráulicas Base",
-  "description": "Memorial descritivo de instalacoes hidraulicas prediais de agua fria/quente.",
+  "description": "Memorial descritivo de instalacoes hidraulicas prediais de agua fria/quente. Memorial técnico expandido (v2).",
   "category": "hidraulica",
   "subcategory": "hidraulica",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes hidraulicas da edificacao do tipo {{tipo_edificacao}}, em {{localizacao}}, com {{numero_pavimentos}} pavimento(s) e ocupacao estimada de {{ocupacao_total}} pessoas."},
-    {"title": "2. ABASTECIMENTO", "content": "Fonte de abastecimento: {{abastecimento}}. Reservatorio inferior: {{reservatorio_inferior}} L. Reservatorio superior: {{reservatorio_superior}} L."},
-    {"title": "3. AGUA QUENTE E MATERIAIS", "content": "Sistema de agua quente: {{agua_quente}}. Materiais e sistemas previstos: {{materiais_hidraulicos}}."}
+    {
+      "title": "1. OBJETO",
+      "content": "Este Memorial Descritivo das Instalações Hidráulicas de água fria (e quente, quando aplicável) estabelece critérios de projeto e execução para a edificação do tipo {{tipo_edificacao}}, com {{numero_pavimentos}} pavimento(s) e ocupação estimada de {{ocupacao_total}} pessoas, localizada em {{localizacao}}."
+    },
+    {
+      "title": "2. ABASTECIMENTO E RESERVAÇÃO",
+      "content": "A fonte de abastecimento adotada é: {{abastecimento}}.\n\nVolumes de reservação previstos: reservatório inferior {{reservatorio_inferior}} L; reservatório superior {{reservatorio_superior}} L. A reservação considera consumo diário, reserva de emergência e, quando houver, parcela de combate a incêndio definida na disciplina específica.\n\nOs reservatórios deverão possuir acesso para inspeção, extravasor, limpeza, ventilação e proteção sanitária conforme boas práticas e normas aplicáveis.",
+      "subsections": [
+        {
+          "title": "2.1 Pressurização",
+          "content": "Quando a pressão disponível da rede ou da reservação elevada for insuficiente, será previsto sistema de pressurização com bombas, barrilete e dispositivos de proteção (válvula de retenção, manômetro, proteção contra falta d'água)."
+        }
+      ]
+    },
+    {
+      "title": "3. REDES DE DISTRIBUIÇÃO",
+      "content": "As redes de água fria serão executadas com materiais compatíveis com pressão de serviço e qualidade da água. Traçados priorizam shafts acessíveis, evitarão travessias indevidas de elementos estruturais e terão registros setoriais por pavimento/zona.\n\nMateriais e sistemas previstos:\n\n{{materiais_hidraulicos}}"
+    },
+    {
+      "title": "4. ÁGUA QUENTE",
+      "content": "Sistema de água quente: {{agua_quente}}.\n\nQuando aplicável, o aquecimento, a recirculação e o isolamento térmico das tubulações deverão garantir conforto, eficiência energética e segurança contra queimaduras, com misturadores e dispositivos de alívio conforme especificação de projeto."
+    },
+    {
+      "title": "5. LOUÇAS, METAIS E PONTOS DE CONSUMO",
+      "content": "Os pontos de consumo serão compatibilizados com o layout arquitetônico (lavatórios, duchas, pias, tanques, pontos de máquinas). Vazões e pressões mínimas nos pontos de utilização observarão a NBR 5626. Em áreas de acessibilidade, serão previstos metais e alturas conforme NBR 9050."
+    },
+    {
+      "title": "6. PROTEÇÃO SANITÁRIA E CONTROLE DE QUALIDADE",
+      "content": "Serão evitadas conexões cruzadas e retrossifonagem. Pontos sujeitos a contaminação receberão dispositivos antisifonagem. Recomenda-se limpeza e desinfecção dos reservatórios antes da entrada em operação, com laudo quando exigido."
+    },
+    {
+      "title": "7. ENSAIOS E ENTREGA",
+      "content": "As tubulações serão ensaiadas quanto a estanqueidade sob pressão antes do fechamento de shafts e forros. Na entrega, deverão constar identificações de registros, esquema de barrilete e orientações de manutenção periódica."
+    },
+    {
+      "title": "8. DISPOSIÇÕES FINAIS",
+      "content": "Este memorial complementa plantas, esquemas isométricos e memorial de cálculo hidráulico. Alterações de ocupação, número de pontos ou pressão disponível exigem redimensionamento."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de instalações hidráulicas seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 5626 - Instalacoes prediais de agua fria", "ABNT NBR 7198 - Projeto e execucao de instalacoes prediais de agua quente"],
+  "normas": [
+    "ABNT NBR 5626 — Instalações prediais de água fria",
+    "ABNT NBR 7198 — Projeto e execução de instalações prediais de água quente",
+    "ABNT NBR 9050 — Acessibilidade (pontos e metais)",
+    "Portaria de vigilância sanitária local para reservatórios (quando aplicável)"
+  ],
   "variables": [
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
-    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
-    {"name": "ocupacao_total", "type": "number", "label": "Populacao estimada", "required": true, "min": 1},
-    {"name": "abastecimento", "type": "select", "label": "Fonte de abastecimento", "required": true, "options": [{"value": "rede_publica", "label": "Rede publica"}, {"value": "poco", "label": "Poco"}, {"value": "mista", "label": "Rede publica e poco"}]},
-    {"name": "reservatorio_inferior", "type": "number", "label": "Reservatorio inferior (L)", "required": false, "min": 0},
-    {"name": "reservatorio_superior", "type": "number", "label": "Reservatorio superior (L)", "required": false, "min": 0},
-    {"name": "agua_quente", "type": "select", "label": "Sistema de agua quente", "required": false, "options": [{"value": "nao", "label": "Nao"}, {"value": "sim", "label": "Sim"}]},
-    {"name": "materiais_hidraulicos", "type": "textarea", "label": "Materiais e sistemas", "required": false}
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "tipo_edificacao",
+      "type": "text",
+      "label": "Tipo de edificacao",
+      "required": true
+    },
+    {
+      "name": "numero_pavimentos",
+      "type": "number",
+      "label": "Numero de pavimentos",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "ocupacao_total",
+      "type": "number",
+      "label": "Populacao estimada",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "abastecimento",
+      "type": "select",
+      "label": "Fonte de abastecimento",
+      "required": true,
+      "options": [
+        {
+          "value": "rede_publica",
+          "label": "Rede publica"
+        },
+        {
+          "value": "poco",
+          "label": "Poco"
+        },
+        {
+          "value": "mista",
+          "label": "Rede publica e poco"
+        }
+      ]
+    },
+    {
+      "name": "reservatorio_inferior",
+      "type": "number",
+      "label": "Reservatorio inferior (L)",
+      "required": false,
+      "min": 0
+    },
+    {
+      "name": "reservatorio_superior",
+      "type": "number",
+      "label": "Reservatorio superior (L)",
+      "required": false,
+      "min": 0
+    },
+    {
+      "name": "agua_quente",
+      "type": "select",
+      "label": "Sistema de agua quente",
+      "required": false,
+      "options": [
+        {
+          "value": "nao",
+          "label": "Nao"
+        },
+        {
+          "value": "sim",
+          "label": "Sim"
+        }
+      ]
+    },
+    {
+      "name": "materiais_hidraulicos",
+      "type": "textarea",
+      "label": "Materiais e sistemas",
+      "required": false
+    }
   ]
 }

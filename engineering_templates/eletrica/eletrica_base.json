@@ -1,29 +1,212 @@
 {
   "name": "Instalações Elétricas Base",
-  "description": "Memorial descritivo de instalacoes eletricas prediais.",
+  "description": "Memorial descritivo de instalacoes eletricas prediais. Memorial técnico expandido (v2).",
   "category": "eletrica",
   "subcategory": "eletrica",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes eletricas da edificacao do tipo {{tipo_edificacao}}, com uso {{uso_edificacao}}, localizada em {{localizacao}}."},
-    {"title": "2. FORNECIMENTO E CARGAS", "content": "A tensao de fornecimento adotada e {{tensao_fornecimento}}. A potencia instalada e de {{potencia_instalada}} kW, com demanda calculada de {{carga_demanda}} kW. Padrao de entrada: {{padrao_entrada}}."},
-    {"title": "3. GERACAO AUXILIAR", "content": "Presenca de gerador: {{gerador}}. Quando aplicavel, potencia {{potencia_gerador}} kVA, autonomia {{autonomia_gerador}} h. Transferencia e cargas: {{transferencia_gerador}}."},
-    {"title": "4. ATERRAMENTO", "content": "Sistema de aterramento: {{aterramento_eletrico}}."}
+    {
+      "title": "1. OBJETO E ABRANGÊNCIA",
+      "content": "O presente Memorial Descritivo das Instalações Elétricas descreve critérios de projeto, dimensionamento e execução das instalações de baixa tensão da edificação do tipo {{tipo_edificacao}}, com uso {{uso_edificacao}}, localizada em {{localizacao}}.\n\nAbrange entrada de energia, medição, distribuição, circuitos terminais, proteções, aterramento, iluminação, tomadas, força e, quando previsto, geração auxiliar. O projeto observa a ABNT NBR 5410 e as normas da concessionária local."
+    },
+    {
+      "title": "2. DADOS DE FORNECIMENTO E CARGAS",
+      "content": "A tensão de fornecimento adotada é {{tensao_fornecimento}}. A potência instalada total estimada é de {{potencia_instalada}} kW, com demanda calculada de {{carga_demanda}} kW, considerando fatores de demanda adequados ao uso {{uso_edificacao}}.\n\nO padrão de entrada especificado é: {{padrao_entrada}}.\n\nOs quadros de distribuição serão setorizados por pavimento/uso, com reserva de espaço para expansão mínima de 20% em número de polos, salvo restrição física justificada.",
+      "subsections": [
+        {
+          "title": "2.1 Critérios de demanda",
+          "content": "A demanda foi estimada a partir do levantamento de cargas de iluminação, tomadas de uso geral, equipamentos específicos, climatização e cargas especiais. Revisões de carga durante a obra devem ser comunicadas ao projetista."
+        }
+      ]
+    },
+    {
+      "title": "3. ENTRADA DE ENERGIA, MEDIÇÃO E PROTEÇÃO GERAL",
+      "content": "A entrada de serviço será executada conforme padrão da concessionária, com eletrodutos, condutores e dispositivos de proteção dimensionados para a demanda e o tipo de fornecimento.\n\nNo quadro geral (QGBT) serão previstos dispositivo de proteção geral, DPS quando aplicável pela avaliação de risco, barramentos dimensionados e identificação clara dos circuitos."
+    },
+    {
+      "title": "4. DISTRIBUIÇÃO, CONDUTORES E ELETRODUTOS",
+      "content": "Os circuitos terminais serão discriminados em diagramas unifilares, com seção mínima conforme NBR 5410 e queda de tensão limitada aos valores normativos. Condutores de cobre com isolação adequada à temperatura e ao meio.\n\nEletrodutos e eletrocalhas terão taxa de ocupação controlada, com caixas de passagem acessíveis e trajetos que evitem interferência com estrutura e hidráulica."
+    },
+    {
+      "title": "5. ILUMINAÇÃO E TOMADAS",
+      "content": "A iluminação artificial será dimensionada para níveis de iluminância compatíveis com o uso dos ambientes, priorizando luminárias eficientes e circuitos setorizados. Tomadas de uso geral (TUG) e específicas (TUE) seguirão a densidade mínima normativa e as necessidades do programa arquitetônico.\n\nEm áreas molhadas e externas serão adotados dispositivos DR e graus de proteção IP compatíveis com a exposição."
+    },
+    {
+      "title": "6. GERAÇÃO AUXILIAR E TRANSFERÊNCIA",
+      "content": "Presença de gerador: {{gerador}}.\n\nQuando aplicável: potência {{potencia_gerador}} kVA; autonomia estimada {{autonomia_gerador}} h. Transferência e cargas atendidas: {{transferencia_gerador}}.\n\nO sistema de transferência (QTA) deverá garantir intertravamento que impeça paralelismo indevido com a rede, sinalização de estado e manutenção segura."
+    },
+    {
+      "title": "7. ATERRAMENTO E EQUIPOTENCIALIZAÇÃO",
+      "content": "Sistema de aterramento previsto:\n\n{{aterramento_eletrico}}\n\nSerá prevista equipotencialização principal (BEP) e ligações suplementares nos ambientes exigidos pela NBR 5410, com continuidade verificável no comissionamento."
+    },
+    {
+      "title": "8. PROTEÇÕES, SELETIVIDADE E COORDENAÇÃO",
+      "content": "Os dispositivos de proteção (disjuntores, DR, DPS) serão selecionados para sobrecarga, curto-circuito e choque elétrico, buscando seletividade entre proteção geral e terminais. Capacidades de interrupção devem ser compatíveis com a corrente de curto-circuito estimada no ponto de instalação."
+    },
+    {
+      "title": "9. ENSAIOS, COMISSIONAMENTO E ENTREGA",
+      "content": "Antes da energização definitiva, deverão ser realizados ensaios de continuidade, resistência de isolação, polaridade, disparo de DR, verificação de aterramento e inspeção visual conforme NBR 5410. Recomenda-se termo de comissionamento com registro de medições."
+    },
+    {
+      "title": "10. DISPOSIÇÕES FINAIS",
+      "content": "Este memorial deve ser interpretado em conjunto com plantas, diagramas unifilares e quadro de cargas. Alterações de carga ou de layout elétrico sem revisão do projetista comprometem a validade do dimensionamento."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de instalações elétricas seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 5410 - Instalacoes eletricas de baixa tensao"],
+  "normas": [
+    "ABNT NBR 5410 — Instalações elétricas de baixa tensão",
+    "ABNT NBR 5419 — Proteção contra descargas atmosféricas (interfaces)",
+    "Normas e padrões da concessionária local de energia",
+    "NR-10 — Segurança em instalações e serviços em eletricidade"
+  ],
   "variables": [
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
-    {"name": "uso_edificacao", "type": "text", "label": "Uso da edificacao", "required": true},
-    {"name": "tensao_fornecimento", "type": "select", "label": "Tensao de fornecimento", "required": true, "options": [{"value": "127_220", "label": "127/220 V"}, {"value": "220_380", "label": "220/380 V"}, {"value": "media_tensao", "label": "Media tensao"}]},
-    {"name": "potencia_instalada", "type": "number", "label": "Potencia instalada (kW)", "required": true, "min": 0},
-    {"name": "carga_demanda", "type": "number", "label": "Demanda calculada (kW)", "required": false, "min": 0},
-    {"name": "padrao_entrada", "type": "text", "label": "Tipo de padrao de entrada", "required": false},
-    {"name": "gerador", "type": "select", "label": "Possui gerador?", "required": false, "options": [{"value": "nao", "label": "Nao"}, {"value": "sim", "label": "Sim"}]},
-    {"name": "potencia_gerador", "type": "number", "label": "Potencia do gerador (kVA)", "required": true, "min": 0, "depends_on": {"field": "gerador", "equals": "sim"}},
-    {"name": "autonomia_gerador", "type": "number", "label": "Autonomia do gerador (h)", "required": true, "min": 0, "depends_on": {"field": "gerador", "equals": "sim"}},
-    {"name": "transferencia_gerador", "type": "textarea", "label": "Transferencia e cargas", "required": true, "depends_on": {"field": "gerador", "equals": "sim"}},
-    {"name": "aterramento_eletrico", "type": "textarea", "label": "Sistema de aterramento", "required": false}
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "tipo_edificacao",
+      "type": "text",
+      "label": "Tipo de edificacao",
+      "required": true
+    },
+    {
+      "name": "uso_edificacao",
+      "type": "text",
+      "label": "Uso da edificacao",
+      "required": true
+    },
+    {
+      "name": "tensao_fornecimento",
+      "type": "select",
+      "label": "Tensao de fornecimento",
+      "required": true,
+      "options": [
+        {
+          "value": "127_220",
+          "label": "127/220 V"
+        },
+        {
+          "value": "220_380",
+          "label": "220/380 V"
+        },
+        {
+          "value": "media_tensao",
+          "label": "Media tensao"
+        }
+      ]
+    },
+    {
+      "name": "potencia_instalada",
+      "type": "number",
+      "label": "Potencia instalada (kW)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "carga_demanda",
+      "type": "number",
+      "label": "Demanda calculada (kW)",
+      "required": false,
+      "min": 0
+    },
+    {
+      "name": "padrao_entrada",
+      "type": "text",
+      "label": "Tipo de padrao de entrada",
+      "required": false
+    },
+    {
+      "name": "gerador",
+      "type": "select",
+      "label": "Possui gerador?",
+      "required": false,
+      "options": [
+        {
+          "value": "nao",
+          "label": "Nao"
+        },
+        {
+          "value": "sim",
+          "label": "Sim"
+        }
+      ]
+    },
+    {
+      "name": "potencia_gerador",
+      "type": "number",
+      "label": "Potencia do gerador (kVA)",
+      "required": true,
+      "min": 0,
+      "depends_on": {
+        "field": "gerador",
+        "equals": "sim"
+      }
+    },
+    {
+      "name": "autonomia_gerador",
+      "type": "number",
+      "label": "Autonomia do gerador (h)",
+      "required": true,
+      "min": 0,
+      "depends_on": {
+        "field": "gerador",
+        "equals": "sim"
+      }
+    },
+    {
+      "name": "transferencia_gerador",
+      "type": "textarea",
+      "label": "Transferencia e cargas",
+      "required": true,
+      "depends_on": {
+        "field": "gerador",
+        "equals": "sim"
+      }
+    },
+    {
+      "name": "aterramento_eletrico",
+      "type": "textarea",
+      "label": "Sistema de aterramento",
+      "required": false
+    }
   ]
 }

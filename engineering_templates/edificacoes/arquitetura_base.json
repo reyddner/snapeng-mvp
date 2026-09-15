@@ -1,28 +1,182 @@
 {
   "name": "Arquitetônico Base",
-  "description": "Memorial descritivo arquitetonico para edificacoes.",
+  "description": "Memorial descritivo arquitetonico para edificacoes. Memorial técnico expandido (v2).",
   "category": "edificacoes",
   "subcategory": "arquitetura",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. IDENTIFICACAO", "content": "Este memorial descreve a edificacao de uso {{tipo_edificacao}}, localizada em {{localizacao}}, no municipio de {{municipio}}/{{uf}}, com area de terreno de {{area_terreno}} m2 e area construida de {{area_construida}} m2."},
-    {"title": "2. PROGRAMA E ORGANIZACAO", "content": "O programa de necessidades contempla: {{programa_necessidades}}. A edificacao possui {{numero_pavimentos}} pavimento(s), com sistema construtivo {{sistema_construtivo}}."},
-    {"title": "3. ESPECIFICACOES", "content": "Os acabamentos e revestimentos previstos sao: {{acabamentos}}. As solucoes de acessibilidade contemplam: {{acessibilidade}}."},
-    {"title": "4. COMPATIBILIZACAO", "content": "O projeto deve ser compatibilizado com as disciplinas estrutural, fundacoes, eletrica, hidrossanitaria, SPDA e seguranca contra incendio antes da execucao."}
+    {
+      "title": "1. OBJETO E ESCOPO DO MEMORIAL",
+      "content": "Este Memorial Descritivo Arquitetônico apresenta as diretrizes de projeto, especificações construtivas e critérios de desempenho adotados para a edificação do tipo {{tipo_edificacao}}, situada em {{localizacao}}, município de {{municipio}}/{{uf}}.\n\nO documento integra o conjunto de peças técnicas necessárias à análise por órgãos competentes, à compatibilização multidisciplinar e à execução da obra, devendo ser lido em conjunto com plantas, cortes, fachadas, detalhamentos e memoriais das demais disciplinas.\n\nEscopo contemplado: organização espacial, sistema construtivo, desempenho funcional, acessibilidade, acabamentos e premissas de compatibilização com estrutura, fundações, instalações e segurança contra incêndio.",
+      "subsections": [
+        {
+          "title": "1.1 Premissas de projeto",
+          "content": "Adotam-se premissas de conforto ambiental, racionalização construtiva, manutenção facilitada e aderência à legislação urbanística local. Qualquer alteração de programa, área ou sistema construtivo exigirá revisão deste memorial e das peças gráficas correlatas."
+        }
+      ]
+    },
+    {
+      "title": "2. IDENTIFICAÇÃO DO EMPREENDIMENTO",
+      "content": "A edificação ocupa terreno de {{area_terreno}} m², com área construída total de {{area_construida}} m², distribuída em {{numero_pavimentos}} pavimento(s). O uso pretendido é {{tipo_edificacao}}.\n\nA implantação observa afastamentos, taxa de ocupação e parâmetros urbanísticos aplicáveis ao zoneamento de {{municipio}}. A acessibilidade viária e pedonal foi considerada desde a concepção do partido arquitetônico."
+    },
+    {
+      "title": "3. PROGRAMA DE NECESSIDADES E ORGANIZAÇÃO ESPACIAL",
+      "content": "O programa de necessidades desenvolvido contempla:\n\n{{programa_necessidades}}\n\nA organização espacial prioriza fluxos claros entre áreas sociais, íntimas, de serviço e técnicas, com ventilação e iluminação naturais sempre que possível, e reserva de shafts e casas de máquinas dimensionados para as instalações previstas.",
+      "subsections": [
+        {
+          "title": "3.1 Circulações e hierarquia espacial",
+          "content": "As circulações horizontais e verticais foram dimensionadas para o fluxo estimado de usuários e mobiliário e, quando aplicável, para requisitos de saída de emergência da disciplina de segurança contra incêndio."
+        }
+      ]
+    },
+    {
+      "title": "4. SISTEMA CONSTRUTIVO",
+      "content": "O sistema construtivo adotado é: {{sistema_construtivo}}.\n\nA escolha considera desempenho estrutural, isolamento térmico e acústico, prazo de execução, disponibilidade regional de materiais e facilidade de manutenção. As interfaces com fundações, estrutura e vedações devem ser detalhadas em projeto executivo antes do início da obra.",
+      "subsections": [
+        {
+          "title": "4.1 Vedações e envoltória",
+          "content": "As vedações verticais e a envoltória devem garantir estanqueidade, desempenho térmico compatível com a NBR 15575 (quando habitacional) e adequada interface com esquadrias, impermeabilizações e sistemas de fachada."
+        }
+      ]
+    },
+    {
+      "title": "5. ESPECIFICAÇÕES DE ACABAMENTOS E REVESTIMENTOS",
+      "content": "Os acabamentos e revestimentos previstos são:\n\n{{acabamentos}}\n\nAs especificações finais de fabricantes, cores e texturas poderão ser refinadas em caderno de encargos, mantendo desempenho equivalente. Superfícies molháveis receberão tratamento impermeabilizante adequado ao uso."
+    },
+    {
+      "title": "6. ACESSIBILIDADE E DESEMPENHO",
+      "content": "As soluções de acessibilidade previstas contemplam:\n\n{{acessibilidade}}\n\nObserva-se a ABNT NBR 9050 quanto a rotas acessíveis, desníveis, sanitários, sinalização e vagas reservadas, no que for aplicável à tipologia. Para edificações habitacionais, a NBR 15575 orienta isolamento, estanqueidade e durabilidade."
+    },
+    {
+      "title": "7. CONFORTO AMBIENTAL E SUSTENTABILIDADE",
+      "content": "O partido arquitetônico busca ventilação cruzada, controle de insolação e redução de cargas térmicas. Recomenda-se esquadrias com desempenho compatível e iluminância natural adequada aos ambientes de permanência prolongada.\n\nMedidas de racionalização de água e energia devem ser compatibilizadas com os projetos de instalações (medição setorizada, iluminação eficiente, eventual aproveitamento pluvial)."
+    },
+    {
+      "title": "8. COMPATIBILIZAÇÃO MULTIDISCIPLINAR",
+      "content": "Antes da execução, este projeto deverá ser compatibilizado com estrutura, fundações, instalações elétricas, hidrossanitárias, SPDA, segurança contra incêndio e demais complementares. Conflitos de shafts, vãos, peitoris, lajes e cargas especiais devem ser resolvidos formalmente, com registro técnico."
+    },
+    {
+      "title": "9. DIRETRIZES DE EXECUÇÃO E CONTROLE",
+      "content": "A execução observará boas práticas de canteiro, proteção de elementos acabados, controle dimensional de vãos e níveis, e armazenamento adequado de materiais. Recomenda-se plano de qualidade com inspeções por etapa e registro fotográfico.\n\nNão serão aceitas substituições de sistema construtivo ou de desempenho sem anuência do responsável técnico e revisão documental."
+    },
+    {
+      "title": "10. DISPOSIÇÕES FINAIS",
+      "content": "Este memorial complementa as peças gráficas do projeto arquitetônico e não as substitui. Em caso de divergência, prevalece a interpretação mais restritiva sob o ponto de vista de segurança e desempenho, mediante esclarecimento do autor do projeto.\n\nAlterações de uso, ocupação ou geometria invalidam parcialmente as premissas aqui descritas e exigem atualização do memorial."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de arquitetura e edificações seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 6492 - Documentacao tecnica para projetos arquitetonicos", "ABNT NBR 9050 - Acessibilidade a edificacoes", "ABNT NBR 15575 - Edificacoes habitacionais - Desempenho"],
+  "normas": [
+    "ABNT NBR 6492 — Documentação técnica para projetos arquitetônicos",
+    "ABNT NBR 9050 — Acessibilidade a edificações, mobiliário, espaços e equipamentos urbanos",
+    "ABNT NBR 15575 — Edificações habitacionais — Desempenho",
+    "ABNT NBR 16636-1 — Elaboração e desenvolvimento de serviços técnicos especializados de projetos",
+    "Código de Obras e legislação urbanística do município de implantação"
+  ],
   "variables": [
-    {"name": "tipo_edificacao", "type": "text", "label": "Tipo de edificacao", "required": true},
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "municipio", "type": "text", "label": "Municipio", "required": false},
-    {"name": "uf", "type": "text", "label": "UF", "required": false},
-    {"name": "area_terreno", "type": "number", "label": "Area do terreno (m2)", "required": true, "min": 0},
-    {"name": "area_construida", "type": "number", "label": "Area construida (m2)", "required": true, "min": 0},
-    {"name": "programa_necessidades", "type": "textarea", "label": "Programa de necessidades", "required": true},
-    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
-    {"name": "sistema_construtivo", "type": "text", "label": "Sistema construtivo", "required": true},
-    {"name": "acabamentos", "type": "textarea", "label": "Acabamentos", "required": false},
-    {"name": "acessibilidade", "type": "textarea", "label": "Acessibilidade", "required": false}
+    {
+      "name": "tipo_edificacao",
+      "type": "text",
+      "label": "Tipo de edificacao",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "municipio",
+      "type": "text",
+      "label": "Municipio",
+      "required": false
+    },
+    {
+      "name": "uf",
+      "type": "text",
+      "label": "UF",
+      "required": false
+    },
+    {
+      "name": "area_terreno",
+      "type": "number",
+      "label": "Area do terreno (m2)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "area_construida",
+      "type": "number",
+      "label": "Area construida (m2)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "programa_necessidades",
+      "type": "textarea",
+      "label": "Programa de necessidades",
+      "required": true
+    },
+    {
+      "name": "numero_pavimentos",
+      "type": "number",
+      "label": "Numero de pavimentos",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "sistema_construtivo",
+      "type": "text",
+      "label": "Sistema construtivo",
+      "required": true
+    },
+    {
+      "name": "acabamentos",
+      "type": "textarea",
+      "label": "Acabamentos",
+      "required": false
+    },
+    {
+      "name": "acessibilidade",
+      "type": "textarea",
+      "label": "Acessibilidade",
+      "required": false
+    }
   ]
 }

@@ -1,24 +1,144 @@
 {
   "name": "Instalações Sanitárias Base",
-  "description": "Memorial descritivo de instalacoes sanitarias.",
+  "description": "Memorial descritivo de instalacoes sanitarias. Memorial técnico expandido (v2).",
   "category": "hidraulica",
   "subcategory": "sanitario",
-  "version": "1.1",
+  "version": "2.0",
   "sections": [
-    {"title": "1. OBJETO", "content": "Este memorial descreve as instalacoes sanitarias da obra em {{localizacao}}, atendendo {{numero_contribuintes}} contribuinte(s)."},
-    {"title": "2. COLETA", "content": "A rede coletora publica esta classificada como {{rede_coletora}}. Quando nao houver rede, o sistema de tratamento adotado e {{sistema_tratamento}}, com vazao diaria estimada de {{vazao_diaria}} L/dia e destino do efluente {{destino_efluente}}."},
-    {"title": "3. VENTILACAO", "content": "A solucao de ventilacao sanitaria e: {{ventilacao_sanitaria}}."},
-    {"title": "4. EXECUCAO", "content": "Tubulacoes, caixas, conexoes e dispositivos deverao ser instalados com declividades, acessibilidade para manutencao e estanqueidade conforme projeto e ABNT NBR 8160."}
+    {
+      "title": "1. OBJETO",
+      "content": "Este Memorial Descritivo das Instalações Sanitárias de esgoto predial define critérios para coleta, ventilação e disposição dos efluentes da edificação em {{localizacao}}, considerando {{numero_contribuintes}} contribuintes."
+    },
+    {
+      "title": "2. SISTEMA DE COLETA",
+      "content": "Existência de rede coletora pública: {{rede_coletora}}.\n\nAs tubulações de esgoto sanitário serão executadas com caimento normativo, juntas adequadas, caixas de inspeção/gordura quando necessárias e ramais dimensionados pela unidade de Hunter ou método equivalente da NBR 8160."
+    },
+    {
+      "title": "3. TRATAMENTO E DISPOSIÇÃO (QUANDO APLICÁVEL)",
+      "content": "Quando não houver rede pública, o sistema de tratamento previsto é: {{sistema_tratamento}}.\n\nVazão diária estimada: {{vazao_diaria}} L/dia. Destino do efluente tratado: {{destino_efluente}}.\n\nO sistema deverá observar normas ambientais e exigências do órgão licenciador, com acesso para manutenção e limpeza de fossa/filtro/sumidouro ou ETE compacta."
+    },
+    {
+      "title": "4. VENTILAÇÃO SANITÁRIA",
+      "content": "Solução de ventilação sanitária:\n\n{{ventilacao_sanitaria}}\n\nA ventilação primária e secundária evitará pressão negativa excessiva nos desconectores e o escape de gases para ambientes ocupados, com terminais acima da cobertura conforme NBR 8160."
+    },
+    {
+      "title": "5. ENSAIOS E ENTREGA",
+      "content": "As tubulações serão submetidas a ensaio de estanqueidade com água ou ar antes do fechamento. Caixas sifonadas e desconectores devem permanecer acessíveis para manutenção."
+    },
+    {
+      "title": "6. DISPOSIÇÕES FINAIS",
+      "content": "Este memorial complementa plantas de esgoto e detalhes de caixas. Mudança do número de aparelhos ou do destino do efluente exige revisão do projeto."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de instalações sanitárias seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 8160 - Sistemas prediais de esgoto sanitario", "ABNT NBR 7229 - Projeto, construcao e operacao de sistemas de tanques septicos"],
+  "normas": [
+    "ABNT NBR 8160 — Sistemas prediais de esgoto sanitário — Projeto e execução",
+    "ABNT NBR 7229 — Projeto, construção e operação de sistemas de tanques sépticos (quando aplicável)",
+    "ABNT NBR 13969 — Tanques sépticos — Unidades de tratamento complementar (quando aplicável)",
+    "Legislação ambiental estadual/municipal"
+  ],
   "variables": [
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "numero_contribuintes", "type": "number", "label": "Numero de contribuintes", "required": true, "min": 1},
-    {"name": "rede_coletora", "type": "select", "label": "Rede coletora publica", "required": true, "options": [{"value": "sim", "label": "Sim"}, {"value": "nao", "label": "Nao"}]},
-    {"name": "sistema_tratamento", "type": "text", "label": "Sistema de tratamento", "required": true, "depends_on": {"field": "rede_coletora", "equals": "nao"}},
-    {"name": "vazao_diaria", "type": "number", "label": "Vazao diaria (L/dia)", "required": true, "min": 0, "depends_on": {"field": "rede_coletora", "equals": "nao"}},
-    {"name": "destino_efluente", "type": "text", "label": "Destino do efluente", "required": true, "depends_on": {"field": "rede_coletora", "equals": "nao"}},
-    {"name": "ventilacao_sanitaria", "type": "textarea", "label": "Ventilacao sanitaria", "required": true}
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "numero_contribuintes",
+      "type": "number",
+      "label": "Numero de contribuintes",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "rede_coletora",
+      "type": "select",
+      "label": "Rede coletora publica",
+      "required": true,
+      "options": [
+        {
+          "value": "sim",
+          "label": "Sim"
+        },
+        {
+          "value": "nao",
+          "label": "Nao"
+        }
+      ]
+    },
+    {
+      "name": "sistema_tratamento",
+      "type": "text",
+      "label": "Sistema de tratamento",
+      "required": true,
+      "depends_on": {
+        "field": "rede_coletora",
+        "equals": "nao"
+      }
+    },
+    {
+      "name": "vazao_diaria",
+      "type": "number",
+      "label": "Vazao diaria (L/dia)",
+      "required": true,
+      "min": 0,
+      "depends_on": {
+        "field": "rede_coletora",
+        "equals": "nao"
+      }
+    },
+    {
+      "name": "destino_efluente",
+      "type": "text",
+      "label": "Destino do efluente",
+      "required": true,
+      "depends_on": {
+        "field": "rede_coletora",
+        "equals": "nao"
+      }
+    },
+    {
+      "name": "ventilacao_sanitaria",
+      "type": "textarea",
+      "label": "Ventilacao sanitaria",
+      "required": true
+    }
   ]
 }

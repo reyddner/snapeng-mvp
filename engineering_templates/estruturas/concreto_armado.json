@@ -1,42 +1,146 @@
 {
   "name": "Estrutura de Concreto Armado",
-  "description": "Template para memorial descritivo de estruturas de concreto armado",
+  "description": "Template para memorial descritivo de estruturas de concreto armado Memorial técnico expandido (v2).",
   "category": "estruturas",
   "subcategory": "concreto_armado",
-  "version": "1.1",
+  "version": "2.0",
   "sections": [
     {
       "title": "1. OBJETO",
-      "content": "Este memorial descreve a execucao da estrutura de concreto armado do tipo {{tipo_estrutura}}, localizada em {{localizacao}}, com {{numero_pavimentos}} pavimento(s)."
+      "content": "Este Memorial Descritivo Estrutural apresenta os critérios de projeto e execução da estrutura de concreto armado do tipo {{tipo_estrutura}}, localizada em {{localizacao}}, com {{numero_pavimentos}} pavimento(s)."
     },
     {
-      "title": "2. SISTEMA ESTRUTURAL",
-      "content": "O sistema estrutural adotado e {{sistema_estrutural}}. As cargas consideradas no dimensionamento sao: {{cargas_adotadas}}."
+      "title": "2. SISTEMA ESTRUTURAL E AÇÕES",
+      "content": "O sistema estrutural adotado é: {{sistema_estrutural}}.\n\nCargas e ações consideradas:\n\n{{cargas_adotadas}}\n\nO dimensionamento observa a NBR 6118 quanto a estados limites últimos e de serviço, incluindo flechas, fissuração e estabilidade global.",
+      "subsections": [
+        {
+          "title": "2.1 Modelo estrutural",
+          "content": "O modelo analítico/computacional considera rigideces compatíveis com a sequência construtiva e as condições de apoio nas fundações. Lajes, vigas e pilares serão detalhados com taxa de armadura e espaçamentos conforme norma."
+        }
+      ]
     },
     {
       "title": "3. MATERIAIS",
-      "content": "Concreto com resistencia caracteristica fck = {{fck}} MPa. Armaduras em aco {{tipo_aco}}, com cobrimento nominal de {{cobrimento}} cm, conforme ABNT NBR 6118."
+      "content": "Concreto com resistência característica fck = {{fck}} MPa. Armaduras em aço {{tipo_aco}}, com cobrimento nominal de {{cobrimento}} cm, definido conforme classe de agressividade ambiental e tipo de elemento.\n\nAgregados, cimento e aditivos deverão atender às normas brasileiras, com controle tecnológico em laboratório idôneo."
     },
     {
-      "title": "4. EXECUCAO E CONTROLE",
-      "content": "A execucao seguira a ABNT NBR 14931. Controle tecnologico e de execucao: {{controle_execucao}}."
+      "title": "4. EXECUÇÃO, FÔRMAS E CURA",
+      "content": "A execução seguirá a NBR 14931. Fôrmas e escoramentos serão dimensionados para as cargas de concretagem. A cura será mantida pelo período mínimo normativo, evitando retração precoce e perda de resistência superficial."
+    },
+    {
+      "title": "5. CONTROLE TECNOLÓGICO",
+      "content": "Controle tecnológico e de execução:\n\n{{controle_execucao}}\n\nDevem ser moldados corpos de prova por betonada/caminhão conforme plano de amostragem, com ruptura e registro. Não conformidades implicarão plano de ação (esclerometria, ultrassom, reforço) sob responsabilidade técnica."
+    },
+    {
+      "title": "6. JUNTAS, IMPERMEABILIZAÇÃO E INTERFACES",
+      "content": "Juntas de dilatação/construção serão detalhadas para permitir movimentação sem dano aos acabamentos. Interfaces com impermeabilização, shafts e instalações não poderão reduzir cobrimentos nem seccionar armaduras sem autorização do projetista."
+    },
+    {
+      "title": "7. DISPOSIÇÕES FINAIS",
+      "content": "Alterações de vãos, cargas especiais (cofre, piscina, equipamentos) ou remoção de elementos estruturais exigem novo cálculo e atualização deste memorial."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de estrutura de concreto armado seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
     }
   ],
   "calculations": [],
   "normas": [
-    "NBR 6118 - Projeto de estruturas de concreto",
-    "NBR 12655 - Concreto de cimento Portland - Preparo, controle, recebimento e aceitacao",
-    "NBR 14931 - Execucao de estruturas de concreto"
+    "ABNT NBR 6118 — Projeto de estruturas de concreto",
+    "ABNT NBR 6120 — Ações para o cálculo de estruturas de edificações",
+    "ABNT NBR 6123 — Forças devidas ao vento em edificações",
+    "ABNT NBR 12655 — Concreto de cimento Portland — Preparo, controle e recebimento",
+    "ABNT NBR 14931 — Execução de estruturas de concreto"
   ],
   "variables": [
-    {"name": "tipo_estrutura", "type": "text", "label": "Tipo de Estrutura", "required": true},
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "numero_pavimentos", "type": "number", "label": "Numero de pavimentos", "required": true, "min": 1},
-    {"name": "fck", "type": "number", "label": "Resistencia caracteristica (MPa)", "required": true, "min": 1},
-    {"name": "tipo_aco", "type": "text", "label": "Classe do aco", "required": true},
-    {"name": "cobrimento", "type": "number", "label": "Cobrimento (cm)", "required": true, "min": 0},
-    {"name": "sistema_estrutural", "type": "text", "label": "Sistema estrutural", "required": true},
-    {"name": "cargas_adotadas", "type": "textarea", "label": "Cargas consideradas", "required": true},
-    {"name": "controle_execucao", "type": "textarea", "label": "Controle tecnologico e de execucao", "required": false}
+    {
+      "name": "tipo_estrutura",
+      "type": "text",
+      "label": "Tipo de Estrutura",
+      "required": true
+    },
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "numero_pavimentos",
+      "type": "number",
+      "label": "Numero de pavimentos",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "fck",
+      "type": "number",
+      "label": "Resistencia caracteristica (MPa)",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "tipo_aco",
+      "type": "text",
+      "label": "Classe do aco",
+      "required": true
+    },
+    {
+      "name": "cobrimento",
+      "type": "number",
+      "label": "Cobrimento (cm)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "sistema_estrutural",
+      "type": "text",
+      "label": "Sistema estrutural",
+      "required": true
+    },
+    {
+      "name": "cargas_adotadas",
+      "type": "textarea",
+      "label": "Cargas consideradas",
+      "required": true
+    },
+    {
+      "name": "controle_execucao",
+      "type": "textarea",
+      "label": "Controle tecnologico e de execucao",
+      "required": false
+    }
   ]
 }

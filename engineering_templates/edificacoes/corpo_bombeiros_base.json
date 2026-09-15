@@ -1,26 +1,150 @@
 {
   "name": "Segurança Contra Incêndio Base",
-  "description": "Memorial descritivo para seguranca contra incendio e panico.",
+  "description": "Memorial descritivo para seguranca contra incendio e panico. Memorial técnico expandido (v2).",
   "category": "edificacoes",
   "subcategory": "corpo_bombeiros",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
-    {"title": "1. IDENTIFICACAO E CLASSIFICACAO", "content": "Este memorial apresenta as medidas de seguranca contra incendio da edificacao em {{localizacao}}, com ocupacao {{ocupacao_bombeiros}}, area total de {{area_total_bombeiros}} m2 e altura de {{altura_edificacao}} m."},
-    {"title": "2. POPULACAO E SAIDAS", "content": "A populacao prevista e de {{populacao_bombeiros}} pessoas. As saidas de emergencia foram definidas considerando: {{saidas_emergencia}}."},
-    {"title": "3. SISTEMAS DE PROTECAO", "content": "A classificacao de risco adotada e {{risco_incendio}}. O sistema de hidrantes e {{sistema_hidrantes}}. Os demais sistemas de protecao previstos sao: {{sistemas_protecao}}."},
-    {"title": "4. CONFORMIDADE", "content": "O projeto deve ser conferido com as Instrucoes Tecnicas e exigencias do Corpo de Bombeiros competente antes do protocolo e da execucao."}
+    {
+      "title": "1. OBJETO",
+      "content": "Este Memorial de Segurança contra Incêndio e Pânico descreve as medidas de proteção ativa e passiva previstas para a edificação de ocupação {{ocupacao_bombeiros}}, com área total {{area_total_bombeiros}} m², altura {{altura_edificacao}} m e população {{populacao_bombeiros}} pessoas, em {{localizacao}}."
+    },
+    {
+      "title": "2. CLASSIFICAÇÃO E RISCO",
+      "content": "Classificação de risco de incêndio: {{risco_incendio}}.\n\nA classificação observa a legislação do Corpo de Bombeiros da unidade federativa e as Instruções Técnicas aplicáveis à ocupação e à altura da edificação."
+    },
+    {
+      "title": "3. SAÍDAS DE EMERGÊNCIA",
+      "content": "Descrição das saídas de emergência:\n\n{{saidas_emergencia}}\n\nAs rotas de fuga terão largura, distanciamento e sinalização conformes à IT/NBR aplicável, com portas na sentido do fluxo e iluminação de emergência."
+    },
+    {
+      "title": "4. SISTEMA DE HIDRANTES E PROTEÇÃO ATIVA",
+      "content": "Sistema de hidrantes: {{sistema_hidrantes}}.\n\nDemais sistemas de proteção:\n\n{{sistemas_protecao}}\n\nExtintores serão distribuídos conforme risco e carga de incêndio, com sinalização e acesso desimpedido."
+    },
+    {
+      "title": "5. SINALIZAÇÃO, ILUMINAÇÃO E DETECÇÃO",
+      "content": "Serão previstos sistemas de sinalização fotoluminescente/adequada, iluminação de emergência e, quando exigido, detecção e alarme de incêndio endereçável ou convencional conforme a IT local."
+    },
+    {
+      "title": "6. GESTÃO E MANUTENÇÃO",
+      "content": "Após a aprovação e execução, a edificação deverá manter plano de manutenção dos sistemas de segurança contra incêndio, treinamento de brigada quando exigido e registros de inspeção."
+    },
+    {
+      "title": "7. DISPOSIÇÕES FINAIS",
+      "content": "Este memorial subsidia o processo de AVCB/ALCB junto ao Corpo de Bombeiros e deve ser compatibilizado com arquitetura, hidráulica de incêndio e elétrica de emergência."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de segurança contra incêndio seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
+    }
   ],
   "calculations": [],
-  "normas": ["ABNT NBR 9077 - Saidas de emergencia em edificios", "ABNT NBR 12693 - Sistemas de protecao por extintores de incendio", "ABNT NBR 13714 - Sistemas de hidrantes e de mangotinhos", "ABNT NBR 17240 - Sistemas de deteccao e alarme de incendio"],
+  "normas": [
+    "Instruções Técnicas do Corpo de Bombeiros do estado de implantação",
+    "ABNT NBR 9077 — Saídas de emergência em edifícios",
+    "ABNT NBR 10898 — Sistema de iluminação de emergência",
+    "ABNT NBR 12693 — Sistemas de proteção por extintores de incêndio",
+    "ABNT NBR 13714 — Sistemas de hidrantes e de mangotinhos para combate a incêndio"
+  ],
   "variables": [
-    {"name": "localizacao", "type": "text", "label": "Localizacao", "required": true},
-    {"name": "ocupacao_bombeiros", "type": "text", "label": "Ocupacao", "required": true},
-    {"name": "area_total_bombeiros", "type": "number", "label": "Area total (m2)", "required": true, "min": 0},
-    {"name": "altura_edificacao", "type": "number", "label": "Altura (m)", "required": true, "min": 0},
-    {"name": "populacao_bombeiros", "type": "number", "label": "Populacao prevista", "required": true, "min": 1},
-    {"name": "risco_incendio", "type": "text", "label": "Classificacao de risco", "required": true},
-    {"name": "saidas_emergencia", "type": "textarea", "label": "Saidas de emergencia", "required": true},
-    {"name": "sistema_hidrantes", "type": "select", "label": "Sistema de hidrantes", "required": false, "options": [{"value": "nao_aplicavel", "label": "Nao aplicavel"}, {"value": "sim", "label": "Aplicavel"}]},
-    {"name": "sistemas_protecao", "type": "textarea", "label": "Sistemas de protecao", "required": false}
+    {
+      "name": "localizacao",
+      "type": "text",
+      "label": "Localizacao",
+      "required": true
+    },
+    {
+      "name": "ocupacao_bombeiros",
+      "type": "text",
+      "label": "Ocupacao",
+      "required": true
+    },
+    {
+      "name": "area_total_bombeiros",
+      "type": "number",
+      "label": "Area total (m2)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "altura_edificacao",
+      "type": "number",
+      "label": "Altura (m)",
+      "required": true,
+      "min": 0
+    },
+    {
+      "name": "populacao_bombeiros",
+      "type": "number",
+      "label": "Populacao prevista",
+      "required": true,
+      "min": 1
+    },
+    {
+      "name": "risco_incendio",
+      "type": "text",
+      "label": "Classificacao de risco",
+      "required": true
+    },
+    {
+      "name": "saidas_emergencia",
+      "type": "textarea",
+      "label": "Saidas de emergencia",
+      "required": true
+    },
+    {
+      "name": "sistema_hidrantes",
+      "type": "select",
+      "label": "Sistema de hidrantes",
+      "required": false,
+      "options": [
+        {
+          "value": "nao_aplicavel",
+          "label": "Nao aplicavel"
+        },
+        {
+          "value": "sim",
+          "label": "Aplicavel"
+        }
+      ]
+    },
+    {
+      "name": "sistemas_protecao",
+      "type": "textarea",
+      "label": "Sistemas de protecao",
+      "required": false
+    }
   ]
 }

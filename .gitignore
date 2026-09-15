@@ -64,7 +64,7 @@ dmypy.json
 teste_*.docx
 teste_*.pdf
 _smoke2.py
-
+_quality_sample/
 # Static intermediários
 frontend/static/css/dist/
 frontend/static/js/dist/

@@ -1,44 +1,81 @@
 {
   "name": "Subestação Elétrica",
-  "description": "Template para memorial descritivo de subestação elétrica",
+  "description": "Template para memorial descritivo de subestação elétrica Memorial técnico expandido (v2).",
   "category": "eletrica",
   "subcategory": "subestacao",
-  "version": "1.0",
+  "version": "2.0",
   "sections": [
     {
       "title": "1. OBJETO",
-      "content": "Este memorial descreve a execução da subestação elétrica {{tipo_subestacao}} localizada em {{localizacao}}, com potência instalada de {{potencia_instalada}} kVA.",
-      "variables": ["tipo_subestacao", "localizacao", "potencia_instalada"]
+      "content": "Este memorial descreve a subestação elétrica do tipo {{tipo_subestacao}}, com potência instalada {{potencia_instalada}} kVA, tensão primária {{tensao_primaria}} kV e tensão secundária {{tensao_secundaria}} kV, em {{localizacao}}."
     },
     {
-      "title": "2. DIMENSIONAMENTO",
-      "content": "A subestação foi dimensionada para atender uma demanda de {{demanda_maxima}} kVA, com tensão primária de {{tensao_primaria}} kV e tensão secundária de {{tensao_secundaria}} kV.",
-      "variables": ["demanda_maxima", "tensao_primaria", "tensao_secundaria"]
+      "title": "2. DEMANDA E TRANSFORMADOR",
+      "content": "Demanda máxima considerada: {{demanda_maxima}} kVA. Potência do transformador: {{potencia_transformador}} kVA.\n\nO transformador será especificado com perdas, ligação e classe de isolamento compatíveis com a rede da concessionária e com a carga prevista, incluindo margem de expansão."
     },
     {
-      "title": "3. EQUIPAMENTOS",
-      "content": "Os principais equipamentos instalados são: {{equipamentos}}. O transformador possui potência nominal de {{potencia_transformador}} kVA.",
-      "variables": ["equipamentos", "potencia_transformador"]
+      "title": "3. EQUIPAMENTOS PRINCIPAIS",
+      "content": "{{equipamentos}}\n\nA disposição física observará distâncias de segurança, ventilação, acesso para manutenção e restrição a pessoas não autorizadas."
     },
     {
-      "title": "4. PROTEÇÕES",
-      "content": "O sistema de proteção inclui: {{sistemas_protecao}}. A coordenação de proteções foi realizada conforme NBR 14039.",
-      "variables": ["sistemas_protecao"]
+      "title": "4. PROTEÇÕES E MEDIÇÃO",
+      "content": "Sistemas de proteção:\n\n{{sistemas_protecao}}\n\nA coordenação de proteções primária/secundária buscará seletividade com a rede da concessionária. Medição atenderá ao padrão exigido (primário/secundário)."
+    },
+    {
+      "title": "5. ATERRAMENTO E SEGURANÇA",
+      "content": "A malha de aterramento da subestação será dimensionada para correntes de falta, com equipotencialização de carcaças e portas. Sinalização de risco elétrico, EPIs e procedimentos NR-10 são obrigatórios na operação."
+    },
+    {
+      "title": "6. COMISSIONAMENTO",
+      "content": "Antes da energização, realizar inspeções, ensaios de relação de transformação, resistência de isolação, operação de seccionadoras/disjuntores e verificação de intertravamentos. Registrar em relatório técnico."
+    },
+    {
+      "title": "7. DISPOSIÇÕES FINAIS",
+      "content": "Qualquer alteração de potência contratada ou de arranjo de barras exige revisão do projeto da subestação e anuência da concessionária quando cabível."
+    },
+    {
+      "title": "A. METODOLOGIA DE PROJETO E CONTROLE DE QUALIDADE",
+      "content": "A elaboração deste memorial de subestação elétrica seguiu fluxo de levantamento de dados, definição de premissas, dimensionamento/parametrização técnica, compatibilização preliminar com disciplinas correlatas e revisão interna de coerência normativa.\n\nO controle de qualidade documental contempla verificação de consistência entre memorial, plantas e memoriais de cálculo (quando houver), checagem de unidades, conferência de hipóteses de carga/uso e rastreabilidade das normas citadas.\n\nRecomenda-se matriz de pendências aberta até a emissão da versão “para execução”, com responsáveis e prazos. Alterações de escopo devem gerar nova revisão tipada (R0, R1, R2…), com histórico resumido no carimbo das peças.",
+      "subsections": [
+        {
+          "title": "A.1 Entregáveis mínimos recomendados",
+          "content": "Além deste memorial, recomenda-se manter atualizados: plantas e detalhes da disciplina; memorial de cálculo ou planilhas de dimensionamento; lista de materiais críticos; e registro de compatibilização com arquitetura/estrutura/instalações."
+        },
+        {
+          "title": "A.2 Critérios de aceite em obra",
+          "content": "Não se recomenda liberar etapas ocultas (concretagem, fechamento de shafts, aterro, revestimento) sem inspeção registrada. Desvios em relação ao projeto devem ser formalizados em RFI/RFO e respondidos pelo responsável técnico antes da continuidade."
+        }
+      ]
+    },
+    {
+      "title": "B. SEGURANÇA DO TRABALHO, MEIO AMBIENTE E SAÚDE OCUPACIONAL",
+      "content": "A execução das intervenções previstas neste memorial deverá observar as Normas Regulamentadoras aplicáveis (NR-18, NR-10, NR-35, NR-6, entre outras conforme a atividade), o PCMAT/PCMSO da obra e as exigências do responsável pela segurança do canteiro.\n\nÁreas de risco elétrico, escavação, trabalho em altura, soldagem, movimentação de cargas e espaços confinados (quando houver) exigem procedimentos específicos, EPIs/EPCs e autorização de trabalho. Resíduos de construção serão segregados e destinados conforme legislação ambiental local.\n\nO projetista não substitui a gestão de SST da obra; contudo, as soluções técnicas aqui descritas pressupõem condições seguras de montagem, inspeção e manutenção futura (acessos, distâncias, ventilação e sinalização)."
+    },
+    {
+      "title": "C. MANUTENÇÃO, OPERAÇÃO E VIDA ÚTIL",
+      "content": "Após a entrega, a preservação do desempenho depende de plano de manutenção preventiva: inspeções periódicas, limpeza de dispositivos, reaperto/reaperto torque quando aplicável, verificação de estanqueidade, testes de proteções e atualização de as-built.\n\nRecomenda-se manual do proprietário/operador contendo: periodicidade sugerida de inspeção; pontos de acesso; sinais de anomalia; e contatos do responsável técnico. Intervenções que alterem cargas, trajetos, pressões, seções ou proteções devem ser precedidas de análise técnica.\n\nA vida útil de projeto pressupõe uso compatível com o programa informado, manutenção regular e ausência de sobrecargas não previstas. Ambientes agressivos (litorâneos, industriais, com vapores químicos) podem exigir inspeções mais frequentes e proteção adicional.",
+      "subsections": [
+        {
+          "title": "C.1 As-built e documentação final",
+          "content": "Ao término da execução, devem ser consolidados desenhos as-built, relatórios de comissionamento, certificados de materiais críticos e ART/RRT de execução, arquivados junto ao memorial aprovado."
+        }
+      ]
+    },
+    {
+      "title": "D. LIMITAÇÕES, EXCLUSÕES E RESPONSABILIDADES",
+      "content": "Este memorial reflete as informações disponíveis na data de emissão. Não cobre, salvo menção explícita: projetos de outras disciplinas; orçamento detalhado; cronograma físico-financeiro; laudos laboratoriais; ou licenciamento ambiental completo.\n\nO contratante é responsável pela veracidade dos dados de uso, ocupação, cargas especiais e restrições do terreno. O executor é responsável pela conformidade com o projeto, boas práticas e normas de segurança. O responsável técnico autor responde pelos critérios de projeto aqui descritos, nos limites da legislação profissional.\n\nEm caso de conflito entre memorial e desenho, prevalece a interpretação mais conservadora sob o ponto de vista de segurança, até esclarecimento formal do autor do projeto."
+    },
+    {
+      "title": "E. LISTA DE VERIFICAÇÃO PRÉ-EMISSÃO",
+      "content": "Antes da emissão definitiva, recomenda-se conferir:\n\n- Premissas de uso/ocupação ainda válidas;\n- Compatibilidade com arquitetura e estrutura (vãos, shafts, cargas);\n- Normas citadas vigentes e aplicáveis à tipología;\n- Dimensionamentos revisados após última alteração de layout;\n- Identificação clara de revisões e responsável técnico;\n- Anexos (plantas/cálculos) coerentes com o texto deste memorial;\n- Requisitos de concessionárias e órgãos locais considerados;\n- Plano mínimo de ensaios/comissionamento definido.\n\nItens não verificados devem constar como pendência explícita, nunca como premissa oculta."
     }
   ],
-  "calculations": [
-    {
-      "name": "corrente_primaria",
-      "formula": "(potencia_instalada * 1000) / (tensao_primaria * 1.732)",
-      "inputs": ["potencia_instalada", "tensao_primaria"],
-      "unit": "A",
-      "description": "Corrente primária calculada"
-    }
-  ],
+  "calculations": [],
   "normas": [
-    "NBR 14039 - Instalações elétricas de média tensão",
-    "NBR 5410 - Instalações elétricas de baixa tensão",
-    "NBR 15749 - Transformadores de potência"
+    "ABNT NBR 14039 — Instalações elétricas de média tensão de 1,0 kV a 36,2 kV",
+    "ABNT NBR 5410 — Instalações elétricas de baixa tensão (lado BT)",
+    "NR-10 — Segurança em instalações e serviços em eletricidade",
+    "Padrões técnicos da concessionária local"
   ],
   "variables": [
     {
@@ -99,4 +136,3 @@
     }
   ]
 }
-
